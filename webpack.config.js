@@ -3,11 +3,31 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'),
       path    = require('path');
 
 module.exports = {
+   mode: 'production',
+   target: 'node',
    entry: './views/index.js',
    output: {
       path: path.join(__dirname, 'dist'),
       filename: '[name].bundle.js',
       publicPath: '/'
+   },
+   devServer: {    
+     stats: 'errors-only',    
+     historyApiFallback: true,
+     inline: true,
+     port: 3000,
+     public: 'recipe-locker.glitch.me',
+     allowedHosts: ['*.recipe-locker.glitch.me',
+                    '*.api.glitch.com',
+                    '*.glitch.com'
+                   ],
+     proxy: {
+       '/api' : {
+         target: 'http://localhost:8080',
+         pathRewrite : {'^/api' : ''},
+         secure: true
+       }
+     }     
    },
    module: {
       rules: [
@@ -20,7 +40,7 @@ module.exports = {
             }
          }, {
              test: /\.css$/,
-             include: path.resolve(__dirname, './public/style'),
+             include: path.resolve(__dirname, './public/css'),
              use: [
                  'style-loader',
                  'css-loader'
