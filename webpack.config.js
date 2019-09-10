@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'),
       path    = require('path');
 
 module.exports = {
-   mode: 'production',
+   mode: 'development',
    target: 'node',
    entry: './views/index.js',
    output: {
@@ -15,7 +15,7 @@ module.exports = {
      stats: 'errors-only',    
      historyApiFallback: true,
      inline: true,
-     port: 3000,
+     port: 8080,
      public: 'recipe-locker.glitch.me',
      allowedHosts: ['*.recipe-locker.glitch.me',
                     '*.api.glitch.com',
@@ -23,7 +23,7 @@ module.exports = {
                    ],
      proxy: {
        '/api' : {
-         target: 'http://localhost:8080',
+         target: 'http://localhost:3000',
          pathRewrite : {'^/api' : ''},
          secure: true
        }
@@ -39,15 +39,8 @@ module.exports = {
                presets: ['@babel/preset-env', '@babel/preset-react']
             }
          }, {
-             test: /\.css$/,
-             include: path.resolve(__dirname, './public/css'),
-             use: [
-                 'style-loader',
-                 'css-loader'
-             ]
-         }, {
              test: /\.(png|jpe?g|gif|svg|ttf|woff|woff2|ttf)$/,
-             include: path.resolve(__dirname, './public'),
+             include: path.resolve(__dirname, '../public'),
              use: [
                  {
                 loader: 'file-loader',
@@ -66,3 +59,14 @@ module.exports = {
       }),
    ]
 }
+
+/*
+{
+             test: /\.css$/,
+             include: path.resolve(__dirname, '../public/style.css'),
+             use: [
+                 'style-loader',
+                 'css-loader'
+             ]
+         }, 
+*/

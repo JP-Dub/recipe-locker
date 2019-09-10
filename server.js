@@ -11,7 +11,7 @@ const express    = require('express'),
 	    app        = express();
 	
 const webpackDevServer = require('./node_modules/webpack-dev-server/lib/Server'),
-	    webpackConfig = require('./webpack.co'),
+	    webpackConfig = require('./webpack.config'),
       webpack       = require('webpack'),
 	    compiler      = webpack(webpackConfig);	
 
@@ -22,6 +22,9 @@ const devServerOptions = Object.assign({}, webpackConfig.devServer, {
 });
 
 const wpServer = new webpackDevServer(compiler, devServerOptions);
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
@@ -34,7 +37,13 @@ app.get('/', function(request, response) {
 
 routes(app);
 
-// listen for requests :)
-const listener = app.listen(process.env.PORT, function() {
-  console.log('Your app is listening on port ' + listener.address().port);
+const client = process.env.PORT,
+      server = 8080;
+
+app.listen(client,  function () {
+	console.log('Node.js listening on port ' + client + '...');
+});
+
+wpServer.listen(server, '127.0.0.1', () => {
+	console.log('Webpack Dev Server listening on ' +  server + '...')
 });
