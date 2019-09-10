@@ -8,6 +8,7 @@
     "build": "webpack"
   },
   "dependencies": {
+    "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.1.0",
@@ -18,9 +19,9 @@
     "passport-twitter": "^1.0.4",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-router-dom": "^5.0.1"
+    "react-router-dom": "^5.0.1"    
   },
-  "devDependencies" : {
+  "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/cli": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
@@ -36,7 +37,7 @@
     "webpack-cli": "^3.3.5",
     "webpack-dev-middleware": "^3.7.0",
     "webpack-dev-server": "^3.3.1",
-    "webpack-hot-middleware": "^2.25.0"    
+    "webpack-hot-middleware": "^2.25.0"
   },
   "engines": {
     "node": "10.x"
