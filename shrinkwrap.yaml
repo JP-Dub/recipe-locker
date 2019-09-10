@@ -7,6 +7,7 @@ dependencies:
   express-session: 1.16.2
   mongoose: 5.7.0
   passport: 0.4.0
+  passport-local: 1.0.0
   passport-twitter: 1.0.4
   react: 16.9.0
   react-dom: 16.9.0
@@ -4216,6 +4217,14 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-s2PlXoAGym/iF4TS2yK9FdeRfxQ=
+  /passport-local/1.0.0:
+    dependencies:
+      passport-strategy: 1.0.0
+    dev: false
+    engines:
+      node: '>= 0.4.0'
+    resolution:
+      integrity: sha1-H+YyaMkudWBmJkN+O5BmYsFbpu4=
   /passport-oauth1/1.1.0:
     dependencies:
       oauth: 0.9.15
@@ -6073,6 +6082,7 @@ specifiers:
   http-proxy-middleware: ^0.19.1
   mongoose: ^5.7.0
   passport: ^0.4.0
+  passport-local: ^1.0.0
   passport-twitter: ^1.0.4
   react: ^16.9.0
   react-dom: ^16.9.0
