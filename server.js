@@ -1,7 +1,7 @@
 'use strict'
 const express    = require('express'),
       bodyParser = require('body-parser'),
-      routes     = require('./routes/api'),
+      routes     = require('./app/routes/api'),
 	    mongoose   = require('mongoose'),
       passport   = require('passport'),
 	    session    = require('express-session'),
@@ -23,8 +23,29 @@ const devServerOptions = Object.assign({}, webpackConfig.devServer, {
 
 const wpServer = new webpackDevServer(compiler, devServerOptions);
 
+require('dotenv').config();
+require('./app/config/passport')(passport);
+
+mongoose.connect(process.env.MONGO_URI, {
+	useNewUrlParser   : true,
+	useFindAndModify  : false,
+  useUnifiedTopology: true 
+});
+
+mongoose.Promise = global.Promise;
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+
+app.set('trust proxy', 1);
+app.use(session({
+	secret: 'lockerOfRecipes',
+	resave: false,
+	saveUninitialized: true,
+	cookie : {
+	    secure: true
+		}
+}));
 
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
@@ -34,8 +55,10 @@ app.get('/', function(request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
+app.use(passport.initialize());
+app.use(passport.session());
 
-routes(app);
+routes(app, passport);
 
 const client = process.env.PORT,
       server = 8080;

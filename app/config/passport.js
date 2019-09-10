@@ -1,7 +1,7 @@
 'use strict';
 
 const TwitterStrategy = require('passport-twitter').Strategy,
-      User            = require('../models/users'),
+      User            = require('../model/users'),
       configAuth      = require('./auth'),
       bcrypt          = require('bcrypt');
 
