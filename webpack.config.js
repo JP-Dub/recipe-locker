@@ -39,6 +39,13 @@ module.exports = {
                presets: ['@babel/preset-env', '@babel/preset-react']
             }
          }, {
+             test: /\.css$/,
+             include: path.resolve(__dirname, './public/style'),
+             use: [
+                 'style-loader',
+                 'css-loader'
+             ]
+         },  {
              test: /\.(png|jpe?g|gif|svg|ttf|woff|woff2|ttf)$/,
              include: path.resolve(__dirname, '../public'),
              use: [
@@ -60,13 +67,3 @@ module.exports = {
    ]
 }
 
-/*
-{
-             test: /\.css$/,
-             include: path.resolve(__dirname, '../public/style.css'),
-             use: [
-                 'style-loader',
-                 'css-loader'
-             ]
-         }, 
-*/
