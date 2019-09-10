@@ -10,9 +10,9 @@ A working copy is available [here](https://recipe-locker.glitch.me/)
 
 ### Joel Piazza
 [LinkedIn](https://www.linkedin.com/in/joelpiazza)<br>
-[Email](jdub@quantumleap-recruitment.com)<br>
+[Email](mailto:jdub@quantumleap-recruitment.com)<br>
 
-*portfolio*<br>
+*To see more of my work...*<br>
 [CodePen](https://codepen.io/j-dub)<br>
 
 # *The Recipe Locker*
