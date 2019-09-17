@@ -20,6 +20,10 @@ p {
   text-align: center;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .contents { 
   display: hidden;
 }
@@ -35,7 +39,7 @@ p {
   position: relative;
   width: 100%;
   border: 1px solid black;
-} */
+}  */
 
 #index {
   height: 15vh;
@@ -43,7 +47,7 @@ p {
 
 #recipe {
   height: 65vh;
-  
+
 }
 
 /****** Media Queries ******/

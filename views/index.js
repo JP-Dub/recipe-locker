@@ -12,8 +12,8 @@ class Main extends Component {
     return (
       <div id ="main" className="container">#main / .container
         <p>The Recipe Locker</p>
-        <div id='index' className='contents avgScreen'>#index</div>
-        <div id='recipe' className='contents avgScreen'>#recipe</div>
+        <div id='index' className='contents avgScreen'>#index / .contents avgScreen</div>
+        <div id='recipe' className='contents avgScreen'>#recipe / .contents avgScreen</div>
       </div>
       );
   }
