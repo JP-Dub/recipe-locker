@@ -10,7 +10,11 @@ class Main extends Component {
   
   render() {
     return (
-      <h1>Hello World</h1>
+      <div id ="main" className="container">#main / .container
+        <p>The Recipe Locker</p>
+        <div id='index' className='contents avgScreen'>#index</div>
+        <div id='recipe' className='contents avgScreen'>#recipe</div>
+      </div>
       );
   }
 }

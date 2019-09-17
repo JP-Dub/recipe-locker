@@ -1,25 +1,49 @@
-/* styles */
-/* called by your view template */
-
-* {
-  box-sizing: border-box;
-}
-
 body {
-  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
-  margin: 2em;
+  margin: 0;
+  padding: 0 5px;
+  width: 99.5%;
+  height: 99vh;
   background-color: whitesmoke;
+  overflow: hidden;
+}
+#main {
+  position: relative;
+  margin: 2em auto;
+  height: auto;
+  width: 90%;
+  padding: 1em;
+  border: 1px solid black;
+}
+p {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
 }
 
-h1 {
-  font-style: italic;
-  color: #373fff;
+.contents { 
+  display: hidden;
+}
+.avgScreen {
+  display: inline-block;
+  border: 1px solid black;
+  position: relative;
+  width: 45%;
 }
 
-footer {
-  margin-top: 50px;
-  padding-top: 25px;
-  border-top: 1px solid lightgrey;
+/* .contents {
+  margin-top: 1em;
+  position: relative;
+  width: 100%;
+  border: 1px solid black;
+} */
+
+#index {
+  height: 15vh;
+}
+
+#recipe {
+  height: 65vh;
+  
 }
 
 /****** Media Queries ******/
@@ -41,11 +65,14 @@ footer {
     font-size: .8em; 
   }
   .avgScreen {
-    display: none;
+    display: hidden;
   }
-  .smallScreen {
-    display: block;
-    padding-top: 2px;
-    padding-left: 5px;
+  .contents {
+    display: visible;
+    margin-top: 1em;
+    position: relative;
+    width: 100%;
+    border: 1px solid black;
   }
+
 }
