@@ -14,49 +14,117 @@ body {
   width: 85%;
   border-radius: .25em;
   height: auto;
+/*   z-index: 4; */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d2ff52+0,91e842+100;Neon */
+  background: #d2ff52; /* Old browsers */
+  background: -moz-linear-gradient(top,  #d2ff52 0%, #91e842 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #d2ff52 0%,#91e842 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #d2ff52 0%,#91e842 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52', endColorstr='#91e842',GradientType=0 ); /* IE6-9 */
+  
 }
 
 #locker {
+  z-index: 1;
+  height: 2em;
   border: 0 0 1px 0 solid black;
   text-align: center;
+  vertical-align: middle;
 }
 
+#locker > p{
+  margin-top: 0;
+  padding: 5px;
+  border: 0 0 1px 0 solid black;
+}
 #flex {
   width: 100%;
   display: inline-flex;
   align-items: stretch;
-  height: 80vh;
+  height: 70vh;
   overflow: hidden;
 }
-
 .contents {
- overflow: auto; 
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: whitesmoke !important;
 }
-
 #index {
+  z-index: 3;
   width: 30%;
   border: 1px solid black;
   order: 1;
   border-radius: .25em 0 0 .25em;
 }
+#index-name,
+#recipe-name {
+  height: 1.5em;
+  width: 100%;
+  padding-top: 5px;
+  border-bottom: 1px solid black;
+  background-color: skyblue;  
+}
+#index-name {
+/*   height: 1.5em;
+  width: 100%;
+  padding-top: 5px;
+  border-bottom: 1px solid black;
+  background-color: skyblue; */
+  text-align: left;
+  z-index: 1;
+  padding-left: 5px;
+}
+#index-table {
+  overflow-y : auto;
+  height: 80vh;
+}
+
+table {
+  z-index: -1;
+  width: 100%;
+  border-collapse: collapse;
+}
+th {
+/*   background-color: skyblue;
+  text-align: left; */
+}
+td {
+  padding-left: 10px;
+}
+tbody {
+  background-color: whitesmoke;
+
+}
+tr:nth-child(even) {
+  background-color: lightgray;
+}  
 
 #recipe {
   width: 70%;
   margin-left: 1em;
   border: 1px solid black;
   order: 2;
+/*   z-index: 2; */
   border-radius: 0 .25em .25em 0;
 }
 
-table {
+#recipe-name {
+    text-align: center;
+/*   height: 1.5em;
   width: 100%;
-  border-collapse: collapse;
+  background-color: skyblue;
+  border-bottom: 1px solid black; */
 }
+
+
 /****** Media Queries ******/
 
 @media all and (min-width: 1081px) {
   body {
     font-size: 1.5em;
+  }
+  table {
+/*     margin-top: 1.75em; */
   }
 }
  
@@ -70,13 +138,15 @@ table {
   body {
     font-size: .8em; 
   }
-
   #flex {
    display: block;
     height: auto;
     padding: 0;
+  } 
+  .contents {
+    position: relative;
+    min-height: 7em;
   }
-  
   #index { 
     min-height: 1.5em;
     max-height: 15vh;
@@ -85,6 +155,21 @@ table {
     border-top: 0;
     border-radius: .25em .25em 0 0;
   }
+  #index-name {
+    text-align: center;
+    border-radius: .25em .25em 0 0;
+    border-top: 1px solid black;
+  }
+  #index-table {
+    height: 7em;
+    max-height: 20em;
+  }
+  td {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid black;
+  }  
+  
   #recipe {
     margin: 1em auto;
     height: 60vh;
@@ -92,14 +177,69 @@ table {
     width: 99%; 
     overflow: auto;
     border-radius: 0 0 .25em .25em;
-  } 
-  .contents {
-    position: relative;
-    min-height: 7em;
   }
-  td {
-    width: 100%;
-    text-align: center;
-    border-top: 1px solid black;
-  }
+  
+
 }
+
+
+/* #main {
+  position: relative;
+  margin: 2em auto;
+  height: auto;
+  width: 90%;
+  padding: 1em;
+  border: 1px solid black;
+  display: flex;
+}
+
+header {
+  border: 1px solid purple;
+  padding: 5px;
+  width: 100%;
+  order: 0;
+  height: 2em;
+}
+
+p {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.contents { 
+  margin-top: 1em;
+  display: hidden;
+}
+
+.avgScreen {
+  display: inline-block;
+  border: 1px solid black;
+  position: relative;
+  width: 45%;
+}
+
+#index {
+  height: 65vh;
+  max-width: 30%;
+  overflow: auto;
+}
+
+#recipe {
+  margin-left: 1em;
+  height: 65vh;
+  width: 59vw;    align-items: stretch;
+} */
+
+/* table {
+  border-collapse: collapse;
+  width: 100%;
+}
+tr:nth-child(even) {
+  background-color: orange;
+}
+
+td {
+  padding: 5px;
+  border: 1px solid dimgray;
+} */
