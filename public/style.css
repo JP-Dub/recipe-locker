@@ -1,55 +1,57 @@
 body {
   margin: 0;
-  padding: 0 5px;
+  padding: 0;
   width: 99.5%;
   height: 99vh;
   background-color: whitesmoke;
-  overflow: hidden;
+  overflow: auto;
 }
-#main {
-  position: relative;
+
+.container {
   margin: 2em auto;
-  height: auto;
-  width: 90%;
-  padding: 1em;
+  padding: 0 1em 2em 1em;
   border: 1px solid black;
+  width: 85%;
+  border-radius: .25em;
+  height: auto;
 }
-p {
-  margin: 0 auto;
-  width: 100%;
+
+#locker {
+  border: 0 0 1px 0 solid black;
   text-align: center;
 }
 
-ul {
-  list-style-type: none;
-}
-
-.contents { 
-  display: hidden;
-}
-.avgScreen {
-  display: inline-block;
-  border: 1px solid black;
-  position: relative;
-  width: 45%;
-}
-
-/* .contents {
-  margin-top: 1em;
-  position: relative;
+#flex {
   width: 100%;
-  border: 1px solid black;
-}  */
+  display: inline-flex;
+  align-items: stretch;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.contents {
+ overflow: auto; 
+}
 
 #index {
-  height: 15vh;
+  width: 30%;
+  border: 1px solid black;
+  order: 1;
+  border-radius: .25em 0 0 .25em;
 }
 
 #recipe {
-  height: 65vh;
-
+  width: 70%;
+  margin-left: 1em;
+  border: 1px solid black;
+  order: 2;
+  border-radius: 0 .25em .25em 0;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
 /****** Media Queries ******/
 
 @media all and (min-width: 1081px) {
@@ -64,19 +66,40 @@ ul {
   }
 }
  
-@media all and (max-width: 640px) and (min-width: 300px) {
+@media all and (max-width: 640px) and (min-width: 250px) {
   body {
     font-size: .8em; 
   }
-  .avgScreen {
-    display: hidden;
-  }
-  .contents {
-    display: visible;
-    margin-top: 1em;
-    position: relative;
-    width: 100%;
-    border: 1px solid black;
-  }
 
+  #flex {
+   display: block;
+    height: auto;
+    padding: 0;
+  }
+  
+  #index { 
+    min-height: 1.5em;
+    max-height: 15vh;
+    margin: 0 auto;
+    width: 99%;
+    border-top: 0;
+    border-radius: .25em .25em 0 0;
+  }
+  #recipe {
+    margin: 1em auto;
+    height: 60vh;
+    min-height: 30vh;
+    width: 99%; 
+    overflow: auto;
+    border-radius: 0 0 .25em .25em;
+  } 
+  .contents {
+    position: relative;
+    min-height: 7em;
+  }
+  td {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid black;
+  }
 }

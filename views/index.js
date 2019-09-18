@@ -11,9 +11,25 @@ class Main extends Component {
   render() {
     return (
       <div id ="main" className="container">#main / .container
-        <p>The Recipe Locker</p>
-        <div id='index' className='contents avgScreen'>#index / .contents avgScreen</div>
-        <div id='recipe' className='contents avgScreen'>#recipe / .contents avgScreen</div>
+        <header id='locker'>
+            <p>The Recipe Locker</p>
+          </header>
+          <div id='flex'>
+            <div id='index' className='contents'>
+              <table>
+                <tr><td>foo gartarum</td></tr>
+                <tr><td>lipsum chiken</td></tr>
+                <tr><td>roast modicum</td></tr>
+                <tr><td>cranium</td></tr>
+              </table>
+            </div>
+            <div id='recipe' className='contents'>
+              <header id='title'>Title</header>
+              <article id='ingredients'>
+                Ingredients
+              </article>
+            </div>
+          </div>
       </div>
       );
   }
