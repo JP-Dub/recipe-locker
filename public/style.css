@@ -32,16 +32,32 @@ body {
   text-align: center;
   vertical-align: middle;
   border: 1px solid red;
+  
+  display: inline-block;
+  position: relative;
 }
-#edit {
-  float: right;
+#left {
+  margin-left: 10px;
+  border: 1px solid purple;
 }
-#locker > p{
+#locker-title {
+  margin-left: 50px;
+
   margin-top: 0;
   padding: 5px;
   font-size: 1.5em;
   border: 1px solid red;
 }
+#edit {
+  float: right;
+  border: 1px solid green;
+}
+/* #locker > p {
+  margin-top: 0;
+  padding: 5px;
+  font-size: 1.5em;
+  border: 1px solid red;
+} */
 #flex {
   width: 100%;
   display: inline-flex;
