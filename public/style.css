@@ -14,7 +14,6 @@ body {
   width: 75%;
   border-radius: .25em;
   height: auto;
-/*   z-index: 4; */
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d2ff52+0,91e842+100;Neon */
   background: #d2ff52; /* Old browsers */
   background: -moz-linear-gradient(top,  #d2ff52 0%, #91e842 100%); /* FF3.6-15 */
@@ -114,6 +113,10 @@ tr:nth-child(even) {
   width: 100%;
   background-color: skyblue;
   border-bottom: 1px solid black; */
+}
+
+ul {
+  list-style-position: inside;
 }
 
 
