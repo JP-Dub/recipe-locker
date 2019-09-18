@@ -12,7 +12,7 @@ body {
 .container {
   margin: 2em auto;
   padding: 0 1em 2em 1em;
-  border: 1px solid black;
+  border: 5px ridge lightgray;
   width: 75%;
   border-radius: .25em;
   height: auto;
@@ -22,7 +22,7 @@ body {
   background: -webkit-linear-gradient(top,  #d2ff52 0%,#91e842 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom,  #d2ff52 0%,#91e842 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52', endColorstr='#91e842',GradientType=0 ); /* IE6-9 */
-  box-shadow: 4px 4px 20px 10px black;
+  box-shadow: 8px 4px 20px 10px dimgray;
 }
 
 #locker {
@@ -31,6 +31,7 @@ body {
   border: 0 0 1px 0 solid black;
   text-align: center;
   vertical-align: middle;
+  border: 1px solid red;
 }
 #edit {
   float: right;
@@ -38,6 +39,8 @@ body {
 #locker > p{
   margin-top: 0;
   padding: 5px;
+  font-size: 1.5em;
+  border: 1px solid red;
 }
 #flex {
   width: 100%;
@@ -49,12 +52,13 @@ body {
 .contents {
   overflow-x: hidden;
   overflow-y: hidden;
-  background-color: whitesmoke !important;
+  background-color: whitesmoke;
+  border: 5px ridge lightgray;
 }
 #index {
   z-index: 3;
   width: 30%;
-  border: 1px solid black;
+/*   border: 1px solid black; */
   order: 1;
   border-radius: .25em 0 0 .25em;
 }
@@ -104,7 +108,7 @@ tr:nth-child(even) {
 #recipe {
   width: 70%;
   margin-left: 1em;
-  border: 1px solid black;
+/*   border: 1px solid black; */
   order: 2;
 /*   z-index: 2; */
   border-radius: 0 .25em .25em 0;
