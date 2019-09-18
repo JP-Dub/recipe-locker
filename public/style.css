@@ -1,3 +1,5 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css");
+
 body {
   margin: 0;
   padding: 0;
@@ -20,7 +22,7 @@ body {
   background: -webkit-linear-gradient(top,  #d2ff52 0%,#91e842 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom,  #d2ff52 0%,#91e842 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52', endColorstr='#91e842',GradientType=0 ); /* IE6-9 */
-  
+  box-shadow: 4px 4px 20px 10px black;
 }
 
 #locker {
@@ -30,11 +32,12 @@ body {
   text-align: center;
   vertical-align: middle;
 }
-
+#edit {
+  float: right;
+}
 #locker > p{
   margin-top: 0;
   padding: 5px;
-  border: 0 0 1px 0 solid black;
 }
 #flex {
   width: 100%;

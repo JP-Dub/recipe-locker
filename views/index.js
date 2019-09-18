@@ -20,7 +20,7 @@ class Main extends Component {
       <ErrorBoundary>
         <div id ="main" className="container">
           <header id='locker'>
-            <p>The Recipe Locker<span id='edit'>&#xf044;</span></p>
+            <p>The Recipe Locker<span id='edit'><i className='far fa-edit'></i></span></p>
           </header>
           <div id='flex'>
             <div id='index' className='contents'>
