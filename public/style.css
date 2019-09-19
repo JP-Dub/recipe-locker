@@ -19,10 +19,10 @@ body {
 
 .container {
   margin: 2em auto;
-  padding: 0 1em 2em 1em;
+  padding: 0 1.5em 2em 1.5em;
   border: 5px ridge lightgray;
   width: 75%;
-  border-radius: .25em;
+  border-radius: .5em;
   height: auto;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d2ff52+0,91e842+100;Neon */
   background: #d2ff52; /* Old browsers */
@@ -94,7 +94,7 @@ body {
   z-index: 3;
   width: 30%;
   order: 1;
-  border-radius: .25em 0 0 .25em;
+  border-radius: .5em 0 0 .5em;
 }
 
 #index-name {
@@ -134,9 +134,9 @@ tr:nth-child(even) {
 
 #recipe {
   width: 70%;
-  margin-left: 1em;
+  margin-left: 1.5em;
   order: 2;
-  border-radius: 0 .25em .25em 0;
+  border-radius: 0 .5em .5em 0;
 }
 
 /* #recipe-name {
@@ -187,8 +187,8 @@ ul {
     width: 100%;
     position: fixed;
     border: 0;
-    border-top: 2px solid dimgray;
-    border-bottom: 2px solid dimgray;
+    border-top: 5px ridge lightgray;
+    border-bottom: 5px ridge lightgray;
 /*     border: 5px 0 5px 0 solid dimgray; */
   }
   #locker {
@@ -210,7 +210,7 @@ ul {
     margin: 0 auto;
     padding:0;
     width: 99%;
-    border-radius: .25em .25em 0 0;
+    border-radius: .5em .5em 0 0;
   }
   #index-name {
     text-align: center;
@@ -238,7 +238,7 @@ ul {
     min-height: 30vh;
     width: 99%; 
     overflow: auto;
-    border-radius: 0 0 .25em .25em;
+    border-radius: 0 0 .5em .5em;
   }
   
 
