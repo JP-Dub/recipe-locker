@@ -22,6 +22,7 @@ class Main extends Component {
           <header id='locker'>
             <p id='locker-title'>         
               <span id='center'>The Recipe Locker</span>
+              <span id='login'><i className='fas fa-lock' /></span>
             </p>
           </header>
           <div id='flex'>

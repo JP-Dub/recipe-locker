@@ -46,11 +46,15 @@ body {
 #locker-title {
   margin: 0 auto;
   font-size: 1.5em;
-  font-weight: 900;
+  font-weight: bold;
+/*   font-style: italic; */
 }
 
-#center {
+/* #center {
   font-style: italic;
+} */
+#login {
+  float: right;
 }
 
 /* #locker > p {
