@@ -20,7 +20,7 @@ class Main extends Component {
       <ErrorBoundary>
         <div id ="main" className="container">
           <header id='locker'>
-            <p id='left'><i className='fas fa-archive'/></p><p id='locker-title'>The Recipe Locker</p><p id='edit'><i className='far fa-edit'></i></p>
+            <p id='locker-title'><span id='left'><i className='fas fa-archive'/></span>The Recipe Locker<span id='right'><i className='far fa-edit' /></span></p>
           </header>
           <div id='flex'>
             <div id='index' className='contents'>
@@ -93,3 +93,5 @@ ReactDOM.render(
     <Main />, 
     document.getElementById('root')
 );
+
+// <p id='left'><i className='fas fa-archive'/></p><p id='locker-title'>The Recipe Locker</p><p id='edit'><i className='far fa-edit'></i></p>
