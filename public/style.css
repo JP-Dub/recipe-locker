@@ -9,6 +9,8 @@ body {
   overflow: auto;
 }
 
+/***** main div *****/
+
 .container {
   margin: 2em auto;
   padding: 0 1em 2em 1em;
@@ -25,32 +27,29 @@ body {
   box-shadow: 8px 4px 20px 10px dimgray;
 }
 
+/***** main header div *****/
+
 #locker {
   z-index: 1;
   height: 2em;
   border: 0 0 1px 0 solid black;
   text-align: center;
-  vertical-align: middle;
-  border: 1px solid red;
-  
-  display: inline-block;
-  position: relative;
-}
-#left {
-  margin-left: 10px;
-  border: 1px solid purple;
+  padding: 10px 5px 5px;
+  color: dimgray;
 }
 #locker-title {
-  margin-left: 50px;
-
-  margin-top: 0;
-  padding: 5px;
+  margin: 0 auto;
   font-size: 1.5em;
-  border: 1px solid red;
+  font-weight: 900;
+}
+#left {
+  float: left;
+}
+#center {
+  font-style: italic;
 }
 #right {
   float: right;
-  border: 1px solid green;
 }
 /* #locker > p {
   margin-top: 0;
@@ -58,6 +57,8 @@ body {
   font-size: 1.5em;
   border: 1px solid red;
 } */
+
+/***** recipe and ingredients divs (x2) *****/
 #flex {
   width: 100%;
   display: inline-flex;
@@ -71,6 +72,18 @@ body {
   background-color: whitesmoke;
   border: 5px ridge lightgray;
 }
+
+#index-name,
+#recipe-name {
+  height: 1.75em;
+  width: 100%;
+  padding-top: .5em;
+  border-bottom: 1px solid black;
+  background-color: skyblue;  
+}
+
+/***** recipe name div *****/
+
 #index {
   z-index: 3;
   width: 30%;
@@ -78,20 +91,8 @@ body {
   order: 1;
   border-radius: .25em 0 0 .25em;
 }
-#index-name,
-#recipe-name {
-  height: 1.5em;
-  width: 100%;
-  padding-top: 5px;
-  border-bottom: 1px solid black;
-  background-color: skyblue;  
-}
+
 #index-name {
-/*   height: 1.5em;
-  width: 100%;
-  padding-top: 5px;
-  border-bottom: 1px solid black;
-  background-color: skyblue; */
   text-align: left;
   z-index: 1;
   padding-left: 5px;
@@ -120,6 +121,8 @@ tbody {
 tr:nth-child(even) {
   background-color: lightgray;
 }  
+
+/***** Recipe *****/
 
 #recipe {
   width: 70%;
@@ -184,7 +187,7 @@ ul {
   #index-name {
     text-align: center;
     border-radius: .25em .25em 0 0;
-    border-top: 1px solid black;
+    border-top: 5px ridge gray;
   }
   #index-table {
     height: 7em;
