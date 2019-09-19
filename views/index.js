@@ -28,7 +28,7 @@ class Main extends Component {
           </header>
           <div id='flex'>
             <div id='index' className='contents'>
-              <header id='index-name'>Recipe Name</header>
+              <header id='index-name'>Recipe Name<span id='index-name-right'><i className='fas fa-plus-square' /></span></header>
               <div id='index-table'>
                 <table>
                   <tbody>
