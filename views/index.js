@@ -21,9 +21,9 @@ class Main extends Component {
         <div id ="main" className="container">
           <header id='locker'>
             <p id='locker-title'>
-              <span id='left'><i className='fas fa-archive'/></span>
+              
               <span id='center'>The Recipe Locker</span>
-              <span id='right'><i className='far fa-edit' /></span>
+              
             </p>
           </header>
           <div id='flex'>
@@ -49,7 +49,11 @@ class Main extends Component {
               </div>
             </div>
             <div id='recipe' className='contents'>
-              <header id='recipe-name'>Yum Yum Chicken</header>
+              <header id='recipe-name'>Yum Yum Chicken
+              <span id='right'><i className='far fa-edit'/></span>
+              <span id='left'><i className='fas fa-trash' /></span>
+              
+              </header>
               <article id='recipe-ingredients'>
                 <ul>Ingredients:
                   <li>2lbs Chicken Breast</li>
