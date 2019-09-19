@@ -47,11 +47,13 @@ class Main extends Component {
               </div>
             </div>
             <div id='recipe' className='contents'>
-              <header id='recipe-name'>
-                <p id='recipe-title'>Yum Yum Chicken
-                  <span id='right'><i className='far fa-edit'/></span>
-                  <span id='left'><i className='fas fa-trash' /></span>
-                </p>
+              <header id='recipe-header'>
+                <h3 id='recipe-left' className='recipe-div' />
+                <h3 id='recipe-title' className='recipe-div'>Yum Yum Chicken</h3>
+                <h3 id='recipe-icons' className='recipe-div'>
+                  <i class='far fa-edit' />
+                  <i class='fas fa-trash'/>
+                </h3>
               </header>
               <article id='recipe-ingredients'>
                 <ul>Ingredients:
