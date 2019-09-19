@@ -131,26 +131,26 @@ tr:nth-child(even) {
 #recipe {
   width: 70%;
   margin-left: 1em;
-/*   border: 1px solid black; */
   order: 2;
-/*   z-index: 2; */
   border-radius: 0 .25em .25em 0;
 }
 
-#recipe-name {
-    text-align: center;
-/*   height: 1.5em;
-  width: 100%;
-  background-color: skyblue;
-  border-bottom: 1px solid black; */
+/* #recipe-name {
+  text-align: center;
+  border-bottom: 1px solid red; 
+} */
+
+#recipe-title {
+  margin: 0;
+  text-align: center;
 }
 #left {
   float: right;
-/*   padding-left: 20px; */
+  padding-right: 10px;
 }
 #right {
   float: right;
-  padding-left: 20px;
+  padding-right: 10px;
 }
 
 ul {

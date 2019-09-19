@@ -20,10 +20,8 @@ class Main extends Component {
       <ErrorBoundary>
         <div id ="main" className="container">
           <header id='locker'>
-            <p id='locker-title'>
-              
+            <p id='locker-title'>         
               <span id='center'>The Recipe Locker</span>
-              
             </p>
           </header>
           <div id='flex'>
@@ -49,10 +47,11 @@ class Main extends Component {
               </div>
             </div>
             <div id='recipe' className='contents'>
-              <header id='recipe-name'>Yum Yum Chicken
-              <span id='right'><i className='far fa-edit'/></span>
-              <span id='left'><i className='fas fa-trash' /></span>
-              
+              <header id='recipe-name'>
+                <p id='recipe-title'>Yum Yum Chicken
+                  <span id='right'><i className='far fa-edit'/></span>
+                  <span id='left'><i className='fas fa-trash' /></span>
+                </p>
               </header>
               <article id='recipe-ingredients'>
                 <ul>Ingredients:
