@@ -175,8 +175,12 @@ ul {
   body {
     font-size: .8em; 
   }
+  #locker {
+    padding: 5px;
+/*     padding-top: 5px; */
+  }
   #flex {
-   display: block;
+    display: block;
     height: auto;
     padding: 0;
   } 
@@ -188,14 +192,17 @@ ul {
     min-height: 1.5em;
     max-height: 15vh;
     margin: 0 auto;
+    padding:0;
     width: 99%;
-    border-top: 0;
     border-radius: .25em .25em 0 0;
   }
   #index-name {
     text-align: center;
     border-radius: .25em .25em 0 0;
-    border-top: 5px ridge gray;
+    margin-top: 0;
+    padding: 4px 0px;
+    border: 1px solid red;
+/*     border-top: 5px ridge lightgray; */
   }
   #index-table {
     height: 7em;
