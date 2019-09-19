@@ -45,7 +45,7 @@ body {
   padding: .3em;
   height: 2.5em;
   text-align: center;
-  width: 100%; 
+  width: 100%;
 }
 .locker-div {
   display: inherit;
@@ -55,7 +55,6 @@ body {
   width: 20%; 
 }
 #locker-left {
-  /* intentional blank tag */
   float: left;
   margin: 0;
 }
@@ -71,8 +70,9 @@ body {
 #locker-lock {
   float: right;
   padding-top: .2em;
-  padding-right: .5em;
+  padding-right: .55em;
 }
+
 
 /* #locker > p {
   margin-top: 0;
@@ -105,7 +105,7 @@ body {
   background-color: skyblue;  
 }
 
-/***** recipe name div *****/
+/***** recipe index div *****/
 
 #index {
   z-index: 3;
@@ -178,9 +178,13 @@ tr:nth-child(even) {
 }
 #recipe-icons {
   float: right;
-  padding-right: .5em;
+  padding-right: .75em;
   text-align: right;
 }
+.fa-edit {
+  padding-right: .4em;
+}
+
 
 ul {
   list-style-position: inside;
@@ -191,7 +195,7 @@ ul {
 
 @media all and (min-width: 1281px) {
   body {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
   table {
 /*     margin-top: 1.75em; */
@@ -200,7 +204,7 @@ ul {
  
 @media all and (max-width: 1280px) and (min-width: 801px) {
   body {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 }
  
@@ -209,6 +213,7 @@ ul {
     font-size: .8em; 
   }
   #main {
+    min-width: 325px;
     width: 100%;
     position: fixed;
     border: 0;
@@ -266,7 +271,7 @@ ul {
     border-radius: 0 0 .5em .5em;
   }
   .recipe-div {
-    padding-top: 2em;
+    padding-top: .2em;
   }
   
 
