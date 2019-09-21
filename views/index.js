@@ -15,6 +15,10 @@ class Main extends Component {
   
   componentWillUnMount() {}
   
+  userLogin () {
+    
+  }
+  
   render() {
     return (
       <ErrorBoundary>
@@ -79,10 +83,24 @@ class Main extends Component {
   }
 }
 
-
+class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {}
+  }
+  componentDidMount() {}
+  
+  componentWillUnMount() {}
+  
+  render() {
+    return (
+      <div>What up dude</div>
+    )
+  }
+}
 
 	// Error class React Component
-class ErrorBoundary extends React.Component {	
+class ErrorBoundary extends Component {	
 		constructor(props) {
 			super(props);
 			this.state = { hasError: false };
