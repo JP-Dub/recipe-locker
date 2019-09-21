@@ -6,6 +6,7 @@ import '../public/style.css';
 class Main extends Component {
   constructor(props) {
     super(props);
+    this.userLogin = this.userLogin.bind(this);
     this.state = {
       
     }
@@ -16,7 +17,7 @@ class Main extends Component {
   componentWillUnMount() {}
   
   userLogin () {
-    
+    console.log('clicked')
   }
   
   render() {
@@ -27,7 +28,7 @@ class Main extends Component {
             <h2 id='locker-left' className='locker-div' />
             <h2 id='locker-title' className='locker-div'>The Recipe Locker</h2>          
             <h2 id='locker-right' className='locker-div'>
-              <a href="" target='_self' title='user login'><i id='locker-lock' className='fas fa-lock' /></a>
+              <a href="" onClick={this.userLogin} target='_self' title='user login'><i id='locker-lock' className='fas fa-lock' /></a>
             </h2>
           </header>
           <div id='flex'>
@@ -63,8 +64,8 @@ class Main extends Component {
                 <h3 id='recipe-left' className='recipe-div' />
                 <h3 id='recipe-title' className='recipe-div'>Yum Yum Chicken</h3>
                 <h3 id='recipe-icons' className='recipe-div'>
-                  <a href="" target='_self' title='edit recipe'><i class='far fa-edit' /></a>
-                  <a href="" target='_self' title='delete recipe'><i class='fas fa-trash'/></a>
+                  <a href="" target='_self' title='edit recipe'><i className='far fa-edit' /></a>
+                  <a href="" target='_self' title='delete recipe'><i className='fas fa-trash'/></a>
                 </h3>
               </header>
               <article id='recipe-ingredients'>
