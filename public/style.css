@@ -3,7 +3,7 @@
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
-          box-sizing: border-box;
+          box-sizing: border-box;       
 }
 
 body {
@@ -20,10 +20,13 @@ body {
 #main {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d2ff52+0,91e842+100;Neon */
   background: #d2ff52; /* Old browsers */
+  
   background: -moz-linear-gradient(top,  #d2ff52 0%, #91e842 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  #d2ff52 0%,#91e842 100%); /* Chrome10-25,Safari5.1-6 */
+ 
   background: linear-gradient(to bottom,  #d2ff52 0%,#91e842 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52', endColorstr='#91e842',GradientType=0 ); /* IE6-9 */
+/*   filter: blur(2px);
+  -webkit-filter: blur(2px); */
   border: 5px ridge lightgray;  
   -webkit-border-radius: .5em;
      -moz-border-radius: .5em;
@@ -231,8 +234,6 @@ ul {
   }
   #main {
       /* Add the blur effect */
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
     min-width: 325px;
     width: 100%;
     position: fixed;
