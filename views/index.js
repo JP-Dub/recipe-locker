@@ -28,7 +28,7 @@ class Main extends Component {
             <h2 id='locker-left' className='locker-div' />
             <h2 id='locker-title' className='locker-div'>The Recipe Locker</h2>          
             <h2 id='locker-right' className='locker-div'>
-              <a href="" onClick={this.userLogin} target='_self' title='user login'><i id='locker-lock' className='fas fa-lock' /></a>
+              <i id='locker-lock' className='fas fa-lock' onClick={this.userLogin} title='user login'/>
             </h2>
           </header>
           <div id='flex'>

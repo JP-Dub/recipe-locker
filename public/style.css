@@ -77,6 +77,9 @@ body {
   padding-top: .2em;
   padding-right: .55em;
 }
+#locker-lock:hover {
+  cursor: pointer;
+}
 
 
 /* #locker > p {
