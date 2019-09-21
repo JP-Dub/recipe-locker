@@ -69,6 +69,7 @@ body {
 }
 #locker-lock {
   float: right;
+  font-size: .8em;
   padding-top: .2em;
   padding-right: .55em;
 }
@@ -98,7 +99,7 @@ body {
 
 #index-header,
 #recipe-header {
-  background-color: skyblue; 
+  background-color:#d9b3ff; 
   border-bottom: 1px solid black;
   height: 2em;
   padding-top: .25em;
