@@ -68,10 +68,11 @@ body {
   float: right;
 }
 #locker-lock {
+  color: black;
   float: right;
-  font-size: .8em;
+  font-size: .78em;
   padding-top: .2em;
-  padding-right: .55em;
+  padding-right: .75em;
 }
 
 
@@ -237,9 +238,8 @@ ul {
     border-bottom: 5px ridge lightgray;
 /*     border: 5px 0 5px 0 solid dimgray; */
   }
-  #locker {
+  #locker-header {
     padding: 5px;
-/*     padding-top: 5px; */
   }
   #flex {
     display: block;
