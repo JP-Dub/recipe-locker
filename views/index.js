@@ -22,14 +22,18 @@ class Main extends Component {
           <header id='locker-header'>
             <h2 id='locker-left' className='locker-div' />
             <h2 id='locker-title' className='locker-div'>The Recipe Locker</h2>          
-            <h2 id='locker-right' className='locker-div'><i id='locker-lock' className='fas fa-lock' /></h2>
+            <h2 id='locker-right' className='locker-div'>
+              <a href="" target='_self' title='user login'><i id='locker-lock' className='fas fa-lock' /></a>
+            </h2>
           </header>
           <div id='flex'>
             <div id='index' className='contents'>
               <header id='index-header'>
                 <h3 id='index-left' className='index-div'></h3>
                 <h3 id='index-title' className='index-div'>Recipe Name</h3>
-                <h3 id='index-right' className='index-div'><i className='fas fa-plus-square'></i></h3>
+                <h3 id='index-right' className='index-div'>
+                  <a href="" target='_self' title='add new recipe'><i className='fas fa-plus-square'></i></a>
+                </h3>
               </header>
               <div id='index-table'>
                 <table>
@@ -55,8 +59,8 @@ class Main extends Component {
                 <h3 id='recipe-left' className='recipe-div' />
                 <h3 id='recipe-title' className='recipe-div'>Yum Yum Chicken</h3>
                 <h3 id='recipe-icons' className='recipe-div'>
-                  <i class='far fa-edit' />
-                  <i class='fas fa-trash'/>
+                  <a href="" target='_self' title='edit recipe'><i class='far fa-edit' /></a>
+                  <a href="" target='_self' title='delete recipe'><i class='fas fa-trash'/></a>
                 </h3>
               </header>
               <article id='recipe-ingredients'>
