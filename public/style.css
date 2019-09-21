@@ -20,10 +20,9 @@ body {
 #main {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d2ff52+0,91e842+100;Neon */
   background: #d2ff52; /* Old browsers */
-  
-  background: -moz-linear-gradient(top,  #d2ff52 0%, #91e842 100%); /* FF3.6-15 */
- 
-  background: linear-gradient(to bottom,  #d2ff52 0%,#91e842 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: -webkit-linear-gradient(top,  #d2ff52 0%,#91e842 100%); /* Chrome10-25,Safari5.1-6 */
+  background:    -moz-linear-gradient(top,  #d2ff52 0%, #91e842 100%); /* FF3.6-15 */
+  background:         linear-gradient(to bottom,  #d2ff52 0%,#91e842 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52', endColorstr='#91e842',GradientType=0 ); /* IE6-9 */
 /*   filter: blur(2px);
   -webkit-filter: blur(2px); */
@@ -34,6 +33,7 @@ body {
   -webkit-box-shadow: 8px 4px 20px 10px dimgray;
      -moz-box-shadow: 8px 4px 20px 10px dimgray;
           box-shadow: 8px 4px 20px 10px dimgray;
+  font-family: Arial;
   height: auto;   
   margin: 2em auto;
   padding: 0 1.5em 2em 1.5em;
@@ -43,7 +43,7 @@ body {
 /***** main header div *****/
 
 #locker-header {
-  color: dimgray;
+  color: #d9b3ff;
   display: inline-block;
   padding: .3em;
   height: 2.5em;
@@ -75,7 +75,7 @@ body {
   float: right;
   font-size: .78em;
   padding-top: .2em;
-  padding-right: .75em;
+  padding-right: .55em;
 }
 
 
@@ -198,7 +198,7 @@ tr:nth-child(even) {
 }
 #recipe-icons {
   float: right;
-  padding-right: .75em;
+  padding-right: .4em;
   text-align: right;
 }
 .fa-edit {
@@ -268,7 +268,7 @@ ul {
     text-align: center; 
   }
   .index-div {
-    padding-top: .2em;
+    padding-top: .3em;
     width: 20%;
   }
   #index-left {
@@ -301,7 +301,7 @@ ul {
     border-radius: 0 0 .5em .5em;
   }
   .recipe-div {
-    padding-top: .2em;
+    padding-top: .3em;
   }
   
 
