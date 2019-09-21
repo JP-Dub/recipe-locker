@@ -79,6 +79,8 @@ class Main extends Component {
   }
 }
 
+
+
 	// Error class React Component
 class ErrorBoundary extends React.Component {	
 		constructor(props) {
