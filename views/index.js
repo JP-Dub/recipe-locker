@@ -26,7 +26,11 @@ class Main extends Component {
           </header>
           <div id='flex'>
             <div id='index' className='contents'>
-              <header id='index-name'>Recipe Name<span id='index-name-right'><i className='fas fa-plus-square' /></span></header>
+              <header id='index-header'>
+                <h3 id='index-left' className='index-div'></h3>
+                <h3 id='index-title' className='index-div'>Recipe Name</h3>
+                <h3 id='index-right' className='index-div'><i className='fas fa-plus-square'></i></h3>
+              </header>
               <div id='index-table'>
                 <table>
                   <tbody>
