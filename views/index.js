@@ -7,6 +7,8 @@ class Main extends Component {
   constructor(props) {
     super(props);
     this.userLogin = this.userLogin.bind(this);
+    this.twitterHandler = this.twitterHandler.bind(this);
+    
     this.state = {
       locked : 1,
       create : '', 
@@ -24,7 +26,9 @@ class Main extends Component {
   
   componentWillUnMount() {}
   
-  userLogin() {
+  userLogin(evt) {
+    evt.preventDefault();
+    window.location.href = '/api/auth/twitter';  
     
     if(this.state.locked) {
       this.setState({
@@ -73,7 +77,7 @@ class Main extends Component {
               <header id='index-header'>
                 <h3 id='index-left' className='index-div'></h3>
                 <h3 id='index-title' className='index-div'>Recipe Name</h3>
-                <h3 id='index-right' className='index-div'>
+                <h3 id='index-icon' className='index-div'>
                   <i title='add recipe' className={this.state.create}></i>
                 </h3>
               </header>
