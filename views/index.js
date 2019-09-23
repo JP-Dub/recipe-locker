@@ -21,7 +21,7 @@ class Main extends Component {
   
   componentDidMount() {
     this.index = document.getElementById('index-header');
-    console.log(this.index.firstChild)
+    console.log(this.index)
     
   }
   
