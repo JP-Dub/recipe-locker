@@ -73,7 +73,7 @@ class Main extends Component {
             </h2>
           </header>
           <div id='flex'>
-            <div id='index' className='contents'>
+            <div id='index' className='flex-container'>
               <header id='index-header' className='header'>
                 <h3 id='index-left' className='index-div'></h3>
                 <h3 id='index-title' className='index-div'>Recipe Name</h3>
@@ -100,7 +100,7 @@ class Main extends Component {
                 </table>
               </div>
             </div>
-            <div id='recipe' className='contents'>
+            <div id='recipe' className='flex-container'>
               <header id='recipe-header' className='header'>
                 <h3 id='recipe-left' className='recipe-div' />
                 <h3 id='recipe-title' className='recipe-div'>Yum Yum Chicken</h3>

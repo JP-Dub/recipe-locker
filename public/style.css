@@ -92,17 +92,16 @@ body {
 
 /***** recipe and ingredients divs (x2) *****/
 #flex {
-  width: 100%;
-  display: inline-flex;
   align-items: stretch;
+  display: inline-flex;
   height: 70vh;
   overflow: hidden;
+  width: 100%;
 }
-.contents {
-  overflow-x: hidden;
-  overflow-y: hidden;
+.flex-container {
   background-color: whitesmoke;
   border: 5px ridge lightgray;
+  overflow: hidden;
 }
 
 /* #index-header,
@@ -126,7 +125,11 @@ body {
   width: 100%;
 }
 
-
+/* .flex-header {
+  display: inherit;
+  height: 1.5em;
+  margin-top: 0;  
+} */
 
 /***** recipe index div *****/
 
@@ -148,9 +151,18 @@ body {
   padding-top: .1em;
   width: 15%;  
 }
-#index-left {
+
+#index-header:first-child {
+  color: white;
   float: right;
   width: 1%;
+}
+/* #index-left {
+  float: right;
+  width: 1%;
+} */
+#index-header:nth-child(2) {
+  
 }
 #index-title {
   padding-left: .2em;
