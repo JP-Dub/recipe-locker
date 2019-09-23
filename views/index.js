@@ -76,7 +76,7 @@ class Main extends Component {
           <div id='flex'>
             <div id='index' className='flex-container'>
               <header id='index-header' className='header'>
-                <h3 className='idx hdr-div' />
+                <h3 className='idx hdr-div'/>
                 <h3 className='idx hdr-div'>Recipe Name</h3>
                 <h3 className='idx hdr-div'>
                   <i className={this.state.create} title='add recipe'/>
