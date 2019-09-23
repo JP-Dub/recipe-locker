@@ -96,17 +96,7 @@ body {
   overflow: hidden;
 }
 
-/* #index-header,
-#recipe-header {
-  background-color:#d9b3ff; 
-  border-bottom: 1px solid dimgray;
-  display: inline-block;
-  height: 2em;
-  padding-top: .25em;
-  text-align: center;
-  width: 100%;
-} */
-
+/*  #index-header, #recipe-header  */
 .header {
   background-color:#d9b3ff; 
   border-bottom: 1px solid dimgray;
@@ -309,7 +299,8 @@ ul {
     text-align: center;
     width: 50%;    
   }
-  .index-div {
+/*   .index-div */
+  .idx {
     padding-top: .3em;
     width: 20%;
   }
@@ -332,7 +323,8 @@ ul {
     overflow: auto;
     border-radius: 0 0 .5em .5em;
   }
-  .recipe-div {
+/*   .recipe-div */
+  .rcp {
     padding-top: .3em;
   }
   
