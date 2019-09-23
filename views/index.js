@@ -8,16 +8,21 @@ class Main extends Component {
     super(props);
     this.userLogin = this.userLogin.bind(this);
     this.state = {
-      
+      locked : 1,
+      //locked : 'fas fa-lock',
+      unlocked: 'fas fa-lock-open'
     }
   }
   
-  componentDidMount() {}
+  componentDidMount() {
+    
+    
+  }
   
   componentWillUnMount() {}
   
   userLogin () {
-    console.log('clicked')
+    this.state.user = this.state.locked ? 'fas fa-lock' : 'fas fa-lock-open'
   }
   
   render() {
