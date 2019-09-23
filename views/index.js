@@ -9,7 +9,9 @@ class Main extends Component {
     this.userLogin = this.userLogin.bind(this);
     this.state = {
       locked : 1,
-      //locked : 'fas fa-lock',
+      create : '', 
+      edit   : '',
+      delete : '',
       unlocked: 'fas fa-lock-open',
       user : 'fas fa-lock'
     }
@@ -22,19 +24,37 @@ class Main extends Component {
   
   componentWillUnMount() {}
   
-  userLogin () {
+  userLogin() {
     
     if(this.state.locked) {
       this.setState({
         user: 'fas fa-unlock',
-        locked : 0 
+        locked : 0, 
+        create : 'fas fa-plus-square',
+        edit : 'far fa-edit',
+        delete : 'fas fa-trash'
       })
     } else {
       this.setState({
         user: 'fas fa-lock',
-        locked: 1
+        locked: 1,
+        create : '',
+        edit : '',
+        delete : ''
       })
     }
+  }
+  
+  createRecipe() {
+    
+  }
+  
+  editRecipe() {
+    
+  }
+  
+  deleteRecipe() {
+    
   }
   
   render() {
@@ -54,7 +74,7 @@ class Main extends Component {
                 <h3 id='index-left' className='index-div'></h3>
                 <h3 id='index-title' className='index-div'>Recipe Name</h3>
                 <h3 id='index-right' className='index-div'>
-                  <a href="" target='_self' title='add new recipe'><i className='fas fa-plus-square'></i></a>
+                  <i title='add recipe' className={this.state.create}></i>
                 </h3>
               </header>
               <div id='index-table'>
@@ -81,8 +101,8 @@ class Main extends Component {
                 <h3 id='recipe-left' className='recipe-div' />
                 <h3 id='recipe-title' className='recipe-div'>Yum Yum Chicken</h3>
                 <h3 id='recipe-icons' className='recipe-div'>
-                  <a href="" target='_self' title='edit recipe'><i className='far fa-edit' /></a>
-                  <a href="" target='_self' title='delete recipe'><i className='fas fa-trash'/></a>
+                  <i title='edit recipe' className={this.state.edit} />
+                  <i title='delete' className={this.state.delete} />
                 </h3>
               </header>
               <article id='recipe-ingredients'>
