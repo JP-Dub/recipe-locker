@@ -105,12 +105,24 @@ body {
   border: 5px ridge lightgray;
 }
 
-#index-header,
+/* #index-header,
 #recipe-header {
   background-color:#d9b3ff; 
   border-bottom: 1px solid dimgray;
+  display: inline-block;
   height: 2em;
   padding-top: .25em;
+  text-align: center;
+  width: 100%;
+} */
+
+.header {
+  background-color:#d9b3ff; 
+  border-bottom: 1px solid dimgray;
+  display: inline-block;
+  height: 2em;
+  padding-top: .25em;
+  text-align: center;
   width: 100%;
 }
 
@@ -125,9 +137,9 @@ body {
   z-index: 3;
 }
 #index-header { 
-  display: inline-block;
-  text-align: center;
-  width: 100%;  
+/*   display: inline-block; */
+/*   text-align: center; */
+/*   width: 100%;   */
 }
 .index-div {
   display: inherit;
@@ -187,9 +199,9 @@ tr:nth-child(even) {
 }
 #recipe-header {
   padding: 0;
-  display: inline-block;
-  text-align: center;
-  width: 100%;
+/*   display: inline-block; */
+/*   text-align: center; */
+/*   width: 100%; */
 }
 .recipe-div {
   display: inherit;
