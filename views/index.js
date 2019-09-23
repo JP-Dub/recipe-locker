@@ -167,6 +167,41 @@ class ErrorBoundary extends Component {
 		};
 }; 
 
+// configure ajax call
+const ajax = {
+  ready: function ready(fn) {
+        
+    if (typeof fn !== 'function') return;
+    if (document.readyState === 'complete') return fn();
+
+    document.addEventListener('DOMContentLoaded', fn, false);
+  },
+  request: function ajaxRequest(method, path, data, callback) {
+    let xmlhttp = new XMLHttpRequest(),
+        url     = '../api' + path,        
+        params  = typeof data === 'string' ? data 
+                  : Object.keys(data).map( k => encodeURIComponent(k) + '=' + encodeURIComponent(data[k]) ).join('&');  
+
+    xmlhttp.open(method, url, true);
+
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+          let res = JSON.parse(xmlhttp.response);
+              
+          if(res.statusCode === 400) return alert(res.response.body)
+             
+          callback(res);
+        }
+    };
+
+    xmlhttp.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+    xmlhttp.send(params);
+    return xmlhttp;
+  }
+};
+
 // render to DOM
 ReactDOM.render(
     <Main />, 
