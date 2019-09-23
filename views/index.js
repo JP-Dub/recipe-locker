@@ -28,7 +28,7 @@ class Main extends Component {
   
   userLogin(evt) {
     evt.preventDefault();
-    window.location.href = '/api/auth/twitter';  
+    // window.location.href = '/api/auth/twitter';  
     
     if(this.state.locked) {
       this.setState({
@@ -120,6 +120,7 @@ class Main extends Component {
             </div>
           </div>
         </div>
+        <Login />
       </ErrorBoundary>
       );
   }
