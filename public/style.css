@@ -17,7 +17,7 @@ body {
 
 /***** main div *****/
 
-#main {
+#locker {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d2ff52+0,91e842+100;Neon */
   background: #d2ff52; /* Old browsers */
   background: -webkit-linear-gradient(top,  #d2ff52 0%,#91e842 100%); /* Chrome10-25,Safari5.1-6 */
@@ -50,26 +50,25 @@ body {
   text-align: center;
   width: 100%;
 }
+#locker-header > h2:nth-child(1) {
+  float: left;
+  margin: 0;  
+}
+#locker-header > h2:nth-child(2) {
+  font-weight: bold;
+  margin: 0 auto;
+  width: 50%;  
+}
+#locker-header > h2:nth-child(3) {
+ float: right;  
+}
 .locker-div {
   display: inherit;
-/*   font-size: 1.5em;  */
   height: 2em;
   margin-top: 0;  
   width: 20%; 
 }
-#locker-left {
-  float: left;
-  margin: 0;
-}
-#locker-title {
-/*   font-style: italic; */  
-  font-weight: bold;
-  margin: 0 auto;
-  width: 50%;
-}
-#locker-right {
-  float: right;
-}
+
 #locker-lock {
   color: black;
   float: right;
@@ -172,25 +171,6 @@ body {
   width: 15%;  
 }
 
-
-/* #index-left {
-  float: right;
-  width: 1%;
-}
-#index-title {
-  padding-left: .2em;
-  float: left;
-  margin-left: 0;
-  text-align: left;
-  width: 80%;  
-}
-#index-icon {
-  float: right;
-  text-align: right;
-  padding-right: .4em;
-}
- */
-
 #index-table {
   height: 80vh;
   overflow-y : auto;
@@ -229,6 +209,20 @@ tr:nth-child(even) {
 /*   text-align: center; */
 /*   width: 100%; */
 }
+
+#recipe-header > h3:first-child {
+  float: left;  
+}
+#recipe-header > h3:nth-child(2) {
+  margin: 0;
+  text-align: center;
+  width: 50%;  
+}
+#recipe-header > h3:nth-child(3) {
+  float: right;
+  padding-right: .4em;
+  text-align: right;  
+}
 .recipe-div {
   display: inherit;
   height: 1.5em;
@@ -236,19 +230,7 @@ tr:nth-child(even) {
   padding-top: .3em;
   width: 20%;
 }
-#recipe-left {
-  float: left;
-}
-#recipe-title {
-  margin: 0;
-  text-align: center;
-  width: 50%;
-}
-#recipe-icons {
-  float: right;
-  padding-right: .4em;
-  text-align: right;
-}
+
 .fa-edit {
   padding-right: .4em;
 }
@@ -336,17 +318,7 @@ ul {
     padding-top: .3em;
     width: 20%;
   }
-/*   #index-left {
-    float: left;
-    width: 20%;
-  }
-  #index-title {
-    float: initial;
-    margin: 0 auto;
-    text-align: center;
-    width: 50%;
-  } */
- 
+
   #index-table {
     height: 7em;
     max-height: 20em;
@@ -373,6 +345,61 @@ ul {
 }
 
 
+/*
+#recipe-left {
+  float: left;
+}
+#recipe-title {
+  margin: 0;
+  text-align: center;
+  width: 50%;
+}
+#recipe-icons {
+  float: right;
+  padding-right: .4em;
+  text-align: right;
+} */
+/* #index-left {
+  float: right;
+  width: 1%;
+}
+#index-title {
+  padding-left: .2em;
+  float: left;
+  margin-left: 0;
+  text-align: left;
+  width: 80%;  
+}
+#index-icon {
+  float: right;
+  text-align: right;
+  padding-right: .4em;
+}
+ */
+
+/*   #index-left {
+    float: left;
+    width: 20%;
+  }
+  #index-title {
+    float: initial;
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+  } */
+ 
+/* #locker-left {
+  float: left;
+  margin: 0;
+}
+#locker-title { 
+  font-weight: bold;
+  margin: 0 auto;
+  width: 50%;
+}
+#locker-right {
+  float: right;
+} */
 /* #main {
   position: relative;
   margin: 2em auto;

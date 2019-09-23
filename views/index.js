@@ -65,7 +65,7 @@ class Main extends Component {
   render() {
     return (
       <ErrorBoundary>
-        <div id ="main" className="container">
+        <div id ="locker" className="container">
           <header id='locker-header'>
             <h2 id='locker-left' className='locker-div' />
             <h2 id='locker-title' className='locker-div'>The Recipe Locker</h2>          
@@ -107,7 +107,7 @@ class Main extends Component {
                 <h3 id='recipe-title' className='recipe-div'>Yum Yum Chicken</h3>
                 <h3 id='recipe-icons' className='recipe-div'>
                   <i title='edit recipe' className={this.state.edit} />
-                  <i title='delete' className={this.state.delete} />
+                  <i title='delete recipe' className={this.state.delete} />
                 </h3>
               </header>
               <article id='recipe-ingredients'>
