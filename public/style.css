@@ -153,29 +153,55 @@ body {
 }
 
 #index-header:first-child {
+/*   color: white; */
+  float: right;
+  width: 1%;
+  border: 1px solid orange;
+}
+#index-header:nth-child(2) {
+  padding-left: .2em;
+  float: left;
+  margin-left: 0;
+  text-align: left;
+  width: 80%; 
+}
+#index-header:nth-child(3) {
+  float: right;
+  text-align: right;
+  padding-right: .4em;  
+}
+
+
+
+/* #index-header:first-child {
   color: white;
   float: right;
   width: 1%;
-}
+  border: 1px solid orange;
+} */
 /* #index-left {
   float: right;
   width: 1%;
 } */
-#index-header:nth-child(2) {
-  
-}
-#index-title {
+/* #index-header:nth-child(2) {
+  padding-left: .2em;
+  float: left;
+  margin-left: 0;
+  text-align: left;
+  width: 80%; 
+} */
+/* #index-title {
   padding-left: .2em;
   float: left;
   margin-left: 0;
   text-align: left;
   width: 80%;  
-}
-#index-icon {
+} */
+/* #index-icon {
   float: right;
   text-align: right;
   padding-right: .4em;
-}
+} */
 
 #index-table {
   height: 80vh;
