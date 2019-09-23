@@ -13,22 +13,22 @@ module.exports = (app, passport, cors) => {
 	
 	let handleServer = new Server();
   
-  app.get('/demo', (req, res) => {
-    res.redirect('/rsvp/demo');
-  });
+//   app.get('/demo', (req, res) => {
+//     res.redirect('/rsvp/demo');
+//   });
  
-	app.route( '/user/:location' )	
-		.get( handleServer.userLocation );
+// 	app.route( '/user/:location' )	
+// 		.get( handleServer.userLocation );
 			
-	app.route( '/businesses/:search' )
-		.post( handleServer.getNightlife );
+// 	app.route( '/businesses/:search' )
+// 		.post( handleServer.getNightlife );
 	
-	app.route( '/rsvp/clicks' )
-		.get(  handleServer.getClicks )
-		.post( isLoggedIn, handleServer.addClick );	
+// 	app.route( '/rsvp/clicks' )
+// 		.get(  handleServer.getClicks )
+// 		.post( isLoggedIn, handleServer.addClick );	
   
-  app.route('/resetRSVP')
-    .put( handleServer.resetRSVP );  
+//   app.route('/resetRSVP')
+//     .put( handleServer.resetRSVP );  
 		
 	app.get('/auth/twitter', passport.authenticate( 'twitter' ) );
 
