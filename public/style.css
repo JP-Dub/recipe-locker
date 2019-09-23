@@ -238,13 +238,13 @@ ul {
   }
 }
  
-@media all and (max-width: 1280px) and (min-width: 801px) {
+@media all and (max-width: 1280px) and (min-width: 851px) {
   body {
     font-size: 1em;
   }
 }
  
-@media all and (max-width: 800px) and (min-width: 250px) { /* max-width: 640px */
+@media all and (max-width: 850px) and (min-width: 250px) { /* max-width: 640px */
   body {
     font-size: .8em; 
   }
