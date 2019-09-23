@@ -67,18 +67,18 @@ class Main extends Component {
       <ErrorBoundary>
         <div id ="locker" className="container">
           <header id='locker-header'>
-            <h2 className='locker-div lckr hdr-div' />
-            <h2 className='locker-div lckr hdr-div'>The Recipe Locker</h2>          
-            <h2 className='locker-div lckr hdr-div'>
+            <h2 className='lckr hdr-div' />
+            <h2 className='lckr hdr-div'>The Recipe Locker</h2>          
+            <h2 className='lckr hdr-div'>
               <i id='locker-lock' className={this.state.user} onClick={this.userLogin} title='user login'/>
             </h2>
           </header>
           <div id='flex'>
             <div id='index' className='flex-container'>
               <header id='index-header' className='header'>
-                <h3 className='index-div idx hdr-div' />
-                <h3 className='index-div idx hdr-div'>Recipe Name</h3>
-                <h3 className='index-div idx hdr-div'>
+                <h3 className='idx hdr-div' />
+                <h3 className='idx hdr-div'>Recipe Name</h3>
+                <h3 className='idx hdr-div'>
                   <i className={this.state.create} title='add recipe'/>
                 </h3>
               </header>
@@ -103,11 +103,11 @@ class Main extends Component {
             </div>
             <div id='recipe' className='flex-container'>
               <header id='recipe-header' className='header'>
-                <h3 className='recipe-div rcp hdr-div' />
-                <h3 className='recipe-div rcp hdr-div'>Yum Yum Chicken</h3>
-                <h3 className='recipe-div rcp hdr-div'>
-                  <i className={this.state.edit} title='edit recipe'  />
-                  <i className={this.state.delete} title='delete recipe'  />
+                <h3 className='rcp hdr-div' />
+                <h3 className='rcp hdr-div'>Yum Yum Chicken</h3>
+                <h3 className='rcp hdr-div'>
+                  <i className={this.state.edit} title='edit recipe'/>
+                  <i className={this.state.delete} title='delete recipe'/>
                 </h3>
               </header>
               <article id='recipe-ingredients'>
@@ -121,7 +121,7 @@ class Main extends Component {
             </div>
           </div>
         </div>
-        {!this.state.locked? (<Login />) : (<div/>)}
+        {!this.state.locked? <Login /> : <div/>}
       </ErrorBoundary>
       );
   }
