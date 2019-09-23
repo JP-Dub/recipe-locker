@@ -10,7 +10,8 @@ class Main extends Component {
     this.state = {
       locked : 1,
       //locked : 'fas fa-lock',
-      unlocked: 'fas fa-lock-open'
+      unlocked: 'fas fa-lock-open',
+      user : 'fas fa-lock'
     }
   }
   
@@ -22,7 +23,18 @@ class Main extends Component {
   componentWillUnMount() {}
   
   userLogin () {
-    this.state.user = this.state.locked ? 'fas fa-lock' : 'fas fa-lock-open'
+    
+    if(this.state.locked) {
+      this.setState({
+        user: 'fas fa-unlock',
+        locked : 0 
+      })
+    } else {
+      this.setState({
+        user: 'fas fa-lock',
+        locked: 1
+      })
+    }
   }
   
   render() {
@@ -33,7 +45,7 @@ class Main extends Component {
             <h2 id='locker-left' className='locker-div' />
             <h2 id='locker-title' className='locker-div'>The Recipe Locker</h2>          
             <h2 id='locker-right' className='locker-div'>
-              <i id='locker-lock' className='fas fa-lock' onClick={this.userLogin} title='user login'/>
+              <i id='locker-lock' className={this.state.user} onClick={this.userLogin} title='user login'/>
             </h2>
           </header>
           <div id='flex'>
