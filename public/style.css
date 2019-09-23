@@ -50,7 +50,7 @@ body {
   text-align: center;
   width: 100%;
 }
-#locker-header > h2:nth-child(1) {
+#locker-header > h2:first-child {
   float: left;
   margin: 0;  
 }
@@ -76,18 +76,6 @@ body {
   padding-top: .2em;
   padding-right: .55em;
 }
-
-/* #locker-lock:hover {
-  cursor: pointer;
-} */
-
-
-/* #locker > p {
-  margin-top: 0;
-  padding: 5px;
-  font-size: 1.5em;
-  border: 1px solid red;
-} */
 
 /***** recipe and ingredients divs (x2) *****/
 #flex {
@@ -139,17 +127,9 @@ body {
   z-index: 3;
 }
 
-#index-header { 
-/*   display: inline-block; */
-/*   text-align: center; */
-/*   width: 100%;   */
-}
-
-
-#index-header > h3:nth-child(1) {
+#index-header > h3:first-child {
   float: right;
   width: 1%;
-  border: 1px solid orange;
 }
 #index-header > h3:nth-child(2) {
   padding-left: .2em;
@@ -203,11 +183,9 @@ tr:nth-child(even) {
   order: 2;
   width: 70%;
 }
+
 #recipe-header {
   padding: 0;
-/*   display: inline-block; */
-/*   text-align: center; */
-/*   width: 100%; */
 }
 
 #recipe-header > h3:first-child {
@@ -236,9 +214,7 @@ tr:nth-child(even) {
 }
 
 
-#recipe-icons:hover,
-#index-icon,
-#locker-lock:hover {
+i:hover {
   cursor: pointer;
 }
 
@@ -253,9 +229,7 @@ ul {
   body {
     font-size: 1.2em;
   }
-  table {
-/*     margin-top: 1.75em; */
-  }
+
 }
  
 @media all and (max-width: 1280px) and (min-width: 851px) {
@@ -268,14 +242,15 @@ ul {
   body {
     font-size: .8em; 
   }
-  #main {
+  #locker {
       /* Add the blur effect */
     min-width: 325px;
     width: 100%;
     position: fixed;
-    border: 0;
+/*     border: 0;
     border-top: 5px ridge lightgray;
-    border-bottom: 5px ridge lightgray;
+    border-bottom: 5px ridge lightgray; */
+    border: 5px 0px ridge lightgray;
 /*     border: 5px 0 5px 0 solid dimgray; */
   }
   #locker-header {
@@ -286,10 +261,10 @@ ul {
     height: auto;
     padding: 0;
   } 
-  .contents {
+/*   .flex-container {
     position: relative;
     min-height: 7em;
-  }
+  } */
   #index { 
     border-radius: .5em .5em 0 0;
     margin: 0 auto;
@@ -304,7 +279,7 @@ ul {
     text-align: center; 
 /*     z-index: -2; */
   }
-  #index-header > h3:nth-child(1) {
+  #index-header > h3:first-child {
     float: left;
     width: 20%;
   }
@@ -344,7 +319,11 @@ ul {
 
 }
 
-
+/* #recipe-icons,
+#index-icon,
+#locker-lock:hover {
+  cursor: pointer;
+} */
 /*
 #recipe-left {
   float: left;

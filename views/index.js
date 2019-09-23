@@ -67,18 +67,18 @@ class Main extends Component {
       <ErrorBoundary>
         <div id ="locker" className="container">
           <header id='locker-header'>
-            <h2 id='locker-left' className='locker-div' />
-            <h2 id='locker-title' className='locker-div'>The Recipe Locker</h2>          
-            <h2 id='locker-right' className='locker-div'>
+            <h2 className='locker-div' />
+            <h2 className='locker-div'>The Recipe Locker</h2>          
+            <h2 className='locker-div'>
               <i id='locker-lock' className={this.state.user} onClick={this.userLogin} title='user login'/>
             </h2>
           </header>
           <div id='flex'>
             <div id='index' className='flex-container'>
               <header id='index-header' className='header'>
-                <h3 id='index-left' className='index-div'></h3>
-                <h3 id='index-title' className='index-div'>Recipe Name</h3>
-                <h3 id='index-icon' className='index-div'>
+                <h3 className='index-div'></h3>
+                <h3 className='index-div'>Recipe Name</h3>
+                <h3 className='index-div'>
                   <i title='add recipe' className={this.state.create}></i>
                 </h3>
               </header>
@@ -103,9 +103,9 @@ class Main extends Component {
             </div>
             <div id='recipe' className='flex-container'>
               <header id='recipe-header' className='header'>
-                <h3 id='recipe-left' className='recipe-div' />
-                <h3 id='recipe-title' className='recipe-div'>Yum Yum Chicken</h3>
-                <h3 id='recipe-icons' className='recipe-div'>
+                <h3 className='recipe-div' />
+                <h3 className='recipe-div'>Yum Yum Chicken</h3>
+                <h3 className='recipe-div'>
                   <i title='edit recipe' className={this.state.edit} />
                   <i title='delete recipe' className={this.state.delete} />
                 </h3>
