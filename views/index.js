@@ -76,10 +76,10 @@ class Main extends Component {
           <div id='flex'>
             <div id='index' className='flex-container'>
               <header id='index-header' className='header'>
-                <h3 className='index-div'></h3>
+                <h3 className='index-div' />
                 <h3 className='index-div'>Recipe Name</h3>
                 <h3 className='index-div'>
-                  <i title='add recipe' className={this.state.create}></i>
+                  <i className={this.state.create} title='add recipe'/>
                 </h3>
               </header>
               <div id='index-table'>
@@ -106,8 +106,8 @@ class Main extends Component {
                 <h3 className='recipe-div' />
                 <h3 className='recipe-div'>Yum Yum Chicken</h3>
                 <h3 className='recipe-div'>
-                  <i title='edit recipe' className={this.state.edit} />
-                  <i title='delete recipe' className={this.state.delete} />
+                  <i className={this.state.edit} title='edit recipe'  />
+                  <i className={this.state.delete} title='delete recipe'  />
                 </h3>
               </header>
               <article id='recipe-ingredients'>
