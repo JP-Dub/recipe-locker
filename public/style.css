@@ -112,31 +112,25 @@ body {
 }
 
 .hdr-div {
-/*   height: 2em; */
   display: inherit;
   margin-top: 0;   
 }
 
-/* .flex-header {
-  display: inherit;
-  height: 1.5em;
-  margin-top: 0;  
-} */
 
 /***** recipe index div *****/
-#index1,
+
 #index {
   border-radius: .5em 0 0 .5em;
   order: 1;
   width: 30%;
   z-index: 3;
 }
-#index-header1,
+
 #index-header > h3:first-child {
   float: right;
   width: 1%;
 }
-#index-header1,
+
 #index-header > h3:nth-child(2) {
   padding-left: .2em;
   float: left;
@@ -144,24 +138,17 @@ body {
   text-align: left;
   width: 80%; 
 }
-#index-header1,
+
 #index-header > h3:nth-child(3) {
   float: right;
   text-align: right;
   padding-right: .4em;  
 }
-/* .index-div {
-  display: inherit;
-  height: 1.5em;
-  margin-top: 0;
-  padding-top: .1em;
-  width: 15%;  
-} */
 .idx {
-/*   height: 1.5em; */
   padding-top: .1em;
   width: 15%;   
 }
+
 
 #index-table {
   height: 80vh;
@@ -170,7 +157,6 @@ body {
 table {
   border-collapse: collapse;
   width: 100%;
-/*   z-index: -1; */
 }
 th {
 /*   background-color: skyblue;
