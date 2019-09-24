@@ -137,7 +137,7 @@ class Login extends Component {
   render() {
     return (
       <ErrorBoundary>
-        <div id="locker1" class="container">
+        <div id="locker1" className="container">
           <header id='locker-header1'>
             <h2 className='lckr hdr-div' />
             <h2 className='lckr hdr-div'>The Recipe Locker</h2>          
