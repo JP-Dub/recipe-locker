@@ -76,7 +76,7 @@ body {
   height: 2em;
   width: 20%;  
 }
-#locker-lock1,
+
 #locker-lock {
   color: black;
   float: right;
@@ -86,7 +86,7 @@ body {
 }
 
 /***** recipe and ingredients divs (x2) *****/
-#flex1,
+
 #flex {
   align-items: stretch;
   display: inline-flex;
