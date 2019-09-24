@@ -166,16 +166,7 @@ class Login extends Component {
                 </h3>
               </header>              
             </div>
-            <div id='Login' className='flex-container'>
-              <header id='recipe-header2' className='header'>
-                <h3 className='rcp hdr-div'></h3>
-                <h3 className='rcp hdr-div'>Create A User Account</h3>
-                <h3 className='rcp hdr-div'>
-                    <i className='far fa-edit'></i>
-                    <i className='fas fa-trash'></i>
-                </h3>
-              </header>              
-            </div>            
+         
           </div>
         </div>
       </ErrorBoundary>
@@ -249,5 +240,19 @@ ReactDOM.render(
     <Main />, 
     document.getElementById('root')
 );
+
+/*
+            <div id='Login' className='flex-container'>
+              <header id='recipe-header2' className='header'>
+                <h3 className='rcp hdr-div'></h3>
+                <h3 className='rcp hdr-div'>Create A User Account</h3>
+                <h3 className='rcp hdr-div'>
+                    <i className='far fa-edit'></i>
+                    <i className='fas fa-trash'></i>
+                </h3>
+              </header>              
+            </div>   
+*/
+
 
 // <p id='left'><i className='fas fa-archive'/></p><p id='locker-title'>The Recipe Locker</p><p id='edit'><i className='far fa-edit'></i></p>
