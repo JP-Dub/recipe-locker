@@ -41,7 +41,7 @@ body {
 }
 
 /***** main header div *****/
-#locker-header1,
+
 #locker-header {
   color: #d9b3ff;
   display: inline-block;
@@ -50,18 +50,18 @@ body {
   text-align: center;
   width: 100%;
 }
-#locker-header1,
+
 #locker-header > h2:first-child {
   float: left;
   margin: 0;  
 }
-#locker-header1,
+
 #locker-header > h2:nth-child(2) {
   font-weight: bold;
   margin: 0 auto;
   width: 50%;  
 }
-#locker-header1,
+
 #locker-header > h2:nth-child(3) {
  float: right;  
 }
