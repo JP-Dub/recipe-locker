@@ -138,7 +138,49 @@ class Login extends Component {
   
   render() {
     return (
-      <div>What up dude</div>
+      <ErrorBoundary>
+        <div id="locker" class="container">
+          <header id='locker-header'>
+            <h2 className='lckr hdr-div' />
+            <h2 className='lckr hdr-div'>The Recipe Locker</h2>          
+            <h2 className='lckr hdr-div'>
+              <i id='locker-lock' className='fas fa-lock'></i>
+            </h2>
+          </header>
+          <div id='flex'>
+            <div id='index' className='flex-container'>
+              <header id='index-header' className='header'>
+                <h3 className='idx hdr-div'></h3>
+                <h3 className='idx hdr-div'>Twitter Login</h3>
+                <h3 className='idx hdr-div'><i className='fab fa-twitter'></i></h3>
+              </header>
+              <div>
+                <p>Welcome to the Recipe Locker! If would like to add, create and edit or delete your own recipes, we ask that you sign in with Twitter. This will also prevent others from modifying or deleting your recipes. To do this, just click on the Twitter icon in the upper corner.</p>
+              </div>
+            </div>
+            <div id='recipe' className='flex-container'>
+              <header id='recipe-header' className='header'>
+                <h3 className='rcp hdr-div'></h3>
+                <h3 className='rcp hdr-div'>User Login</h3>
+                <h3 className='rcp hdr-div'>
+                    <i className='far fa-edit'></i>
+                    <i className='fas fa-trash'></i>
+                </h3>
+              </header>              
+            </div>
+            <div id='Login' className='contents'>
+              <header id='recipe-headr' className='header'>
+                <h3 className='rcp hdr-div'></h3>
+                <h3 className='rcp hdr-div'>Create A User Account</h3>
+                <h3 className='rcp hdr-div'>
+                    <i className='far fa-edit'></i>
+                    <i className='fas fa-trash'></i>
+                </h3>
+              </header>              
+            </div>            
+          </div>
+        </div>
+      </ErrorBoundary>
     )
   }
 }
