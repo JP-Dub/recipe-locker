@@ -63,12 +63,12 @@ class Main extends Component {
   render() {
     return (
       <ErrorBoundary>
-        <div id ="locker" className="container">
-          <header id='locker-header'>
+        <div id ="main" className='main-container'>
+          <header id='' className='main-header'>
             <h2 className='lckr hdr-div' />
             <h2 className='lckr hdr-div'>The Recipe Locker</h2>          
             <h2 className='lckr hdr-div'>
-              <i id='locker-lock' className={this.state.user} onClick={this.userLogin} title='user login'/>
+              <i id='main-lock' className={this.state.user} onClick={this.userLogin} title='user login'/>
             </h2>
           </header>
           <div id='flex'>
