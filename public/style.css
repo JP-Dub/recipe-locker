@@ -102,6 +102,7 @@ body {
   overflow: hidden;
   width: 100%;
 }
+
 .flex-container {
   background-color: whitesmoke;
   border: 5px ridge lightgray;
@@ -109,7 +110,7 @@ body {
 }
 
 /*  #index-header, #recipe-header  */
-.header {
+.flex-header {
   background-color:#d9b3ff; 
   border-bottom: 1px solid dimgray;
   display: inline-block;

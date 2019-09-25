@@ -64,7 +64,7 @@ class Main extends Component {
     return (
       <ErrorBoundary>
         <div id ="main" className='main-container'>
-          <header id='' className='main-header'>
+          <header id='locker-header' className='main-header'>
             <h2 className='lckr hdr-div' />
             <h2 className='lckr hdr-div'>The Recipe Locker</h2>          
             <h2 className='lckr hdr-div'>
@@ -73,7 +73,7 @@ class Main extends Component {
           </header>
           <div id='flex'>
             <div id='index' className='flex-container'>
-              <header id='index-header' className='header'>
+              <header id='index-header' className='flex-header'>
                 <h3 className='idx hdr-div'/>
                 <h3 className='idx hdr-div'>Recipe Name</h3>
                 <h3 className='idx hdr-div'>
@@ -100,7 +100,7 @@ class Main extends Component {
               </div>
             </div>
             <div id='recipe' className='flex-container'>
-              <header id='recipe-header' className='header'>
+              <header id='recipe-header' className='flex-header'>
                 <h3 className='rcp hdr-div' />
                 <h3 className='rcp hdr-div'>Yum Yum Chicken</h3>
                 <h3 className='rcp hdr-div'>
