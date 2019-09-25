@@ -95,7 +95,8 @@ body {
 
 /***** recipe and ingredients divs (x2) *****/
 
-#flex {
+/*#flex*/
+.flex {
   align-items: stretch;
   display: inline-flex;
   height: 70vh;
@@ -278,8 +279,8 @@ ul {
   #locker-header {
     padding: 5px;
   }
-  #flex1,
-  #flex {
+
+  .flex {
     display: block;
     height: auto;
     padding: 0;
