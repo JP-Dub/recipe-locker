@@ -111,6 +111,7 @@ body {
 }
 
 /*  #index-header, #recipe-header  */
+
 .flex-header {
   background-color:#d9b3ff; 
   border-bottom: 1px solid dimgray;
@@ -286,19 +287,19 @@ ul {
     padding: 0;
     width: 99%;
   }
-  #index-header1,
+
   #index-header { 
     margin-top: 0;
     padding: 0;
     text-align: center; 
 /*     z-index: -2; */
   }
-  #index-header1,
+
   #index-header > h3:first-child {
     float: left;
     width: 20%;
   }
-  #index-header1,
+
   #index-header > h3:nth-child(2) {
     float: initial;
     margin: 0 auto;
@@ -320,8 +321,7 @@ ul {
     text-align: center;
     border-top: 1px solid black;
   }  
-  #recipe1,
-  #login,
+
   #recipe {
     margin: 1em auto;
     height: 60vh;
@@ -337,6 +337,8 @@ ul {
   
 
 }
+
+
 
 /* #recipe-icons,
 #index-icon,
