@@ -43,26 +43,26 @@ body {
 #main-account {
   position: absolute;
   margin: auto;
-  top: 0;
+  top: -20%;
   right: 0;
   bottom: 0;
   left: 0;
 /*   transform: translate(50%, 50%); */
-  width: 60%;
-
+  width: 40%;
+  height: 30%;
 }
 
 /***** main header div *****/
 
 /*#locker-header*/
-#locker-header {
+/* #locker-header {
   color: #d9b3ff;
   display: inline-block;
   padding: .3em;
   height: 2.5em;
   text-align: center;
   width: 100%;
-}
+} */
 
 .main-header {
   color: #d9b3ff;
@@ -97,6 +97,7 @@ body {
 }
 
 /*#locker-lock*/
+#account-close,
 #main-lock {
   color: black;
   float: right;
@@ -111,17 +112,15 @@ body {
   height: 70vh;
 }
 #accounts {
-  height: 40vh;
+  height: 32vh;
 }
-/*#flex*/
+
 .flex {
   align-items: stretch;
-  display: inline-flex;
-  
+  display: inline-flex; 
   overflow: hidden;
   width: 100%;
 }
-
 
 
 .flex-container {
