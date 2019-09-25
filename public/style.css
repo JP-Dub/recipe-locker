@@ -49,7 +49,7 @@ body {
   left: 0;
 /*   transform: translate(50%, 50%); */
   width: 60%;
-  height: auto;
+
 }
 
 /***** main header div *****/
@@ -107,18 +107,22 @@ body {
 
 /***** recipe and ingredients divs (x2) *****/
 
+#food-columns {
+  height: 70vh;
+}
+#accounts {
+  height: 40vh;
+}
 /*#flex*/
 .flex {
   align-items: stretch;
   display: inline-flex;
-  height: 70vh;
+  
   overflow: hidden;
   width: 100%;
 }
 
-#accounts {
-  height: 40vh;
-}
+
 
 .flex-container {
   background-color: whitesmoke;

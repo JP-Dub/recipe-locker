@@ -71,7 +71,7 @@ class Main extends Component {
               <i id='main-lock' className={this.state.user} onClick={this.userLogin} title='user login'/>
             </h2>
           </header>
-          <div id='flex-columns' className='flex'>
+          <div id='food-columns' className='flex'>
             <div id='index' className='flex-container'>
               <header id='index-header' className='flex-header'>
                 <h3 className='idx hdr-div'/>
