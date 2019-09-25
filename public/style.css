@@ -40,6 +40,18 @@ body {
   width: 75%;
 }
 
+#main-account {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+/*   transform: translate(50%, 50%); */
+  width: 60%;
+  height: auto;
+}
+
 /***** main header div *****/
 
 /*#locker-header*/
@@ -104,6 +116,10 @@ body {
   width: 100%;
 }
 
+#accounts {
+  height: 40vh;
+}
+
 .flex-container {
   background-color: whitesmoke;
   border: 5px ridge lightgray;
@@ -134,7 +150,7 @@ body {
   border-radius: .5em 0 0 .5em;
   order: 1;
   width: 30%;
-  z-index: 3;
+/*   z-index: 3; */
 }
 
 #index-header > h3:first-child {

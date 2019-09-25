@@ -71,7 +71,7 @@ class Main extends Component {
               <i id='main-lock' className={this.state.user} onClick={this.userLogin} title='user login'/>
             </h2>
           </header>
-          <div id='' className='flex'>
+          <div id='flex-columns' className='flex'>
             <div id='index' className='flex-container'>
               <header id='index-header' className='flex-header'>
                 <h3 className='idx hdr-div'/>
@@ -119,7 +119,7 @@ class Main extends Component {
             </div>
           </div>
         </div>
-        {/*!this.state.locked? <Login /> : <div/>*/}
+        {!this.state.locked? <Login /> : <div/>}
       </ErrorBoundary>
       );
   }
@@ -137,52 +137,28 @@ class Login extends Component {
   render() {
     return (
       <ErrorBoundary>
-        <div id="account" class="container">
-          <header id='locker-header' class='main-header'>
-            <h2 class='lckr hdr-div'></h2>
-            <h2 class='lckr hdr-div'>User Account</h2>          
-            <h2 class='lckr hdr-div'>
-              <i id='account-close' class='fas fa-window-close' title='close'></i>
+        <div id="main-account" className="main-container">
+          <header id='account-header' className='main-header'>
+            <h2 className='lckr hdr-div'></h2>
+            <h2 className='lckr hdr-div'>User Account</h2>          
+            <h2 className='lckr hdr-div'>
+              <i id='account-close' className='fas fa-window-close' title='close'></i>
             </h2>
           </header>
           
-          <div id='flex'>
-            <div id='index' class='flex-container'>
-              <header id='index-header' class='header'>
-                <h3 class='idx hdr-div'></h3>
-                <h3 class='idx hdr-div'>Twitter Login</h3>
-                <h3 class='idx hdr-div'>
-                  <i class='fab fa-twitter' title='add recipe'></i>
+          <div id='accounts' className='flex'>
+            <div id='twitter' className='flex-container'>
+              <header id='twitter-header' className='flex-header'>
+                <h3 className='idx hdr-div' />
+                <h3 className='idx hdr-div'>Twitter Login</h3>
+                <h3 className='idx hdr-div'>
+                  <i className='fab fa-twitter' title='sign in'></i>
                 </h3>
               </header>
               <div>
                 <p>Welcome to the Recipe Locker! If would like to add, create and edit or delete your own recipes, we ask that you sign in with Twitter. This will also prevent others from modifying or deleting your recipes. To do this, just click on the Twitter icon in the upper corner.</p>
               </div>
             </div>
-            <div id='index' class='flex-container'>
-              <header id='index-header' class='header'>
-                <h3 class='idx hdr-div'></h3>
-                <h3 class='idx hdr-div'>User Login</h3>
-                <h3 class='idx hdr-div'>
-                  <i class='' title='add recipe'></i>
-                </h3>
-              </header>
-              <div>
-                <p>User sign in</p>
-              </div>     
-            </div>
-            <div id='create' class='flex-container'>
-              <header id='index-header' class='header'>
-                <h3 class='idx hdr-div'></h3>
-                <h3 class='idx hdr-div'>Create a User</h3>
-                <h3 class='idx hdr-div'>
-                  <i class='' title='add recipe'></i>
-                </h3>
-              </header>
-              <div>
-                <p>What we've got here is a failure to communicate.</p>
-              </div>
-            </div>            
           </div>
         </div>
       </ErrorBoundary>
