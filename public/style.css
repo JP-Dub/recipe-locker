@@ -184,8 +184,7 @@ tr:nth-child(even) {
 }  
 
 /***** recipe ingredients div *****/
-#recipe1,
-#login,
+
 #recipe {
   border-radius: 0 .5em .5em 0;
   margin-left: 1.5em;
@@ -193,40 +192,29 @@ tr:nth-child(even) {
   width: 70%;
 }
 
-#recipe-header1,
-#recipe-header2,
+
 #recipe-header {
   padding: 0;
 }
 
-#recipe-header1,
-#recipe-header2,
+
 #recipe-header > h3:first-child {
   float: left;  
 }
-#recipe-header1,
-#recipe-header2,
+
 #recipe-header > h3:nth-child(2) {
   margin: 0;
   text-align: center;
   width: 50%;  
 }
-#recipe-header1,
-#recipe-header2,
+
 #recipe-header > h3:nth-child(3) {
   float: right;
   padding-right: .4em;
   text-align: right;  
 }
-/* .recipe-div {
-  display: inherit;
-  height: 1.5em;
-  margin-top: 0;
-  padding-top: .3em;
-  width: 20%;
-} */
+
 .rcp {
-/*   height: 1.5em; */
   padding-top: .3em;
   width: 20%;  
 }
@@ -264,7 +252,7 @@ ul {
   body {
     font-size: .8em; 
   }
-  .container {
+  .main-container {
       /* Add the blur effect */
     min-width: 325px;
     width: 100%;
@@ -275,7 +263,7 @@ ul {
     border: 5px 0px ridge lightgray;
 /*     border: 5px 0 5px 0 solid dimgray; */
   }
-  #locker-header1,
+
   #locker-header {
     padding: 5px;
   }
@@ -289,7 +277,7 @@ ul {
     position: relative;
     min-height: 7em;
   } */
-  #index1,
+
   #index { 
     border-radius: .5em .5em 0 0;
     margin: 0 auto;
