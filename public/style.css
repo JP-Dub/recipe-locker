@@ -17,7 +17,7 @@ body {
 
 /***** main div *****/
 
-.container{
+.main-container{
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d2ff52+0,91e842+100;Neon */
   background: #d2ff52; /* Old browsers */
   background: -webkit-linear-gradient(top,  #d2ff52 0%,#91e842 100%); /* Chrome10-25,Safari5.1-6 */
@@ -42,6 +42,7 @@ body {
 
 /***** main header div *****/
 
+/*#locker-header*/
 #locker-header {
   color: #d9b3ff;
   display: inline-block;
@@ -51,33 +52,40 @@ body {
   width: 100%;
 }
 
-#locker-header > h2:first-child {
+.main-header {
+  color: #d9b3ff;
+  display: inline-block;
+  padding: .3em;
+  height: 2.5em;
+  text-align: center;
+  width: 100%;
+}
+
+/* #locker-header*/ 
+.main-header > h2:first-child { 
   float: left;
   margin: 0;  
 }
 
-#locker-header > h2:nth-child(2) {
+/*#locker-header*/
+.main-header > h2:nth-child(2) {
   font-weight: bold;
   margin: 0 auto;
   width: 50%;  
 }
 
-#locker-header > h2:nth-child(3) {
+/*#locker-header*/
+.main-header > h2:nth-child(3) {
  float: right;  
 }
-/* .locker-div {
-  display: inherit;
-  height: 2em;
-  margin-top: 0;  
-  width: 20%; 
-} */
 
 .lckr {
   height: 2em;
   width: 20%;  
 }
 
-#locker-lock {
+/*#locker-lock*/
+#main-lock {
   color: black;
   float: right;
   font-size: .78em;
