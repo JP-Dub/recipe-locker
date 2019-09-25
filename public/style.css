@@ -16,6 +16,10 @@ body {
 }
 
 /***** main div *****/
+#main {
+  margin: 2em auto;
+  width: 75%;
+}
 
 .main-container{
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d2ff52+0,91e842+100;Neon */
@@ -35,9 +39,9 @@ body {
           box-shadow: 8px 4px 20px 10px dimgray;
   font-family: Arial;
   height: auto;   
-  margin: 2em auto;
+/*   margin: 2em auto; */
   padding: 0 1.5em 2em 1.5em;
-  width: 75%;
+/*   width: 75%; */
 }
 
 #main-account {
@@ -111,8 +115,10 @@ body {
 #food-columns {
   height: 70vh;
 }
+
 #accounts {
-  height: 32vh;
+  height: 25vh;
+  border: 1px solid red;
 }
 
 .flex {
