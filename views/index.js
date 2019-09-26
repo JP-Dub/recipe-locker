@@ -138,26 +138,18 @@ class Login extends Component {
     return (
       <ErrorBoundary>
         <div id="main-account" className="main-container">
-          <header id='account-header' className='main-header'>
-            <h2 className='lckr hdr-div'/>
-            <h2 className='lckr hdr-div'>User Account</h2>
-            <h2 className='lckr hdr-div'>
-              <i id='account-close' className='fas fa-window-close' title='close'/>
-            </h2>
+          <header id='account-header' className='ua-header'>
+            <h3>User Account</h3>         
+            <i id='account-close' className='fas fa-window-close lckr' title='close'/>
           </header>
-          
-          <div id='accounts' className='flex'>
-            <div id='twitter' className='flex-container'>
-              <header id='twitter-header' className='flex-header'>
-                <h3 className='idx hdr-div' />
-                <h3 className='idx hdr-div'>Twitter Login</h3>
-                <h3 className='idx hdr-div'>
-                  <i className='fab fa-twitter' title='sign in' />
-                </h3>
-              </header>
-              <div>
-                <p>Welcome to the Recipe Locker! If would like to add, create and edit or delete your own recipes, we ask that you sign in with Twitter. This will also prevent others from modifying or deleting your recipes. To do this, just click on the Twitter icon in the upper corner.</p>
-              </div>
+          <div id='twitter' className='flex-container'>
+            <header id='twitter-header' className='ua-header'>
+              <h3>Twitter Login</h3>
+              <i class='fab fa-twitter' title='add recipe' />
+            </header>
+            <div id='signin-info'>
+              <p>Welcome to the Recipe Locker!</p>
+              <p> If would like to add, create and edit or delete your own recipes, we ask that you sign in with Twitter. This will also prevent others from modifying or deleting your recipes. To do this, just click on the Twitter icon in the upper corner.</p>
             </div>
           </div>
         </div>
