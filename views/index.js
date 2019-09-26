@@ -142,7 +142,7 @@ class Login extends Component {
             <h2 className='lckr hdr-div'></h2>
             <h2 className='lckr hdr-div'>User Account</h2>          
             <h2 className='lckr hdr-div'>
-              <i id='account-close' className='fas fa-window-close' title='close'></i>
+              <i id='account-close' className='fas fa-window-close' title='close'/>
             </h2>
           </header>
           
@@ -152,7 +152,7 @@ class Login extends Component {
                 <h3 className='idx hdr-div' />
                 <h3 className='idx hdr-div'>Twitter Login</h3>
                 <h3 className='idx hdr-div'>
-                  <i className='fab fa-twitter' title='sign in'></i>
+                  <i className='fab fa-twitter' title='sign in' />
                 </h3>
               </header>
               <div>
