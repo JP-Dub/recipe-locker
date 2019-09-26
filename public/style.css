@@ -16,11 +16,11 @@ body {
 }
 
 /***** main div *****/
+
 #main {
   margin: 2em auto;
   width: 75%;
 }
-
 .main-container{
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d2ff52+0,91e842+100;Neon */
   background: #d2ff52; /* Old browsers */
@@ -53,12 +53,10 @@ body {
   text-align: center;
   width: 100%;
 }
-
 .lckr {
   height: 2em;
   width: 20%;  
 }
-
 .main-header > h2:first-child { 
   float: left;
   margin: 0;  
@@ -72,7 +70,6 @@ body {
 .main-header > h2:nth-child(3) {
  float: right;  
 }
-
 #account-close,
 #main-lock {
   color: black;
@@ -87,20 +84,17 @@ body {
 #food-columns {
   height: 50vh;
 }
-
 .flex {
   align-items: stretch;
   display: inline-flex; 
   overflow: hidden;
   width: 100%;
 }
-
 .flex-container {
   background-color: whitesmoke;
   border: 5px ridge lightgray;
   overflow: hidden;
 }
-
 .flex-header {
   background-color:#d9b3ff; 
   border-bottom: 1px solid dimgray;
@@ -110,10 +104,12 @@ body {
   text-align: center;
   width: 100%;
 }
-
 .hdr-div {
   display: inherit;
   margin-top: 0;   
+}
+i:hover {
+  cursor: pointer;
 }
 
 
@@ -124,7 +120,6 @@ body {
   order: 1;
   width: 30%;
 }
-
 #index-header > h3:first-child {
   float: right;
   width: 1%;
@@ -141,11 +136,11 @@ body {
   text-align: right;
   padding-right: .4em;  
 }
-
 .idx {
   padding-top: .1em;
   width: 15%;   
 }
+
 
 #index-table {
   height: 80vh;
@@ -164,7 +159,6 @@ td {
 }
 tbody {
   background-color: whitesmoke;
-
 }
 tr:nth-child(even) {
   background-color: lightgray;
@@ -202,9 +196,6 @@ tr:nth-child(even) {
   padding-right: .4em;
 }
 
-i:hover {
-  cursor: pointer;
-}
 
 ul {
   list-style-position: inside;
@@ -212,6 +203,7 @@ ul {
 
 
 /*****  User login  *****/
+
 #main-center {
   bottom: 0;
   height: 20em;
