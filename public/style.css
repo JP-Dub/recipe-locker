@@ -19,6 +19,7 @@ body {
 #main {
   margin: 2em auto;
   width: 75%;
+/*   height: auto; */
 }
 
 .main-container{
@@ -130,6 +131,7 @@ body {
 .flex {
   align-items: stretch;
   display: inline-flex; 
+  height: 70vh;
   overflow: hidden;
   width: 100%;
 }
@@ -289,6 +291,7 @@ ul {
 
 #main-account {
   bottom: 0;
+  height: auto;
   left: 0;
   margin: auto;
   max-width: 600px;
@@ -361,18 +364,14 @@ ul {
   }
   #main {
     min-width: 325px;
-    height: auto;
+/*     height: auto; */
     width: 100%;    
   }
+  
   .main-container {
       /* Add the blur effect */
-
     position: fixed;
-/*     border: 0;
-    border-top: 5px ridge lightgray;
-    border-bottom: 5px ridge lightgray; */
     border: 5px 0px ridge lightgray;
-/*     border: 5px 0 5px 0 solid dimgray; */
   }
 
   #locker-header {
@@ -381,7 +380,7 @@ ul {
 
   .flex {
     display: block;
-    height: auto;
+/*     height: auto; */
     padding: 0;
   } 
 /*   .flex-container {
