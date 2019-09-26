@@ -19,7 +19,6 @@ body {
 #main {
   margin: 2em auto;
   width: 75%;
-/*   height: auto; */
 }
 
 .main-container{
@@ -40,35 +39,11 @@ body {
           box-shadow: 8px 4px 20px 10px dimgray;
   font-family: Arial;
   height: auto;   
-/*   margin: 2em auto; */
   padding: 0 1.5em 1.5em 1.5em;
-/*   width: 75%; */
 }
 
-/* #main-account {
-  position: absolute;
-  margin: auto;
-  top: -20%;
-  right: 0;
-  bottom: 0;
-  left: 0;
-/*   transform: translate(50%, 50%); 
-  width: 40%;
-  height: 30%;
-} */
 
 /***** main header div *****/
-
-/*#locker-header*/
-/* #locker-header {
-  color: #d9b3ff;
-  display: inline-block;
-  padding: .3em;
-  height: 2.5em;
-  text-align: center;
-  width: 100%;
-
-} */
 
 .main-header {
   color: #d9b3ff;
@@ -84,31 +59,20 @@ body {
   width: 20%;  
 }
 
-/* #locker-header*/ 
 .main-header > h2:first-child { 
   float: left;
   margin: 0;  
 }
-
-/*#locker-header*/
 .main-header > h2:nth-child(2) {
   font-weight: bold;
   margin: 0 auto;
   padding-top: .1em;
   width: 50%;  
 }
-
-/*#locker-header*/
 .main-header > h2:nth-child(3) {
  float: right;  
 }
 
-
-/* #account-header {
-  font-size : .8em;
-} */
-
-/*#locker-lock*/
 #account-close,
 #main-lock {
   color: black;
@@ -121,30 +85,21 @@ body {
 /***** recipe and ingredients divs (x2) *****/
 
 #food-columns {
-/*   height: 70vh;
-  border: 1px solid blue; */
+  height: 50vh;
 }
-
-/* #accounts {
-  height: 25vh;
-} */
 
 .flex {
   align-items: stretch;
   display: inline-flex; 
-/*   height: 70vh; */
   overflow: hidden;
   width: 100%;
 }
-
 
 .flex-container {
   background-color: whitesmoke;
   border: 5px ridge lightgray;
   overflow: hidden;
 }
-
-/*  #index-header, #recipe-header  */
 
 .flex-header {
   background-color:#d9b3ff; 
@@ -168,14 +123,12 @@ body {
   border-radius: .5em 0 0 .5em;
   order: 1;
   width: 30%;
-/*   z-index: 3; */
 }
 
 #index-header > h3:first-child {
   float: right;
   width: 1%;
 }
-
 #index-header > h3:nth-child(2) {
   padding-left: .2em;
   float: left;
@@ -183,17 +136,16 @@ body {
   text-align: left;
   width: 80%; 
 }
-
 #index-header > h3:nth-child(3) {
   float: right;
   text-align: right;
   padding-right: .4em;  
 }
+
 .idx {
   padding-top: .1em;
   width: 15%;   
 }
-
 
 #index-table {
   height: 80vh;
@@ -266,22 +218,16 @@ ul {
   left: 0;
   margin: auto;
   max-width: 600px;
-  position: relative;
+  position: absolute;
   right: 0;
-  top: 20%; 
-  width: 50%;
-  border: 1px solid blue;  
+  top: -40%; 
+  width: 40%;
 }
 #main-account {
-  bottom: 0;
-  height: 19em;
-  left: 0;
   margin: auto;
   max-width: 600px;
   position: relative;
-  right: 0;
-  top: 20%; 
-  width: 40%;
+  width: 100%;
 }
 #twitter {
   -webkit-border-radius: .5em;
