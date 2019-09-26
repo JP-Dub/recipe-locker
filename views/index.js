@@ -32,7 +32,8 @@ class App extends Component {
   }
   
   componentDidMount() {
-     
+      let path   = window.location.pathname;
+      this.login = RegExp('^/login/.*').test(path);
   }
   
   componentWillUnMount() {}
@@ -140,14 +141,14 @@ class App extends Component {
 class Login extends Component {
   constructor(props) {
     super(props);
-    this.twitter = this.twitter.bind(this)
+    this.twitterHandler = this.twitterHandler.bind(this)
     this.state = {}
   }
   componentDidMount() {}
   
   componentWillUnMount() {}
   
-  twitter(evt) {
+  twitterHandler(evt) {
     evt.preventDefault();
     window.location.href = '/api/auth/twitter';      
   }
@@ -164,7 +165,7 @@ class Login extends Component {
             <div id='twitter' className='flex-container'>
               <header id='twitter-header' className='ua-header'>
                 <h3>Twitter Login</h3>
-                <i class='fab fa-twitter' title='sign in' onClick={this.twitter} />
+                <i class='fab fa-twitter' title='sign in' onClick={this.twitterHandler} />
               </header>
               <div id='signin-info'>
                 <p>Welcome to the Recipe Locker!</p>
