@@ -23,6 +23,7 @@ class App extends Component {
     
     this.state = {
       locked : 1,
+      login : 0,
       create : '', 
       edit   : '',
       delete : '',
@@ -33,7 +34,26 @@ class App extends Component {
   
   componentDidMount() {
       let path   = window.location.pathname;
-      this.login = RegExp('^/login/.*').test(path);
+      this.userPath = RegExp('^/login/.*').test(path);
+      
+      if(this.userPath) {
+        this.setState({
+           
+            login: 1,
+            create : 'fas fa-plus-square',
+            edit : 'far fa-edit',
+            delete : 'fas fa-trash'
+          })
+        } else {
+          this.setState({
+           
+            login: 0,
+            create : '',
+            edit : '',
+            delete : ''
+          })
+      }  
+    
   }
   
   componentWillUnMount() {}
@@ -42,23 +62,19 @@ class App extends Component {
     evt.preventDefault();
     // window.location.href = '/api/auth/twitter';  
     
-    if(this.state.locked) {
-      this.setState({
-        user: 'fas fa-unlock',
-        locked : 0, 
-        create : 'fas fa-plus-square',
-        edit : 'far fa-edit',
-        delete : 'fas fa-trash'
+    //if(this.state.locked) {
+      this.setState( state => {
+       return ({ 
+         locked: this.state.locked? 0 : 1,
+         user  : this.state.locked? 'fas fa-unlock': 'fas fa-lock'
+               })
       })
-    } else {
-      this.setState({
-        user: 'fas fa-lock',
-        locked: 1,
-        create : '',
-        edit : '',
-        delete : ''
-      })
-    }
+    //}
+    // } else {
+    //   this.setState({
+    //     locked : 1
+    //   })
+    // }
   }
   
   createRecipe() {
