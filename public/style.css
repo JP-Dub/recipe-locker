@@ -284,6 +284,61 @@ ul {
 }
 
 
+/*****  User login  *****/
+
+#main-account {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 600px;
+  position: relative;
+  right: 0;
+  top: 20%; 
+  width: 40%;
+}
+#twitter {
+  -webkit-border-radius: .5em;
+     -moz-border-radius: .5em;
+          border-radius: .5em;
+}
+.ua-header {
+  line-height: 2em;
+}
+#account-header > h3  {
+  padding-top: .3em;
+  text-align: center;
+}
+#twitter-header > h3 {
+  background-color:#d9b3ff; 
+  border-bottom: 1px solid dimgray;
+  font-weight: normal;
+  padding-left: .5em;
+  padding-top: .2em;
+}
+.ua-header > h3 {
+  display: inline-block;
+  margin: 0 auto;
+  width: 100%;
+}
+#account-header > i {
+  padding-top: .5em;
+  text-align: left;
+}
+#twitter-header > i {
+  font-size: 1.2em;
+  margin-left: -10%;
+  padding-right: .4em;
+  line-height: 1.75em;
+  text-align: right;
+}
+.ua-header > i {
+  position: absolute;
+  width: 10%;
+}
+#signin-info {
+  padding: 0 .75em;
+}
+
 /****** Media Queries ******/
 
 @media all and (min-width: 1281px) {
