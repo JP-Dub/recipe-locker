@@ -17,9 +17,9 @@ module.exports = function (passport) {
 	});
 	
 	passport.use(new TwitterStrategy({
-    	consumerKey: configAuth.twitter.consumerKey,
+    	consumerKey:    configAuth.twitter.consumerKey,
     	consumerSecret: configAuth.twitter.consumerSecret,
-    	callbackURL: configAuth.twitter.callbackURL
+    	callbackURL:    configAuth.twitter.callbackURL
 	},
 	function(token, tokenSecret, profile, cb) {
     	User.findOne({ 'twitter.id': profile.id }, function (err, user) {
@@ -39,7 +39,6 @@ module.exports = function (passport) {
 					newUser.twitter.id          = profile.id;
 					newUser.twitter.username    = profile.username;
 					newUser.twitter.displayName = profile.displayName;
-					newUser.twitter.location    = profile._json.location;
 
 					newUser.save(function (err) {
 						if (err) return console.error(err);

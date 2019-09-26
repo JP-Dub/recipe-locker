@@ -4,16 +4,17 @@ var Schema = mongoose.Schema;
 var Recipes = new Schema({
    user: {
      twitter : {
-       username: String,
-       id: String
+       username   : String,
+       displayName: String,
+       id         : String
      },
      local : {
-       username : String,
-       id : String
+       username: String,
+       id      : String
      },
      recipes : [{
        name: String,
-       ingredients : Array,
+       ingredients: Array,
        directions : Array
      }]
    }

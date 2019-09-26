@@ -2,8 +2,8 @@
 
 module.exports = {
 	'twitter' : {
-		'consumerKey' : process.env.TWITTER_KEY,
+		'consumerKey'   : process.env.TWITTER_KEY,
 		'consumerSecret': process.env.TWITTER_SECRET,
-		'callbackURL': process.env.TWITTER_URL
+		'callbackURL'   : process.env.TWITTER_URL
 	}
 };
