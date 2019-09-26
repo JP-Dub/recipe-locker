@@ -28,13 +28,13 @@ module.exports = function (passport) {
     			console.log("error")
     			return cb(err);
     		}
-    		
+    	
     		if (user) {
 					
 					return cb(null, user);
 				} else {
 					
-					var newUser = new User();
+					let newUser = new User();
 					
 					newUser.twitter.id          = profile.id;
 					newUser.twitter.username    = profile.username;

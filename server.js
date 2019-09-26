@@ -47,6 +47,12 @@ app.use(session({
 		}
 }));
 
+app.use('/api', proxy({
+  target : 'localhost',
+  port: 3000
+  })
+);
+
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
 
