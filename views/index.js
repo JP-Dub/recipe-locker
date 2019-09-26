@@ -137,6 +137,7 @@ class Login extends Component {
   render() {
     return (
       <ErrorBoundary>
+        <div id='main-center'>
         <div id="main-account" className="main-container">
           <header id='account-header' className='ua-header'>
             <h3>User Account</h3>         
@@ -152,6 +153,7 @@ class Login extends Component {
               <p> If would like to add, create and edit or delete your own recipes, we ask that you sign in with Twitter. This will also prevent others from modifying or deleting your recipes. To do this, just click on the Twitter icon in the upper corner.</p>
             </div>
           </div>
+        </div>
         </div>
       </ErrorBoundary>
     )
