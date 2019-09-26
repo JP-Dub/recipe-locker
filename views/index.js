@@ -3,7 +3,19 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import '../public/style.css';
 
+// Used with BrowserRouter for React Paths
 class Main extends Component {
+    render() {
+      return (
+        <BrowserRouter>
+          <Route exact path='/' strict component={App} />
+          <Route exact path='/login/:user' component={App} />
+        </BrowserRouter>
+        );
+    }
+  }
+
+class App extends Component {
   constructor(props) {
     super(props);
     this.userLogin = this.userLogin.bind(this);
