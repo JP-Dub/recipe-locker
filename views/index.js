@@ -139,8 +139,8 @@ class Login extends Component {
       <ErrorBoundary>
         <div id="main-account" className="main-container">
           <header id='account-header' className='main-header'>
-            <h2 className='lckr hdr-div'></h2>
-            <h2 className='lckr hdr-div'>User Account</h2>          
+            <h2 className='lckr hdr-div'/>
+            <h2 className='lckr hdr-div'>User Account</h2>
             <h2 className='lckr hdr-div'>
               <i id='account-close' className='fas fa-window-close' title='close'/>
             </h2>

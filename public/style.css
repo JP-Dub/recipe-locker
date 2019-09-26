@@ -100,6 +100,10 @@ body {
   width: 20%;  
 }
 
+#account-header {
+  font-size : .8em;
+}
+
 /*#locker-lock*/
 #account-close,
 #main-lock {
