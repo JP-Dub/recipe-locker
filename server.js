@@ -34,6 +34,12 @@ mongoose.connect(process.env.MONGO_URI, {
 
 mongoose.Promise = global.Promise;
 
+app.use('/api', proxy({
+  target : 'localhost',
+  port: 3000
+  })
+);
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -46,12 +52,6 @@ app.use(session({
 	    secure: true
 		}
 }));
-
-app.use('/api', proxy({
-  target : 'localhost',
-  port: 3000
-  })
-);
 
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));

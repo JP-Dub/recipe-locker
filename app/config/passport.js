@@ -41,6 +41,7 @@ module.exports = function (passport) {
 					newUser.twitter.displayName = profile.displayName;
 
 					newUser.save(function (err) {
+            console.log('Error', err)
 						if (err) return console.error(err);
 						
 						return cb(null, newUser);
