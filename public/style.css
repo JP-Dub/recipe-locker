@@ -41,7 +41,7 @@ body {
   font-family: Arial;
   height: auto;   
 /*   margin: 2em auto; */
-  padding: 0 1.5em 2em 1.5em;
+  padding: 0 1.5em 1.5em 1.5em;
 /*   width: 75%; */
 }
 
@@ -121,7 +121,8 @@ body {
 /***** recipe and ingredients divs (x2) *****/
 
 #food-columns {
-  height: 70vh;
+/*   height: 70vh;
+  border: 1px solid blue; */
 }
 
 /* #accounts {
@@ -131,7 +132,7 @@ body {
 .flex {
   align-items: stretch;
   display: inline-flex; 
-  height: 70vh;
+/*   height: 70vh; */
   overflow: hidden;
   width: 100%;
 }
@@ -162,26 +163,6 @@ body {
 
 
 /***** recipe index div *****/
-/* #twitter {
-  border-radius: .5em;
-  width: 100%;
-}
-
-#twitter-header > h3:first-child {
-  float: left;
-  width: 10%;
-}
-#twitter-header > h3:nth-child(2) {
-  padding-left: .2em;
-  margin-left: 0 auto;
-  text-align: center;
-  width: 75%; 
-}
-#twitter-header > h3:nth-child(3) {
-  float: right;
-  text-align: right;
-  padding-right: .4em;  
-} */
 
 #index {
   border-radius: .5em 0 0 .5em;
@@ -245,38 +226,29 @@ tr:nth-child(even) {
   order: 2;
   width: 70%;
 }
-
-
 #recipe-header {
   padding: 0;
 }
-
-
 #recipe-header > h3:first-child {
   float: left;  
 }
-
 #recipe-header > h3:nth-child(2) {
   margin: 0;
   text-align: center;
   width: 50%;  
 }
-
 #recipe-header > h3:nth-child(3) {
   float: right;
   padding-right: .4em;
   text-align: right;  
 }
-
 .rcp {
   padding-top: .3em;
   width: 20%;  
 }
-
 .fa-edit {
   padding-right: .4em;
 }
-
 
 i:hover {
   cursor: pointer;
@@ -364,7 +336,6 @@ ul {
   }
   #main {
     min-width: 325px;
-/*     height: auto; */
     width: 100%;    
   }
   
@@ -380,13 +351,9 @@ ul {
 
   .flex {
     display: block;
-/*     height: auto; */
     padding: 0;
   } 
-/*   .flex-container {
-    position: relative;
-    min-height: 7em;
-  } */
+
 
   #index { 
     border-radius: .5em .5em 0 0;
@@ -433,7 +400,7 @@ ul {
 
   #recipe {
     margin: 1em auto;
-    height: 60vh;
+    height: 50vh;
     min-height: 30vh;
     width: 99%; 
     overflow: auto;
