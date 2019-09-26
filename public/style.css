@@ -77,6 +77,11 @@ body {
   width: 100%;
 }
 
+.lckr {
+  height: 2em;
+  width: 20%;  
+}
+
 /* #locker-header*/ 
 .main-header > h2:first-child { 
   float: left;
@@ -95,10 +100,6 @@ body {
  float: right;  
 }
 
-.lckr {
-  height: 2em;
-  width: 20%;  
-}
 
 #account-header {
   font-size : .8em;
