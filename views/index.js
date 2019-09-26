@@ -119,7 +119,7 @@ class Main extends Component {
             </div>
           </div>
         </div>
-        {!this.state.locked? <Login /> : <div/>}
+        {!this.state.locked? <Login userLogin={this.userLogin} /> : <div/>}
       </ErrorBoundary>
       );
   }
@@ -128,32 +128,38 @@ class Main extends Component {
 class Login extends Component {
   constructor(props) {
     super(props);
+    this.twitter = this.twitter.bind(this)
     this.state = {}
   }
   componentDidMount() {}
   
   componentWillUnMount() {}
   
+  twitter(evt) {
+    evt.preventDefault();
+    window.location.href = '/api/auth/twitter';      
+  }
+  
   render() {
     return (
       <ErrorBoundary>
         <div id='main-center'>
-        <div id="main-account" className="main-container">
-          <header id='account-header' className='ua-header'>
-            <h3>User Account</h3>         
-            <i id='account-close' className='fas fa-window-close lckr' title='close'/>
-          </header>
-          <div id='twitter' className='flex-container'>
-            <header id='twitter-header' className='ua-header'>
-              <h3>Twitter Login</h3>
-              <i class='fab fa-twitter' title='add recipe' />
+          <div id="main-account" className="main-container">
+            <header id='account-header' className='ua-header'>
+              <h3>User Account</h3>         
+              <i id='account-close' className='fas fa-window-close lckr' title='close' onClick={this.props.userLogin}/>
             </header>
-            <div id='signin-info'>
-              <p>Welcome to the Recipe Locker!</p>
-              <p> If would like to add, create and edit or delete your own recipes, we ask that you sign in with Twitter. This will also prevent others from modifying or deleting your recipes. To do this, just click on the Twitter icon in the upper corner.</p>
+            <div id='twitter' className='flex-container'>
+              <header id='twitter-header' className='ua-header'>
+                <h3>Twitter Login</h3>
+                <i class='fab fa-twitter' title='sign in' onClick={this.twitter} />
+              </header>
+              <div id='signin-info'>
+                <p>Welcome to the Recipe Locker!</p>
+                <p> If would like to add, create and edit or delete your own recipes, we ask that you sign in with Twitter. This will also prevent others from modifying or deleting your recipes. To do this, just click on the Twitter icon in the upper corner.</p>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </ErrorBoundary>
     )
