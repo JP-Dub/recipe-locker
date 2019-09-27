@@ -2,7 +2,6 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var Recipes = new Schema({
-   user: {
      twitter : {
        username   : String,
        displayName: String,
@@ -17,7 +16,6 @@ var Recipes = new Schema({
        ingredients: Array,
        directions : Array
      }]
-   }
 });
 
 module.exports = mongoose.model('Recipes', Recipes);

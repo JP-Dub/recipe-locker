@@ -38,20 +38,20 @@ class App extends Component {
       
       if(this.userPath) {
         this.setState({
-           
-            login: 1,
+            locked : 0,
+            login  : 1,
             create : 'fas fa-plus-square',
-            edit : 'far fa-edit',
-            delete : 'fas fa-trash'
+            edit   : 'far fa-edit',
+            delete : 'fas fa-trash',
+            user   : 'fas fa-lock-open'
           })
         } else {
-          this.setState({
-           
-            login: 0,
-            create : '',
-            edit : '',
-            delete : ''
-          })
+          // this.setState({           
+          //   login: 0,
+          //   create : '',
+          //   edit : '',
+          //   delete : ''
+          // })
       }  
     
   }
