@@ -35,11 +35,11 @@ module.exports = function (passport) {
 				} else {
 					
 					let newUser = new User();
-					
+					console.log('profile', profile.constructor, profile.id)
 					newUser.twitter.id          = profile.id;
 					newUser.twitter.username    = profile.username;
 					newUser.twitter.displayName = profile.displayName;
-
+          console.log('newUser', newUser)
 					newUser.save(function (err) {
             console.log('Error', err)
 						if (err) return console.error(err);
