@@ -83,6 +83,7 @@ body {
 
 #food-columns {
   height: 50vh;
+  border: 1px solid red;
 }
 .flex {
   align-items: stretch;
@@ -346,10 +347,10 @@ ul {
     text-align: center;
     border-top: 1px solid black;
   }  
-
+  #food
   #recipe {
     margin: 1em auto;
-    height: 50vh;
+/*     height: 30vh; */
     min-height: 30vh;
     width: 99%; 
     overflow: auto;
