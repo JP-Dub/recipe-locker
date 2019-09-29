@@ -285,6 +285,7 @@ ul {
     font-size: .8em; 
   }
   #main {
+    margin: 0;
     min-width: 325px;
     width: 100%;    
   }
@@ -310,6 +311,7 @@ ul {
     margin: 0 auto;
     min-height: 1.5em;
     max-height: 15vh; 
+/*     height: 30%; */
     padding: 0;
     width: 99%;
   }
@@ -347,11 +349,14 @@ ul {
     text-align: center;
     border-top: 1px solid black;
   }  
-  #food
+  #food-columns {
+    height: auto;
+  }
   #recipe {
     margin: 1em auto;
-/*     height: 30vh; */
-    min-height: 30vh;
+    margin-bottom: 0;
+    height: 60vh;
+/*     min-height: 30vh; */
     width: 99%; 
     overflow: auto;
     border-radius: 0 0 .5em .5em;
