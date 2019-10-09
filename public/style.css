@@ -289,13 +289,16 @@ ul {
   #main {
     margin: 0;
     min-width: 325px;
-    width: 100%;    
+    width: 100%;
   }
   
   .main-container {
-      /* Add the blur effect */
-/*     position: fixed; */
+   /* Add the blur effect */
+   /* position: fixed; */
     border: 5px 0px ridge lightgray;
+    -webkit-box-shadow: initial;
+       -moz-box-shadow: initial;
+            box-shadow: initial;    
   }
 
   #locker-header {
