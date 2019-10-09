@@ -5,6 +5,7 @@ import Login from '../views/login';
 import ErrorBoundary from '../views/errorboundary';
 
 import "../public/style.css";
+import "../public/create.css";
 
 
 // Used with BrowserRouter for React Paths
@@ -22,7 +23,7 @@ class Main extends Component {
 class App extends Component {
   constructor(props) {
     super(props);
-    this.userLogin = this.userLogin.bind(this);
+    // this.userLogin = this.userLogin.bind(this);
 
     this.state = {
       locked  : 1,
@@ -76,7 +77,9 @@ class App extends Component {
 
   }
 
-  addRecipe() {}
+  addRecipe(evt) {
+    
+  }
 
   editRecipe() {}
 
