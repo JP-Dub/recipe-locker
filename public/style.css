@@ -8,11 +8,11 @@
 
 body {
   background-color: whitesmoke;
-  height: 99vh;
+  height: 100vh;
   margin: 0;
   overflow: auto;
   padding: 0;
-  width: 99.5%;
+  width: 100vw;
 }
 
 /***** main div *****/
@@ -74,7 +74,7 @@ body {
 #main-lock {
   color: black;
   float: right;
-/*   font-size: .78em; */
+  font-size: .85em;
   padding-top: .1em;
   padding-right: .55em;
 }
@@ -303,6 +303,7 @@ ul {
 
   #locker-header {
     padding: 5px;
+    border: 1px solid red;
   }
 
   .flex {
@@ -371,6 +372,7 @@ ul {
     padding-top: .3em;
   }
   
+  /* user-login */
   #main-center {
     width: 100%;
   }
