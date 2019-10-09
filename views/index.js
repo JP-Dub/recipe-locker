@@ -23,7 +23,8 @@ class Main extends Component {
 class App extends Component {
   constructor(props) {
     super(props);
-    // this.userLogin = this.userLogin.bind(this);
+    this.userLogin = this.userLogin.bind(this);
+    this.addRecipe = this.addRecipe.bind(this);
 
     this.state = {
       locked  : 1,
