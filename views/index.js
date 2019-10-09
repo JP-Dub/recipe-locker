@@ -53,16 +53,18 @@ class App extends Component {
 
   userLogin(evt) {
     evt.preventDefault();
-    console.log(evt.target, this.userPath)
+    console.log(evt.target.id, this.userPath, this.state.locked)
     // window.location.href = '/api/auth/twitter';
    // if(!this.userPath) {
+    let target = evt.target.id === 'main-lock' ? 0 : 1;  
       this.setState(state => {
         return {
-          locked: this.state.locked ? 0 : 1,
+          locked: target,
           user  : this.state.locked ? "fas fa-unlock" : "fas fa-lock"
         };
         /*
-        
+          locked: this.state.locked ? 0 : 1,
+          user  : this.state.locked ? "fas fa-unlock" : "fas fa-lock"
         */
       });
    // }
