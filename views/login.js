@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import ErrorBoundary from '../views/errorboundary';
 
-export class Login extends Component {
+class Login extends Component {
   constructor(props) {
     super(props);
     this.twitterHandler = this.twitterHandler.bind(this);
@@ -33,7 +34,7 @@ export class Login extends Component {
               <header id="twitter-header" className="ua-header">
                 <h3>Twitter Login</h3>
                 <i
-                  class="fab fa-twitter"
+                  className="fab fa-twitter"
                   title="sign in"
                   onClick={this.twitterHandler}
                 />
@@ -55,3 +56,5 @@ export class Login extends Component {
     );
   }
 }
+
+export default Login;
