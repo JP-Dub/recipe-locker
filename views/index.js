@@ -23,16 +23,15 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.userLogin = this.userLogin.bind(this);
-    // this.twitterHandler = this.twitterHandler.bind(this);
 
     this.state = {
-      locked: 1,
-      login: 0,
-      create: "",
-      edit: "",
-      delete: "",
+      locked  : 1,
+      login   : 0,
+      create  : "",
+      edit    : "",
+      delete  : "",
       unlocked: "fas fa-lock-open",
-      user: "fas fa-lock"
+      user    : "fas fa-lock"
     };
   }
 
@@ -43,9 +42,9 @@ class App extends Component {
     if (this.userPath) {
       this.setState({
         create: "fas fa-plus-square",
-        edit: "far fa-edit",
+        edit  : "far fa-edit",
         delete: "fas fa-trash",
-        user: "fas fa-lock-open"
+        user  : "fas fa-lock-open"
       });
     }
   }

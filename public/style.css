@@ -212,7 +212,7 @@ ul {
   max-width: 600px;
   position: absolute;
   right: 0;
-  top: -40%; 
+  top: 0%; 
   width: 40%;
 }
 #main-account {
@@ -276,6 +276,9 @@ ul {
 @media all and (max-width: 1280px) and (min-width: 851px) {
   body {
     font-size: 1em;
+  }
+  #main-center {
+    width: 60%;
   }
 }
  
@@ -365,6 +368,9 @@ ul {
     padding-top: .3em;
   }
   
+  #main-center {
+    width: 100%;
+  }
 
 }
 
