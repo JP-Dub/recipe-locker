@@ -55,7 +55,6 @@ class App extends Component {
     evt.preventDefault();
     // window.location.href = '/api/auth/twitter';
 
-    //if(this.state.locked) {
     this.setState(state => {
       return {
         locked: this.state.locked ? 0 : 1,
