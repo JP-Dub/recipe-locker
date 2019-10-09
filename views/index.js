@@ -54,19 +54,15 @@ class App extends Component {
   userLogin(evt) {
     evt.preventDefault();
     // window.location.href = '/api/auth/twitter';
+    if(!this.userPath) {
+      this.setState(state => {
+        return {
+          locked: this.state.locked ? 0 : 1,
+          user  : this.state.locked ? "fas fa-unlock" : "fas fa-lock"
+        };
+      });
+    }
 
-    this.setState(state => {
-      return {
-        locked: this.state.locked ? 0 : 1,
-        user  : this.state.locked ? "fas fa-unlock" : "fas fa-lock"
-      };
-    });
-    //}
-    // } else {
-    //   this.setState({
-    //     locked : 1
-    //   })
-    // }
   }
 
   addRecipe() {}

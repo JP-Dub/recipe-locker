@@ -40,7 +40,7 @@ body {
           box-shadow: 8px 4px 20px 10px dimgray;
   font-family: Arial;
   height: auto;   
-  padding: 0 1.5em 0 1.5em;
+  padding: 0 1.5em 2em 1.5em;
 }
 
 
@@ -302,7 +302,8 @@ ul {
     border: 5px 0px ridge lightgray;
     -webkit-box-shadow: initial;
        -moz-box-shadow: initial;
-            box-shadow: initial;    
+            box-shadow: initial; 
+    padding-bottom: 0;
   }
 
   #locker-header {
