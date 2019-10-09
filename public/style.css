@@ -83,7 +83,6 @@ body {
 
 #food-columns {
   height: 50vh;
-  border: 1px solid red;
 }
 .flex {
   align-items: stretch;
