@@ -324,7 +324,7 @@ ul {
 /*     max-height: 15vh;  allows height to grow and shrink when set*/
 /*     height: 30%; */
     padding: 0;
-    width: 99%;
+    width: 100%;
   }
 
   #index-header { 
@@ -364,8 +364,8 @@ ul {
     height: auto;
   }
   #recipe {
-    margin: 1em auto;
-    margin-bottom: 0;
+    margin: 2em auto;
+    margin-bottom: 2em;
     height: 60vh;
 /*     min-height: 30vh; */
     width: 99%; 
