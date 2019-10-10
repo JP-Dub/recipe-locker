@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ErrorBoundary from "../views/errorboundary";
 
-class newRecipe extends Component {
+class NewRecipe extends Component {
   constructor(props) {
     super(props);
    
@@ -25,24 +25,31 @@ class newRecipe extends Component {
                 onClick={this.props.userLogin}
               />
             </header>
-            <div id="twitter" className="flex-container">
-              <header id="twitter-header" className="ua-header">
-                <h3>Name of recipe</h3>
-                <i
-                  className="fab fa-twitter"
-                  title="sign in"
-                  onClick={this.twitterHandler}
-                />
-              </header>
-              <div id="signin-info">
-                <textarea></textarea>
+            <form>
+              <div id="" className="flex-container brder">
+                <header id="" className="ua-header headr">
+                  <h3>Name</h3>
+                </header>
+                <input id="name" />        
               </div>
-            </div>
-          </div>
+              <div id="" className="flex-container brder">
+                <header id="" className="ua-header headr">
+                  <h3>Ingredients</h3>
+                </header>
+                <textarea id="ingredients" />        
+              </div>
+              <div id="" className="flex-container brder">
+                <header id="" className="ua-header headr">
+                  <h3>Directions</h3>
+                </header>
+                <textarea id="directions" />        
+              </div> 
+            </form>           
+          </div>         
         </div>
       </ErrorBoundary>
     );
   }
 }
 
-export default newRecipe;
+export default NewRecipe;
