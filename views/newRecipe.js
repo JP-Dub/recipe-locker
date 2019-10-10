@@ -23,7 +23,9 @@ class NewRecipe extends Component {
 
   submitForm() {
     console.log(this.state)
-    ajax.ready(ajax.)
+    ajax.ready(ajax.request('POST', '/createRecipe', this.state, (data) => {
+      console.log(data)
+    }))
   }  
   
   changeHandler(evt) {

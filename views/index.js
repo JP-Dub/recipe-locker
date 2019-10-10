@@ -231,13 +231,13 @@ const ajax = {
                 k => encodeURIComponent(k) + "=" + encodeURIComponent(data[k])
               )
               .join("&");
-
+console.log(url, 'url')
     xmlhttp.open(method, url, true);
 
     xmlhttp.onreadystatechange = function() {
       if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
         let res = JSON.parse(xmlhttp.response);
-
+        console.log(res, xmlhttp.response)
         if (res.statusCode === 400) return alert(res.response.body);
 
         callback(res);

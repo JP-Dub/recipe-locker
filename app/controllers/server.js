@@ -4,6 +4,7 @@ function ClickHandler() {
   
   this.createRecipe = (req, res) => {
     console.log(req.body)
+    res.json(req.body)
   }
   
 }

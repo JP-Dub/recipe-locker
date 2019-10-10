@@ -30,7 +30,7 @@ module.exports = (app, passport, cors) => {
 //   app.route('/resetRSVP')
 //     .put( handleServer.resetRSVP );  
   app.route('/createRecipe')
-    .post(isLoggedIn, handleServer.createRecipe);
+    .post(handleServer.createRecipe);
 		
 	app.get('/auth/twitter', passport.authenticate( 'twitter' ) );
 
