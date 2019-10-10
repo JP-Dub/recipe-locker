@@ -95,7 +95,7 @@ class App extends Component {
   deleteRecipe() {}
   
   renderUI() {
-    console.log(this.state.newRecipe, this.state.locked)
+  
     if(!this.state.locked) {
       return(
        <Login userLogin={this.userLogin} /> 
