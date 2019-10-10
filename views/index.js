@@ -90,7 +90,18 @@ class App extends Component {
   deleteRecipe() {}
   
   renderUI() {
-    !this.state.locked ? <Login userLogin={this.userLogin}/> 
+    if(!this.state.locked) {
+      return(
+       <Login userLogin={this.userLogin} /> 
+     );
+    } else
+    if(!this.state.create) {
+      return(
+        <NewRecipe />
+      )
+    } else {
+      return( <div />);
+    }
                         
   }
 
@@ -183,7 +194,7 @@ class App extends Component {
             </div>
           </div>
         </div>
-        { !this.state.locked ? <Login userLogin={this.userLogin} /> : <div /> }
+        { this.renderUI()}
       </ErrorBoundary>
     );
   }
