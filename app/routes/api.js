@@ -11,7 +11,7 @@ module.exports = (app, passport, cors) => {
 		}
 	}
 	
-	let handleServer = new Server();
+	const handleServer = new Server();
   
 //   app.get('/demo', (req, res) => {
 //     res.redirect('/rsvp/demo');
@@ -29,6 +29,8 @@ module.exports = (app, passport, cors) => {
   
 //   app.route('/resetRSVP')
 //     .put( handleServer.resetRSVP );  
+  app.route('/createRecipe')
+    .post(isLoggedIn, handlServer.createRecipe)
 		
 	app.get('/auth/twitter', passport.authenticate( 'twitter' ) );
 
