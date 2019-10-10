@@ -1,20 +1,15 @@
 import React, { Component } from "react";
-import ErrorBoundary from '../views/errorboundary';
+import ErrorBoundary from "../views/errorboundary";
 
-class Login extends Component {
+class newRecipe extends Component {
   constructor(props) {
     super(props);
-    this.twitterHandler = this.twitterHandler.bind(this);
+   
     this.state = {};
   }
   componentDidMount() {}
 
   componentWillUnMount() {}
-
-  twitterHandler(evt) {
-    evt.preventDefault();
-    window.location.href = "/api/auth/twitter";
-  }
 
   render() {
     return (
@@ -22,7 +17,7 @@ class Login extends Component {
         <div id="main-center">
           <div id="main-account" className="main-container">
             <header id="account-header" className="ua-header">
-              <h3>User Account</h3>
+              <h3>New Recipe</h3>
               <i
                 id="account-close"
                 className="fas fa-window-close lckr"
@@ -42,7 +37,6 @@ class Login extends Component {
               <div id="signin-info">
                 <p>Welcome to the Recipe Locker!</p>
                 <p>
-                
                   If would like to add, create and edit or delete your own
                   recipes, we ask that you sign in with Twitter. This will also
                   prevent others from modifying or deleting your recipes. To do
@@ -57,4 +51,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default newRecipe;

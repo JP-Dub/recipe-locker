@@ -216,7 +216,6 @@ ul {
   top: 0%; 
   width: 40%;
 }
-
 #main-account {
   margin: auto;
   max-width: 600px;
@@ -224,9 +223,9 @@ ul {
   width: 100%;
 }
 #main-account.main-container {
-  -webkit-box-border: initial;
-     -moz-box-border: initial;
-  box-border: initial;
+  -webkit-box-shadow: initial;
+     -moz-box-shadow: initial;
+          box-shadow: initial;
 }
 #twitter {
   -webkit-border-radius: .5em;
