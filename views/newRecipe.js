@@ -7,6 +7,9 @@ class NewRecipe extends Component {
   constructor(props) {
     super(props);
     this.submitForm = this.submitForm.bind(this);
+    this.changeHandler = this.changeHandler.bind(this);
+     // this.changeHandler = this.ingredientHandler.bind(this);
+     // this.changeHandler = this.directionHandler.bind(this);
     
     this.state = {
       name: ""
@@ -20,8 +23,15 @@ class NewRecipe extends Component {
     console.log(document.newRecipeForm)
   }  
   
+  changeHandler(evt) {
+    console.log(evt.target.value)
+    this.setState({
+      name : evt.target.value
+    })
+  }
+  
   render() {
-    console.log(this.props)
+   
     return (
       <ErrorBoundary>
         <div id="main-center">
@@ -40,19 +50,19 @@ class NewRecipe extends Component {
                 <header className="ua-header headr">
                   <h3>Name</h3>
                 </header>
-                <input id="name" value="" onChange={this.state.name} required />        
+                <input id="name" value={this.state.name} onChange={this.changeHandler} required />        
               </div>
               <div className="flex-container brder">
                 <header className="ua-header headr">
                   <h3>Ingredients</h3>
                 </header>
-                <textarea id="ingredients" value="" required/>        
+                <textarea id="ingredients" value={this.state.ingredients} onChange={this.changeHandler} required/>        
               </div>
               <div className="flex-container brder">
                 <header className="ua-header headr">
                   <h3>Directions</h3>
                 </header>
-                <textarea id="directions" value="" required/>        
+                <textarea id="directions" value={this.state.directions} onChange={this.changeHandler} required/>        
               </div> 
               <div id='bttn-div'>
                 <input id='save' value='Save' type='submit' onClick={this.submitForm}/>

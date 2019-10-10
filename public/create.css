@@ -2,7 +2,7 @@
   -webkit-border-radius: .5em;
      -moz-border-radius: .5em;
           border-radius: .5em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 .brder:last-child {
   margin-bottom: 0;
@@ -16,7 +16,7 @@
 }
 
 #name {
-  height: 2.5em;
+  height: 2em;
 }
 #ingredients {
 
@@ -41,7 +41,7 @@
   position: relative;
   width: 100%;
   font-weight: bold;
-  height: 2.5em;
+  height: 2em;
   margin-left: auto;
   margin-right: auto;
 }
