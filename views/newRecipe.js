@@ -23,9 +23,9 @@ class NewRecipe extends Component {
 
   submitForm() {
     console.log(this.state)
-    ajax.ready(ajax.request('POST', '/createRecipe', this.state, (data) => {
-      console.log(data)
-    }))
+    // ajax.ready(ajax.request('POST', '/createRecipe', this.state, (data) => {
+    //   console.log(data)
+    // }))
   }  
   
   changeHandler(evt) {
@@ -64,27 +64,27 @@ class NewRecipe extends Component {
                 onClick={this.props.userLogin}
               />
             </header>
-            <form id="newRecipeForm">
+            <form id="newRecipeForm" method='POST' action='../api/createRecipe'>
               <div className="flex-container brder">
                 <header className="ua-header headr">
                   <h3>Name</h3>
                 </header>
-                <input id="name" value={this.state.name} onChange={this.changeHandler} required />        
+                <input id="name" name='name' value={this.state.name} onChange={this.changeHandler} required />        
               </div>
               <div className="flex-container brder">
                 <header className="ua-header headr">
                   <h3>Ingredients</h3>
                 </header>
-                <textarea id="ingredients" value={this.state.ingredients} onChange={this.ingredientsHandler} required/>        
+                <textarea id="ingredients" name='ingredients' value={this.state.ingredients} onChange={this.ingredientsHandler} required/>        
               </div>
               <div className="flex-container brder">
                 <header className="ua-header headr">
                   <h3>Directions</h3>
                 </header>
-                <textarea id="directions" value={this.state.directions} onChange={this.directionsHandler} required/>        
+                <textarea id="directions" name='directions' value={this.state.directions} onChange={this.directionsHandler} required/>        
               </div> 
               <div id='bttn-div'>
-                <input id='save' value='Save' type='button' onClick={this.submitForm}/>
+                <input id='save' value='Save' type='submit' onClick={this.submitForm}/>
               </div>
             </form>           
           </div>         
