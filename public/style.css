@@ -216,11 +216,17 @@ ul {
   top: 0%; 
   width: 40%;
 }
+
 #main-account {
   margin: auto;
   max-width: 600px;
   position: relative;
   width: 100%;
+}
+#main-account.main-container {
+  -webkit-box-border: initial;
+     -moz-box-border: initial;
+  box-border: initial;
 }
 #twitter {
   -webkit-border-radius: .5em;
@@ -317,6 +323,10 @@ ul {
     display: block;
     padding: 0;
   } 
+  
+  #food-columns {
+    height: auto;
+  }
 
 
   #index { 
@@ -362,9 +372,7 @@ ul {
     text-align: center;
     border-top: 1px solid black;
   }  
-  #food-columns {
-    height: auto;
-  }
+
   #recipe {
     margin: 2em auto;
 /*     margin-bottom: 2em; */
