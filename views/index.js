@@ -73,12 +73,6 @@ class App extends Component {
         })
       }
     }
-      // this.setState(state => {
-      //   return {
-      //     locked: target === 'main-lock' ? 0 : 1,
-      //     user  : this.state.locked && target === 'main-lock' ? "fas fa-unlock" : "fas fa-lock"
-      //   };
-      // });
 
   }
 
@@ -118,7 +112,7 @@ class App extends Component {
   }
 
   render() {
-    console.log('anything?')
+  
     return (
       <ErrorBoundary>
         <div id="main" className="main-container">

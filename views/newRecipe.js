@@ -8,8 +8,8 @@ class NewRecipe extends Component {
     super(props);
     this.submitForm = this.submitForm.bind(this);
     this.changeHandler = this.changeHandler.bind(this);
-     // this.changeHandler = this.ingredientHandler.bind(this);
-     // this.changeHandler = this.directionHandler.bind(this);
+     this.changeHandler = this.ingredientsHandler.bind(this);
+     this.changeHandler = this.directionsHandler.bind(this);
     
     this.state = {
       name: "",
@@ -30,8 +30,16 @@ class NewRecipe extends Component {
     let id = evt.target.id;
     
     this.setState({
-      id : evt.target.value
+      name : evt.target.value
     })
+  }
+  
+  ingredientsHandler(evt) {
+    
+  }
+  
+  directionsHandler(evt) {
+    
   }
   
   render() {
