@@ -384,6 +384,9 @@ ul {
   #main-center {
     width: 100%;
   }
+  #main-account {
+    padding-bottom: 2em;
+  }
 
 }
 
