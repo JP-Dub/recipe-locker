@@ -30,6 +30,7 @@ class App extends Component {
     this.createRecipe = this.createRecipe.bind(this);
 
     this.state = {
+      newRecipe: 0,
       locked  : 1,
       login   : 0,
       create  : "",
@@ -82,7 +83,10 @@ class App extends Component {
   }
 
   createRecipe(evt) {
-    
+    console.log(event.target.id)
+    if( evt.target.id === 'de nada') {
+      console.log('nothing')
+    }
   }
 
   editRecipe() {}
@@ -95,9 +99,9 @@ class App extends Component {
        <Login userLogin={this.userLogin} /> 
      );
     } else
-    if(!this.state.create) {
+    if(this.state.newRecipe) {
       return(
-        <NewRecipe />
+        <NewRecipe userLogin={this.userLogin} />
       )
     } else {
       return( <div />);
@@ -127,7 +131,9 @@ class App extends Component {
                 <h3 className="idx hdr-div" />
                 <h3 className="idx hdr-div">Recipe Name</h3>
                 <h3 className="idx hdr-div">
-                  <i className={this.state.create} title="add recipe" />
+                  <i className={this.state.create} 
+                     onClick={this.createRecipe}
+                     title="add recipe" />
                 </h3>
               </header>
               <div id="index-table">
@@ -194,7 +200,7 @@ class App extends Component {
             </div>
           </div>
         </div>
-        { this.renderUI()}
+        { this.renderUI() }
       </ErrorBoundary>
     );
   }

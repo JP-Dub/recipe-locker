@@ -41,8 +41,7 @@ class Login extends Component {
               </header>
               <div id="signin-info">
                 <p>Welcome to the Recipe Locker!</p>
-                <p>
-                
+                <p>              
                   If would like to add, create and edit or delete your own
                   recipes, we ask that you sign in with Twitter. This will also
                   prevent others from modifying or deleting your recipes. To do
