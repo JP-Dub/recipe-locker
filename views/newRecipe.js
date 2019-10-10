@@ -27,7 +27,7 @@ class newRecipe extends Component {
             </header>
             <div id="twitter" className="flex-container">
               <header id="twitter-header" className="ua-header">
-                <h3>Twitter Login</h3>
+                <h3>Name of recipe</h3>
                 <i
                   className="fab fa-twitter"
                   title="sign in"
@@ -35,13 +35,7 @@ class newRecipe extends Component {
                 />
               </header>
               <div id="signin-info">
-                <p>Welcome to the Recipe Locker!</p>
-                <p>
-                  If would like to add, create and edit or delete your own
-                  recipes, we ask that you sign in with Twitter. This will also
-                  prevent others from modifying or deleting your recipes. To do
-                  this, just click on the Twitter icon in the upper corner.
-                </p>
+                <textarea></textarea>
               </div>
             </div>
           </div>
