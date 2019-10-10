@@ -27,10 +27,10 @@ class NewRecipe extends Component {
   
   changeHandler(evt) {
     console.log(evt.target, evt.target.id)
-    let id = evt.target.id
+    let id = evt.target.id;
     
     this.setState({
-      evt.target.id : evt.target.value
+      id : evt.target.value
     })
   }
   
