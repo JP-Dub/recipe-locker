@@ -83,8 +83,8 @@ class App extends Component {
   }
 
   createRecipe(evt) {
-    console.log(event.target)
-      if( evt.target.id === 'main-lock') {
+    // console.log(event.target)
+      if( evt.target.id === 'account-close') {
         this.setState({
           newRecipe: 0
         })
@@ -101,6 +101,7 @@ class App extends Component {
   deleteRecipe() {}
   
   renderUI() {
+    console.log(this.state.newRecipe, this.state.locked)
     if(!this.state.locked) {
       return(
        <Login userLogin={this.userLogin} /> 
@@ -108,7 +109,7 @@ class App extends Component {
     } else
     if(this.state.newRecipe) {
       return(
-        <NewRecipe userLogin={this.userLogin} />
+        <NewRecipe userLogin={this.createRecipe} />
       )
     } else {
       return( <div />);
@@ -117,6 +118,7 @@ class App extends Component {
   }
 
   render() {
+    console.log('anything?')
     return (
       <ErrorBoundary>
         <div id="main" className="main-container">

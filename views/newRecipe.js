@@ -12,7 +12,9 @@ class NewRecipe extends Component {
      // this.changeHandler = this.directionHandler.bind(this);
     
     this.state = {
-      name: ""
+      name: "",
+      ingredients: "",
+      directions: ""
     };
   }
   componentDidMount() {}
@@ -20,13 +22,15 @@ class NewRecipe extends Component {
   componentWillUnMount() {}
 
   submitForm() {
-    console.log(document.newRecipeForm)
+    // console.log(document.newRecipeForm)
   }  
   
   changeHandler(evt) {
-    console.log(evt.target.value)
+    console.log(evt.target, evt.target.id)
+    let id = evt.target.id
+    
     this.setState({
-      name : evt.target.value
+      evt.target.id : evt.target.value
     })
   }
   
