@@ -259,6 +259,8 @@ const ajax = {
   }
 };
 
+export default ajax;
+
 // render to DOM
 ReactDOM.render(<Main />, document.getElementById("root"));
 
