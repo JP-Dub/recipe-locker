@@ -178,12 +178,15 @@ class App extends Component {
             </div>
           </div>
         </div>
-        {!this.state.locked ? <Login userLogin={this.userLogin} /> : <div />}
+        { if(!this.state.locked) return <Login userLogin={this.userLogin} />}
       </ErrorBoundary>
     );
   }
 }
 
+/*
+{!this.state.locked ? <Login userLogin={this.userLogin} /> : <div />}
+*/
 // configure ajax call
 const ajax = {
   ready: function ready(fn) {
