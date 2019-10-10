@@ -23,7 +23,7 @@ module.exports = function (passport) {
 	},
 	function(token, tokenSecret, profile, cb) {
     	User.findOne({ 'twitter.id': profile.id }, function (err, user) {
-        
+        console.log('calling twitter')
     		if (err) {
     			console.log("error")
     			return cb(err);

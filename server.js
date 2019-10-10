@@ -49,8 +49,8 @@ app.use(session({
 	resave: false,
 	saveUninitialized: true,
 	cookie : {
-	    secure  : true,
-      sameSite: true
+	    secure  : true
+    
 		}
 }));
 

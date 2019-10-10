@@ -83,10 +83,17 @@ class App extends Component {
   }
 
   createRecipe(evt) {
-    console.log(event.target.id)
-    if( evt.target.id === 'de nada') {
-      console.log('nothing')
-    }
+    console.log(event.target)
+      if( evt.target.id === 'main-lock') {
+        this.setState({
+          newRecipe: 0
+        })
+      } else {
+        this.setState({
+          newRecipe: 1
+        })
+      }
+    
   }
 
   editRecipe() {}
