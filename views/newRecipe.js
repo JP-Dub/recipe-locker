@@ -24,10 +24,11 @@ class NewRecipe extends Component {
   submitForm() {
     
     ajax.ready(ajax.request('POST', '/createRecipe', this.state, (data) => {
-      let form = document.getElementsByName('newRecipeForm')[0];
-      form.reset();
-      console.log('data', data, form)
-      return false;
+      this.setState({
+        name: '',
+        directions:'',
+        ingredients: ''
+      })
       
     }))
   }  
