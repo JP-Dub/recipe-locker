@@ -6,7 +6,7 @@ import NewRecipe from '../views/newRecipe';
 import ErrorBoundary from '../views/errorboundary';
 
 import "../public/style.css";
-import "../public/create.css";
+
 
 
 // Used with BrowserRouter for React Paths

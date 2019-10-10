@@ -1,12 +1,16 @@
 import React, { Component } from "react";
 import ErrorBoundary from "../views/errorboundary";
 import ajax from '../views/index';
+import "../public/create.css";
 
 class NewRecipe extends Component {
   constructor(props) {
     super(props);
     this.submitForm = this.submitForm.bind(this);
-    this.state = {};
+    
+    this.state = {
+      name: ""
+    };
   }
   componentDidMount() {}
 
@@ -17,6 +21,7 @@ class NewRecipe extends Component {
   }  
   
   render() {
+    console.log(this.props)
     return (
       <ErrorBoundary>
         <div id="main-center">
@@ -35,22 +40,22 @@ class NewRecipe extends Component {
                 <header className="ua-header headr">
                   <h3>Name</h3>
                 </header>
-                <input id="name" value="" required />        
+                <input id="name" value="" onChange={this.state.name} required />        
               </div>
               <div className="flex-container brder">
-                <header id="" className="ua-header headr">
+                <header className="ua-header headr">
                   <h3>Ingredients</h3>
                 </header>
                 <textarea id="ingredients" value="" required/>        
               </div>
-              <div id="" className="flex-container brder">
-                <header id="" className="ua-header headr">
+              <div className="flex-container brder">
+                <header className="ua-header headr">
                   <h3>Directions</h3>
                 </header>
                 <textarea id="directions" value="" required/>        
               </div> 
               <div id='bttn-div'>
-                <input id='save' value='Save' onClick={this.submitForm}/>
+                <input id='save' value='Save' type='submit' onClick={this.submitForm}/>
               </div>
             </form>           
           </div>         
