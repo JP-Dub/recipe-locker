@@ -22,14 +22,18 @@ class NewRecipe extends Component {
   componentWillUnMount() {}
 
   submitForm() {
-    console.log(this.state)
-    // ajax.ready(ajax.request('POST', '/createRecipe', this.state, (data) => {
-    //   console.log(data)
-    // }))
+    
+    ajax.ready(ajax.request('POST', '/createRecipe', this.state, (data) => {
+      let form = document.getElementsByName('newRecipeForm')[0];
+      form.reset();
+      console.log('data', data, form)
+      return false;
+      
+    }))
   }  
   
   changeHandler(evt) {
-    console.log(evt.target, evt.target.id)
+   
     let id = evt.target.id;
     
     this.setState({
@@ -64,7 +68,7 @@ class NewRecipe extends Component {
                 onClick={this.props.userLogin}
               />
             </header>
-            <form id="newRecipeForm" method='POST' action='../api/createRecipe'>
+            <form name="newRecipeForm">
               <div className="flex-container brder">
                 <header className="ua-header headr">
                   <h3>Name</h3>
@@ -84,7 +88,7 @@ class NewRecipe extends Component {
                 <textarea id="directions" name='directions' value={this.state.directions} onChange={this.directionsHandler} required/>        
               </div> 
               <div id='bttn-div'>
-                <input id='save' value='Save' type='submit' onClick={this.submitForm}/>
+                <input id='save' value='Save' type='button' onClick={this.submitForm}/>
               </div>
             </form>           
           </div>         
