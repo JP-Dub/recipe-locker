@@ -40,7 +40,7 @@ module.exports = {
             }
          }, {
              test: /\.css$/,
-             include: path.resolve(__dirname, './public/style'),
+             include: path.resolve(__dirname, './public/'),
              use: [
                  'style-loader',
                  'css-loader'

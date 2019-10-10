@@ -2,6 +2,7 @@ import ReactDOM from "react-dom";
 import React, { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import Login from '../views/login';
+import NewRecipe from '../views/newRecipe';
 import ErrorBoundary from '../views/errorboundary';
 
 import "../public/style.css";
@@ -20,11 +21,13 @@ class Main extends Component {
   }
 }
 
+
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.userLogin = this.userLogin.bind(this);
-    this.addRecipe = this.addRecipe.bind(this);
+    this.createRecipe = this.createRecipe.bind(this);
 
     this.state = {
       locked  : 1,
@@ -78,7 +81,7 @@ class App extends Component {
 
   }
 
-  addRecipe(evt) {
+  createRecipe(evt) {
     
   }
 

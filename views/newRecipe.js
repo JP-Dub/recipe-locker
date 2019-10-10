@@ -25,7 +25,7 @@ class NewRecipe extends Component {
                 onClick={this.props.userLogin}
               />
             </header>
-            <form>
+            <form action='/api/createRecipe'>
               <div id="" className="flex-container brder">
                 <header id="" className="ua-header headr">
                   <h3>Name</h3>
@@ -44,6 +44,9 @@ class NewRecipe extends Component {
                 </header>
                 <textarea id="directions" />        
               </div> 
+              <div id='bttn-div'>
+                <input id='save' value='Save' type='submit'/>
+              </div>
             </form>           
           </div>         
         </div>
