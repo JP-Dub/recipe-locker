@@ -7,7 +7,7 @@ class NewRecipe extends Component {
   constructor(props) {
     super(props);
     this.submitForm = this.submitForm.bind(this);
-    this.changeHandler = this.changeHandler.bind(this);
+    this.nameHandler = this.nameHandler.bind(this);
      this.ingredientsHandler = this.ingredientsHandler.bind(this);
      this.directionsHandler = this.directionsHandler.bind(this);
     
@@ -33,7 +33,7 @@ class NewRecipe extends Component {
     }))
   }  
   
-  changeHandler(evt) {
+  nameHandler(evt) {
    
     let id = evt.target.id;
     
@@ -54,8 +54,7 @@ class NewRecipe extends Component {
     })
   }
   
-  render() {
-   
+  render() {   
     return (
       <ErrorBoundary>
         <div id="main-center">
@@ -74,22 +73,38 @@ class NewRecipe extends Component {
                 <header className="ua-header headr">
                   <h3>Name</h3>
                 </header>
-                <input id="name" name='name' value={this.state.name} onChange={this.changeHandler} required />        
+                <input 
+                  id="name" 
+                  name='name' 
+                  value={this.state.name} 
+                  onChange={this.nameHandler} required />        
               </div>
               <div className="flex-container brder">
                 <header className="ua-header headr">
                   <h3>Ingredients</h3>
                 </header>
-                <textarea id="ingredients" name='ingredients' value={this.state.ingredients} onChange={this.ingredientsHandler} required/>        
+                <textarea 
+                  id="ingredients" 
+                  name='ingredients' 
+                  value={this.state.ingredients} 
+                  onChange={this.ingredientsHandler} required/>        
               </div>
               <div className="flex-container brder">
                 <header className="ua-header headr">
                   <h3>Directions</h3>
                 </header>
-                <textarea id="directions" name='directions' value={this.state.directions} onChange={this.directionsHandler} required/>        
+                <textarea 
+                  id="directions" 
+                  name='directions' 
+                  value={this.state.directions} 
+                  onChange={this.directionsHandler} required/>        
               </div> 
               <div id='bttn-div'>
-                <input id='save' value='Save' type='button' onClick={this.submitForm}/>
+                <input 
+                  id='save' 
+                  value='Save' 
+                  type='button' 
+                  onClick={this.submitForm}/>
               </div>
             </form>           
           </div>         
