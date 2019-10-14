@@ -6,9 +6,10 @@ import "../public/create.css";
 class NewRecipe extends Component {
   constructor(props) {
     super(props);
+    this.resetForm = this.resetForm.bind(this);
     this.submitForm = this.submitForm.bind(this);
-    this.nameHandler = this.nameHandler.bind(this);
-    this.ingredientsHandler = this.ingredientsHandler.bind(this);
+    this.nameHandler= this.nameHandler.bind(this);
+    this.ingredientsHandler= this.ingredientsHandler.bind(this);
     this.directionsHandler = this.directionsHandler.bind(this);
     
     this.state = {
@@ -17,9 +18,18 @@ class NewRecipe extends Component {
       directions: ""
     };
   }
+  
   componentDidMount() {}
 
   componentWillUnMount() {}
+  
+  resetForm() {
+    this.setState({
+      name: "",
+      ingredients: "",
+      directions: ""
+    });
+  }
 
   submitForm() {
     
@@ -28,28 +38,26 @@ class NewRecipe extends Component {
         name: '',
         directions:'',
         ingredients: ''
-      })
-      
-    }))
+      });     
+    }));
   }  
   
-  nameHandler(evt) {
-    
+  nameHandler(evt) {    
     this.setState({
       name : evt.target.value
-    })
+    });
   }
   
   ingredientsHandler(evt) {
     this.setState({
       ingredients : evt.target.value
-    })
+    });
   }
   
   directionsHandler(evt) {
     this.setState({
       directions : evt.target.value
-    })
+    });
   }
   
   render() {   

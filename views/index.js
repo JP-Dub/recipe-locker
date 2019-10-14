@@ -115,11 +115,11 @@ class App extends Component {
   
     return (
       <ErrorBoundary>
-        <div id="main" className="main-container">
+        <div id="main" className="frame shadow radius">
           <header id="locker-header" className="main-header">
-            <h2 className="lckr hdr-div" />
-            <h2 className="lckr hdr-div">The Recipe Locker</h2>
-            <h2 className="lckr hdr-div">
+            <h2 className="hdr-div" />
+            <h2 className="hdr-div">The Recipe Locker</h2>
+            <h2 className="hdr-div">
               <i
                 id="main-lock"
                 className={this.state.user}
