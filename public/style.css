@@ -19,7 +19,7 @@ body {
 /***** main div *****/
 
 #main {
-  margin: 2em auto;
+  margin: 2em auto 0;
   height: auto;   
   padding: 0 1.5em;
   width: 75%; 
@@ -96,7 +96,6 @@ i:hover {
   display: inline-flex; 
   overflow: hidden;
   width: 100%;
-  border: 1px solid red;
 }
 .flex-container {
   background-color: whitesmoke;
@@ -378,14 +377,14 @@ ul {
   }  
 
   #recipe {
-    margin: 2em auto;
+    border-radius: 0 0 .5em .5em;   
 /*     margin-bottom: 2em; */
     height: 60vh;
+    margin: 2em 0 0;
     min-height: 10em;
-/*     min-height: 30vh; */
+/*     min-height: 30vh; */  
+    overflow: auto;  
     width: 100%; 
-    overflow: auto;
-    border-radius: 0 0 .5em .5em;
   }
 /*   .recipe-div */
   .rcp {
