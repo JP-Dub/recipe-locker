@@ -89,13 +89,14 @@ i:hover {
 /***** recipe and ingredients divs (x2) *****/
 
 #food-columns {
-  height: 50vh;
+  height: 40vh;
 }
 .flex {
   align-items: stretch;
   display: inline-flex; 
   overflow: hidden;
   width: 100%;
+  border: 1px solid red;
 }
 .flex-container {
   background-color: whitesmoke;
