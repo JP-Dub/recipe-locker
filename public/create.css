@@ -48,7 +48,6 @@ body {
 
 }
 
-
 .radius {
   -webkit-border-radius: .5em;
      -moz-border-radius: .5em;
@@ -75,7 +74,6 @@ body {
   float: right;
   font-size: 1em;
   padding: 0;
-  border: 1px solid blue;
 /*   padding-top: .1em;
   padding-right: .85em; */
 }

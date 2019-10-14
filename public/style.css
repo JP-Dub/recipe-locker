@@ -60,7 +60,7 @@ body {
   text-align: center;
   width: 100%;
 }
-.lckr {
+.main-header > h2 {
   height: 2em;
   width: 10%;  
 }
