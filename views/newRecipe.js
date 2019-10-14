@@ -66,7 +66,7 @@ class NewRecipe extends Component {
         <div id="subframe-mount">
           <div 
             id="subframe" 
-            className="container radius">
+            className="frame radius">
             <header 
               id="subframe-header" 
               className="ua-header">

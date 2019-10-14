@@ -20,11 +20,11 @@ class Login extends Component {
     return (
       <ErrorBoundary>
         <div id="main-center">
-          <div id="main-account" className="frame radius">
-            <header id="account-header" className="ua-header">
+          <div id="subframe" className="frame radius">
+            <header id="subframe-header" className="ua-header">
               <h3>User Account</h3>
               <i
-                id="account-close"
+                id="icon-close"
                 className="fas fa-window-close"
                 title="close"
                 onClick={this.props.userLogin}
