@@ -21,10 +21,10 @@ body {
   height: 20em;
   left: 0;
   margin: 10% auto 0;
-  width: 31.5em;
   position: absolute;
   right: 0;
   top: 0%; 
+  width: 31.5em;
 }
 
 #subframe {
