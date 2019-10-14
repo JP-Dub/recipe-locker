@@ -57,19 +57,23 @@ class NewRecipe extends Component {
   render() {   
     return (
       <ErrorBoundary>
-        <div id="main-center">
-          <div id="main-account" className="main-container">
-            <header id="account-header" className="ua-header">
+        <div id="subframe-mount">
+          <div 
+            id="subframe" 
+            className="container radius">
+            <header 
+              id="subframe-header" 
+              className="ua-header">
               <h3>New Recipe</h3>
               <i
                 id="account-close"
-                className="fas fa-window-close lckr"
+                className="fas fa-window-close"
                 title="close"
                 onClick={this.props.userLogin}
               />
             </header>
             <form name="newRecipeForm">
-              <div className="flex-container brder">
+              <div className="flex-container radius">
                 <header className="ua-header headr">
                   <h3>Name</h3>
                 </header>
@@ -79,7 +83,7 @@ class NewRecipe extends Component {
                   value={this.state.name} 
                   onChange={this.nameHandler} required />        
               </div>
-              <div className="flex-container brder">
+              <div className="flex-container radius">
                 <header className="ua-header headr">
                   <h3>Ingredients</h3>
                 </header>
@@ -87,9 +91,11 @@ class NewRecipe extends Component {
                   id="ingredients" 
                   name='ingredients' 
                   value={this.state.ingredients} 
-                  onChange={this.ingredientsHandler} required/>        
+                  onChange={this.ingredientsHandler}
+                  rows="2"
+                  required/>        
               </div>
-              <div className="flex-container brder">
+              <div className="flex-container radius">
                 <header className="ua-header headr">
                   <h3>Directions</h3>
                 </header>
@@ -97,6 +103,7 @@ class NewRecipe extends Component {
                   id="directions" 
                   name='directions' 
                   value={this.state.directions} 
+                  rows='2'
                   onChange={this.directionsHandler} required/>        
               </div> 
               <div id='bttn-div'>
@@ -105,6 +112,11 @@ class NewRecipe extends Component {
                   value='Save' 
                   type='button' 
                   onClick={this.submitForm}/>
+                <input
+                  id='reset'
+                  value='Reset'
+                  type='button'
+                  onClick={this.resetForm} />
               </div>
             </form>           
           </div>         

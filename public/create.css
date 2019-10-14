@@ -1,83 +1,105 @@
-.main-container{
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d2ff52+0,91e842+100;Neon */
-  background: #d2ff52; /* Old browsers */
-  background: -webkit-linear-gradient(top,  #d2ff52 0%,#91e842 100%); /* Chrome10-25,Safari5.1-6 */
-  background:    -moz-linear-gradient(top,  #d2ff52 0%, #91e842 100%); /* FF3.6-15 */
-  background:         linear-gradient(to bottom,  #d2ff52 0%,#91e842 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52', endColorstr='#91e842',GradientType=0 ); /* IE6-9 */
-/*   filter: blur(2px);
-  -webkit-filter: blur(2px); */
-  border: 5px ridge lightgray;  
-  -webkit-border-radius: .5em;
-     -moz-border-radius: .5em;
-          border-radius: .5em;
-  -webkit-box-shadow: 8px 4px 20px 10px dimgray;
-     -moz-box-shadow: 8px 4px 20px 10px dimgray;
-          box-shadow: 8px 4px 20px 10px dimgray;
-  font-family: Arial;
-  height: auto;   
-  padding: 0 1.5em 2em 1.5em;
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;       
 }
 
-#main-center {
+body {
+  background-color: whitesmoke;
+  font-family: Arial;
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+  padding: 0;
+  width: 100%;
+}
+
+/***** popup UI div *****/
+
+#subframe-mount {
   bottom: 0;
   height: 20em;
   left: 0;
   margin: 10% auto 0;
-  max-width: 600px;
+  width: 31.5em;
   position: absolute;
   right: 0;
-  top: 0; 
-  width: 40%;
+  top: 0%; 
 }
-#main-account {
+
+#subframe {
+  height: auto;
   margin: auto;
   max-width: 600px;
+  padding: 0 1em 1em; /* 0 1.5em 1.5em 1.5em */
   position: relative;
   width: 100%;
 }
-#main-account.main-container {
-  -webkit-box-shadow: initial;
-     -moz-box-shadow: initial;
-          box-shadow: initial;
+
+.container {
+  background: #d2ff52; /* Old browsers */
+  background: -webkit-linear-gradient(top,  #d2ff52 0%,#91e842 100%); 
+  background:    -moz-linear-gradient(top,  #d2ff52 0%, #91e842 100%); 
+  background:         linear-gradient(to bottom,  #d2ff52 0%,#91e842 100%); 
+  border: 5px ridge lightgray; 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52', endColorstr='#91e842',GradientType=0 );
+/*   filter: blur(2px);
+  -webkit-filter: blur(2px); */
+
 }
 
-#account-header > h3  {
+
+.radius {
+  -webkit-border-radius: .5em;
+     -moz-border-radius: .5em;
+          border-radius: .5em;
+}
+
+/**** subframe-header ****/
+#subframe-header {
+  line-height: 2em;
+}
+#subframe-header > h3  {
   padding-top: .3em;
   text-align: center;
 }
-
-.ua-header {
-  line-height: 2em;
+#subframe-header > i {
+/*   padding-top: 0em; */
+  text-align: left;
 }
 
-.ua-header > h3 {
-  display: inline-block;
-  margin: 0 auto;
-  width: 100%;
+/** styling for icon **/
+#icon-close,
+#main-lock {
+  color: black;
+  float: right;
+  font-size: 1em;
+  padding: 0;
+  border: 1px solid blue;
+/*   padding-top: .1em;
+  padding-right: .85em; */
+}
+.i-ele {
+  height: 2em;
+  width: 10%;  
 }
 
-.ua-header > i {
-  position: absolute;
-  width: 10%;
-}
+/***** Form Div *****/
 
 .flex-container {
   background-color: whitesmoke;
   border: 5px ridge lightgray;
   overflow: hidden;
-}
-
-/**** unique ****/
-.brder {
-  -webkit-border-radius: .5em;
-     -moz-border-radius: .5em;
-          border-radius: .5em;
   margin-bottom: 1em;
 }
-.brder:last-child {
-  margin-bottom: 0;
-}
+
+/* .flex-container:last-child {
+  margin-bottom: 1em;
+  border: 1px dashed red;
+} */
+
+/**** Form Header ****/
+/* also used as #twitter-header*/
 .headr > h3 {
   background-color:#d9b3ff; 
   border-bottom: 1px solid dimgray;
@@ -85,6 +107,19 @@
   padding-left: .5em;
   padding-top: .2em;
 }
+.ua-header {
+  line-height: 2em;
+}
+.ua-header > h3 {
+  display: inline-block;
+  margin: 0 auto;
+  width: 100%;
+}
+.ua-header > i {
+  position: absolute;
+  width: 10%;
+}
+
 
 #name {
   height: 2em;
@@ -98,140 +133,61 @@
 #name,
 #ingredients,
 #directions {
+  font-family: Arial;
   font-size: 1em;
-  font-family: times;
-  width: 100%;
   padding-left: 5px;
+  width: 100%;
 }
 #bttn-div {
-  width: 100%;
-  
+  width: 100%; 
 }
+#reset,
 #save {
   background-color:#d9b3ff;
-  position: relative;
-  width: 100%;
   font-weight: bold;
-  height: 3em;
+  height: 2.5em;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  width: 50%;
 }
+#reset {
+  float: right;
+}
+/****** Media Queries ******/
 
-
+@media all and (min-width: 1281px) {
+  body {
+    font-size: 1.2em;
+  }
+}
+ 
 @media all and (max-width: 1280px) and (min-width: 851px) {
   body {
     font-size: 1em;
   }
-  #main-center {
+  #subframe-mount {
+    min-width: 600px;
     width: 60%;
-  }
-  .main-header > h2:nth-child(3) {
-    padding: 4px;
   }
 }
  
-@media all and (max-width: 850px) and (min-width: 250px) { /* max-width: 640px */
+@media all and (max-width: 850px) and (min-width: 250px) { 
   body {
     font-size: .8em; 
   }
-  #main {
-    margin: 0;
+  #subframe-mount {
     min-width: 325px;
     width: 100%;
   }
-  
-  .main-container {
-   /* Add the blur effect */
-   /* position: fixed; */
+/*   #subframe {
+    padding-bottom: 1em;
+  } */
+  .container {
     border: 5px 0px ridge lightgray;
     -webkit-box-shadow: initial;
        -moz-box-shadow: initial;
             box-shadow: initial; 
     padding-bottom: 0;
   }
-
-  #locker-header {
-    padding: 5px;
-  }
-  .main-header > h2:nth-child(2) {
-    padding: 0;
-  }
-
-  .flex {
-    display: block;
-    padding: 0;
-  } 
-  
-  #food-columns {
-    height: auto;
-  }
-
-
-  #index { 
-    border-radius: .5em .5em 0 0;
-    margin: 0 auto;
-    min-height: 5.5em;
-/*     max-height: 15vh;  allows height to grow and shrink when set*/
-/*     height: 30%; */
-    padding: 0;
-    width: 100%;
-  }
-
-  #index-header { 
-    margin-top: 0;
-    padding: 0;
-    text-align: center; 
-/*     z-index: -2; */
-  }
-
-  #index-header > h3:first-child {
-    float: left;
-    width: 20%;
-  }
-
-  #index-header > h3:nth-child(2) {
-    float: initial;
-    margin: 0 auto;
-    text-align: center;
-    width: 50%;    
-  }
-/*   .index-div */
-  .idx {
-    padding-top: .3em;
-    width: 20%;
-  }
-
-  #index-table {
-    height: 7em;
-    max-height: 20em;
-  }
-  td {
-    width: 100%;
-    text-align: center;
-    border-top: 1px solid black;
-  }  
-
-  #recipe {
-    margin: 2em auto;
-/*     margin-bottom: 2em; */
-    height: 60vh;
-    min-height: 10em;
-/*     min-height: 30vh; */
-    width: 100%; 
-    overflow: auto;
-    border-radius: 0 0 .5em .5em;
-  }
-/*   .recipe-div */
-  .rcp {
-    padding-top: .3em;
-  }
-  
-  /* user-login */
-  #main-center {
-    width: 100%;
-  }
-  #main-account {
-    padding-bottom: 2em;
-  }
-
 }

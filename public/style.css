@@ -43,6 +43,12 @@ body {
   padding: 0 1.5em 2em 1.5em;
 }
 
+/* .shadow {
+  -webkit-box-shadow: 8px 4px 20px 10px dimgray;
+     -moz-box-shadow: 8px 4px 20px 10px dimgray;
+          box-shadow: 8px 4px 20px 10px dimgray;
+} */
+
 
 /***** main header div *****/
 
