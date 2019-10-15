@@ -64,7 +64,7 @@ class App extends Component {
 
   userLogin(evt) {
     evt.preventDefault();
-  
+    blur.set(this.main.classList)
     if(!this.userPath) {
       if( evt.target.id === 'main-lock') {
         this.setState({
@@ -82,7 +82,7 @@ class App extends Component {
   }
 
   createRecipe(evt) {
-    // console.log(event.target)
+      blur.set(this.main.classList);
       if( evt.target.id === 'account-close') {
         this.setState({
           newRecipe: 0
@@ -100,20 +100,17 @@ class App extends Component {
   deleteRecipe() {}
   
   renderUI() {
-    console.log(this.main.classList)
+    
     if(!this.state.locked) {
-      blur.set(this.main);
       return(
        <Login userLogin={this.userLogin} /> 
      );
     } else
     if(this.state.newRecipe) {
-      blur.set(this.main);
       return(
         <EditorUI userLogin={this.createRecipe} />
       )
     } else {
-      blur.set(this.main);
       return( <div />);
     }
                         
@@ -267,13 +264,7 @@ export default ajax;
 
 const blur = {
   set: function ready(main) {
-    // if(!main.hasOwnProperty('blur')) {
-    //   console.log('false')
-    // }
-   
-    console.log(main)
-    
-    // return elem.contains('blur') ? elem.remove('blur') : elem.add('blur'); 
+    main.contains('blur') ? main.remove('blur') : main.add('blur');
   }
   
 }
