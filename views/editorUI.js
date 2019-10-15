@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ErrorBoundary from "../views/errorboundary";
 import ajax from '../views/index';
-import "../public/create.css";
+import "../public/editor.css";
 
 class NewRecipe extends Component {
   constructor(props) {
@@ -66,7 +66,7 @@ class NewRecipe extends Component {
         <div id="subframe-mount">
           <div 
             id="subframe" 
-            className="container radius">
+            className="frame radius">
             <header 
               id="subframe-header" 
               className="ua-header">
