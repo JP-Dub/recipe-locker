@@ -38,7 +38,8 @@ class EditorUI extends Component {
         name: '',
         directions:'',
         ingredients: ''
-      });     
+      }); 
+      console.log('data', data)
     }));
   }  
   

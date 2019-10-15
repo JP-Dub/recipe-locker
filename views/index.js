@@ -63,7 +63,7 @@ class App extends Component {
   }
 
   userLogin(evt) {
-    evt.preventDefault();
+    // evt.preventDefault();
     blur.set(this.main.classList)
     if(!this.userPath) {
       if( evt.target.id === 'main-lock') {
@@ -82,22 +82,26 @@ class App extends Component {
   }
 
   createRecipe(evt) {
-      blur.set(this.main.classList);
-      if( evt.target.id === 'account-close') {
-        this.setState({
-          newRecipe: 0
-        })
-      } else {
-        this.setState({
-          newRecipe: 1
-        })
-      }
+    blur.set(this.main.classList);
+    if( evt.target.id === 'account-close') {
+      this.setState({
+        newRecipe: 0
+      })
+    } else {
+      this.setState({
+        newRecipe: 1
+      })
+    }
     
   }
 
-  editRecipe() {}
+  editRecipe() {
+    blur.set(this.main.classList);
+  }
 
-  deleteRecipe() {}
+  deleteRecipe() {
+    blur.set(this.main.classList);
+  }
   
   renderUI() {
     
@@ -238,14 +242,15 @@ const ajax = {
               .join("&");
 
     xmlhttp.open(method, url, true);
-
+console.log(params)
     xmlhttp.onreadystatechange = function() {
       if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-        let res = JSON.parse(xmlhttp.response);
-        console.log(res, xmlhttp.response)
-        if (res.statusCode === 400) return alert(res.response.body);
+        
+        console.log(xmlhttp.response,  xmlhttp['response'].constructor );
+        //let res = JSON.parse(xmlhttp.response);
+        //if (res.statusCode === 400) return alert(res.response.body);
 
-        callback(res);
+        callback(xmlhttp.response);
       }
     };
 
