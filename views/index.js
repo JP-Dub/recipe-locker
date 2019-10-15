@@ -98,18 +98,21 @@ class App extends Component {
   renderUI() {
     let main = document.getElementById('main');
     const blur = () => {
-      
+      main.classList.toggle('blur');
     }
     if(!this.state.locked) {
+      blur();
       return(
        <Login userLogin={this.userLogin} /> 
      );
     } else
     if(this.state.newRecipe) {
+      blur();
       return(
         <EditorUI userLogin={this.createRecipe} />
       )
     } else {
+      blur();
       return( <div />);
     }
                         
