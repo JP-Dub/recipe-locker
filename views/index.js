@@ -95,24 +95,30 @@ class App extends Component {
 
   deleteRecipe() {}
   
+  blur(main) {
+        
+      console.log(main)
+      // main.classList.contains('blur') ? main.classList.remove('blur')
+      //                                 : main.classList.add('blur');
+    
+  }
+  
   renderUI() {
     let main = document.getElementById('main');
-    const blur = () => {
-      main.classList.toggle('blur');
-    }
+    
     if(!this.state.locked) {
-      blur();
+      this.blur(main);
       return(
        <Login userLogin={this.userLogin} /> 
      );
     } else
     if(this.state.newRecipe) {
-      blur();
+      this.blur(main);
       return(
         <EditorUI userLogin={this.createRecipe} />
       )
     } else {
-      blur();
+      this.blur(main);
       return( <div />);
     }
                         
