@@ -2,8 +2,8 @@ import ReactDOM from "react-dom";
 import React, { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import Login from '../views/login';
-import NewRecipe from '../views/newRecipe';
-import
+// import NewRecipe from '../views/newRecipe';
+import EditorUI from '../views/editorUI';
 import ErrorBoundary from '../views/errorboundary';
 
 import "../public/style.css";
@@ -96,7 +96,10 @@ class App extends Component {
   deleteRecipe() {}
   
   renderUI() {
-  
+    let main = document.getElementById('main');
+    const blur = () => {
+      
+    }
     if(!this.state.locked) {
       return(
        <Login userLogin={this.userLogin} /> 
@@ -104,7 +107,7 @@ class App extends Component {
     } else
     if(this.state.newRecipe) {
       return(
-        <NewRecipe userLogin={this.createRecipe} />
+        <EditorUI userLogin={this.createRecipe} />
       )
     } else {
       return( <div />);

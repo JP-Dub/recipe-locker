@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import ErrorBoundary from "../views/errorboundary";
 import ajax from '../views/index';
-import "../public/editor.css";
+import "../public/editorUI.css";
 
-class NewRecipe extends Component {
+class EditorUI extends Component {
   constructor(props) {
     super(props);
     this.resetForm = this.resetForm.bind(this);
@@ -132,4 +132,4 @@ class NewRecipe extends Component {
   }
 }
 
-// export default NewRecipe;
+export default EditorUI;

@@ -43,9 +43,11 @@ body {
      -moz-border-radius: .5em;
           border-radius: .5em;
 }
-/*   filter: blur(2px);
-  -webkit-filter: blur(2px); */
 
+.blur {
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
 /***** main header div *****/
 
 .main-header {
@@ -240,7 +242,7 @@ ul {
           border-radius: .5em;
 }
 .ua-header {
-  line-height: 2em;
+  line-height: 1.5em;
 }
 #account-header > h3  {
   padding-top: .3em;
