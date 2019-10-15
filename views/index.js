@@ -100,6 +100,7 @@ class App extends Component {
   deleteRecipe() {}
   
   renderUI() {
+    console.log(this.main.classList)
     if(!this.state.locked) {
       blur.set(this.main);
       return(
