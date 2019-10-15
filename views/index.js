@@ -43,15 +43,10 @@ class App extends Component {
   }
 
   componentDidMount() {
+    this.main = document.getElementById('main').classList;
+    console.log(this)
     let path = window.location.pathname;
     this.userPath = RegExp("^/login/.*").test(path);
-    
-    console.log(main.classList)
-    const blur = () => {
-      let elem = main.classList;
-      elem.contains('blur') ? elem.remove('blur') : elem.add('blur'); 
-    }
-    this.blur = blur();
 
     if (this.userPath) {
       this.setState({
@@ -107,18 +102,18 @@ class App extends Component {
   renderUI() {
         
     if(!this.state.locked) {
-      this.blur();
+      blur.set(this.main);
       return(
        <Login userLogin={this.userLogin} /> 
      );
     } else
     if(this.state.newRecipe) {
-      this.blur();
+      blur.set(this.main);
       return(
         <EditorUI userLogin={this.createRecipe} />
       )
     } else {
-      this.blur();
+      blur.set(this.main);
       return( <div />);
     }
                         
@@ -269,6 +264,15 @@ const ajax = {
 };
 
 export default ajax;
+
+const blur = {
+  set: function ready(main) {
+    console.log(main)
+    
+    // return elem.contains('blur') ? elem.remove('blur') : elem.add('blur'); 
+  }
+  
+}
 
 // render to DOM
 ReactDOM.render(<Main />, document.getElementById("root"));
