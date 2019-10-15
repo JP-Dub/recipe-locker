@@ -242,7 +242,7 @@ const ajax = {
               .join("&");
 
     xmlhttp.open(method, url, true);
-console.log(params)
+    
     xmlhttp.onreadystatechange = function() {
       if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
         
@@ -259,7 +259,7 @@ console.log(params)
       "Content-Type",
       "application/x-www-form-urlencoded"
     );
-
+    console.log('params', params)
     xmlhttp.send(params);
     return xmlhttp;
   }
@@ -276,18 +276,3 @@ const blur = {
 
 // render to DOM
 ReactDOM.render(<Main />, document.getElementById("root"));
-
-/*
-            <div id='Login' className='flex-container'>
-              <header id='recipe-header2' className='header'>
-                <h3 className='rcp hdr-div'></h3>
-                <h3 className='rcp hdr-div'>Create A User Account</h3>
-                <h3 className='rcp hdr-div'>
-                    <i className='far fa-edit'></i>
-                    <i className='fas fa-trash'></i>
-                </h3>
-              </header>              
-            </div>   
-*/
-
-// <p id='left'><i className='fas fa-archive'/></p><p id='locker-title'>The Recipe Locker</p><p id='edit'><i className='far fa-edit'></i></p>

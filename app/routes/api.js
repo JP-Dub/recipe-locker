@@ -14,6 +14,9 @@ module.exports = (app, passport, cors) => {
 	
 	const handleServer = new Server();
   
+  app.route('/login/:user')
+     .get(isLoggedIn, (re)
+          res.sendFile(__dirname + '/views/index.html');)
 //   app.get('/demo', (req, res) => {
 //     res.redirect('/rsvp/demo');
 //   });
