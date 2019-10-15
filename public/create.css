@@ -106,7 +106,7 @@ body {
   padding-top: .2em;
 }
 .ua-header {
-  line-height: 2em;
+  line-height: 1.5em;
 }
 .ua-header > h3 {
   display: inline-block;
@@ -120,7 +120,7 @@ body {
 
 
 #name {
-  height: 2em;
+  height: 1.5em;
 }
 #ingredients {
 

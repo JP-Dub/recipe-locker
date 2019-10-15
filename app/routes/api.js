@@ -4,6 +4,7 @@ const Server = require(process.cwd() + '/app/controllers/server.js'),
 module.exports = (app, passport, cors) => {
 	
 	function isLoggedIn (req, res, next) {
+    console.log(req.isAuthenticated())
 		if (req.isAuthenticated()) {
 			return next()
 		} else {
@@ -30,7 +31,7 @@ module.exports = (app, passport, cors) => {
 //   app.route('/resetRSVP')
 //     .put( handleServer.resetRSVP );  
   app.route('/createRecipe')
-    .post(handleServer.createRecipe);
+    .post(isLoggedIn, handleServer.createRecipe);
 		
 	app.get('/auth/twitter', passport.authenticate( 'twitter' ) );
 
