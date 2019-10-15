@@ -43,8 +43,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.main = document.getElementById('main');
-    console.log(this.main.classList)
+    this.main = document.getElementById('main').classList;
+    
     let path = window.location.pathname;
     this.userPath = RegExp("^/login/.*").test(path);
 
@@ -266,6 +266,9 @@ export default ajax;
 
 const blur = {
   set: function ready(main) {
+    // if(!main.hasOwnProperty('blur')) {
+    //   console.log('false')
+    // }
     console.log(main)
     
     // return elem.contains('blur') ? elem.remove('blur') : elem.add('blur'); 
