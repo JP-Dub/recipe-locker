@@ -43,8 +43,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.main = document.getElementById('main').classList;
-    console.log(this)
+    this.main = document.getElementById('main');
+    console.log(this.main.classList)
     let path = window.location.pathname;
     this.userPath = RegExp("^/login/.*").test(path);
 
@@ -100,7 +100,6 @@ class App extends Component {
   deleteRecipe() {}
   
   renderUI() {
-        
     if(!this.state.locked) {
       blur.set(this.main);
       return(
@@ -120,7 +119,7 @@ class App extends Component {
   }
 
   render() {
-  
+    
     return (
       <ErrorBoundary>
         <div id="main" className="frame shadow radius">
