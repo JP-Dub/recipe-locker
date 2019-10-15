@@ -246,9 +246,9 @@ const ajax = {
     xmlhttp.onreadystatechange = function() {
       if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
         
-        console.log(xmlhttp.response,  xmlhttp['response'].constructor );
-        //let res = JSON.parse(xmlhttp.response);
-        //if (res.statusCode === 400) return alert(res.response.body);
+        //console.log(xmlhttp.response,  xmlhttp['response'].constructor );
+        // let res = JSON.parse(xmlhttp.response);
+        // if (res.statusCode === 400) return alert(res.response.body);
 
         callback(xmlhttp.response);
       }
@@ -259,7 +259,7 @@ const ajax = {
       "Content-Type",
       "application/x-www-form-urlencoded"
     );
-    console.log('params', params)
+    
     xmlhttp.send(params);
     return xmlhttp;
   }

@@ -4,7 +4,7 @@ const Server = require(process.cwd() + '/app/controllers/server.js'),
 module.exports = (app, passport, cors) => {
 	
 	function isLoggedIn (req, res, next) {
-    console.log(req.isAuthenticated())
+    
 		if (req.isAuthenticated()) {
 			return next()
 		} else {
@@ -15,8 +15,9 @@ module.exports = (app, passport, cors) => {
 	const handleServer = new Server();
   
   app.route('/login/:user')
-     .get(isLoggedIn, (re)
-          res.sendFile(__dirname + '/views/index.html');)
+     .get(isLoggedIn, (req, res) => {
+          res.sendFile(__dirname + '/views/index.html');
+  });
 //   app.get('/demo', (req, res) => {
 //     res.redirect('/rsvp/demo');
 //   });
@@ -34,14 +35,13 @@ module.exports = (app, passport, cors) => {
 //   app.route('/resetRSVP')
 //     .put( handleServer.resetRSVP );  
   app.route('/createRecipe')
-    .post(isLoggedIn, handleServer.createRecipe);
+    .post(handleServer.createRecipe);
 		
 	app.get('/auth/twitter', passport.authenticate( 'twitter' ) );
 
 	app.route('/auth/twitter/callback' )
 		.get( passport.authenticate( 'twitter', {failureRedirect: '/'} ), 
-        (req, res) => {
-    console.log('req.user', req.user)
+        (req, res) => {   
     	    res.redirect('/login/' + req.user.twitter['username']);
 		});	
 		
