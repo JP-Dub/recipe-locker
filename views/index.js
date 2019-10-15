@@ -43,7 +43,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.main = document.getElementById('main').classList;
+    this.main = document.getElementById('main');
     
     let path = window.location.pathname;
     this.userPath = RegExp("^/login/.*").test(path);
@@ -269,6 +269,7 @@ const blur = {
     // if(!main.hasOwnProperty('blur')) {
     //   console.log('false')
     // }
+   
     console.log(main)
     
     // return elem.contains('blur') ? elem.remove('blur') : elem.add('blur'); 
