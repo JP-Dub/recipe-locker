@@ -270,9 +270,9 @@ const blur = {
   set: function ready(main) {
     let open = document.getElementById('main-center');
     let open2 = document.getElementById('subframe-mount');
+    // devise function to prevent unblur if right icon isn't clicked
     
-    
-    main.contains('blur') && open || ? main.remove('blur') : main.add('blur');
+   main.contains('blur') ? main.remove('blur') : main.add('blur');
   }
   
 };
