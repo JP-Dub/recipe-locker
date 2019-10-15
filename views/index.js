@@ -45,6 +45,13 @@ class App extends Component {
   componentDidMount() {
     let path = window.location.pathname;
     this.userPath = RegExp("^/login/.*").test(path);
+    
+    console.log(main.classList)
+    const blur = () => {
+      let elem = main.classList;
+      elem.contains('blur') ? elem.remove('blur') : elem.add('blur'); 
+    }
+    this.blur = blur();
 
     if (this.userPath) {
       this.setState({
@@ -56,7 +63,9 @@ class App extends Component {
     }
   }
 
-  componentWillUnMount() {}
+  componentWillUnMount() {
+
+  }
 
   userLogin(evt) {
     evt.preventDefault();
@@ -95,30 +104,21 @@ class App extends Component {
 
   deleteRecipe() {}
   
-  blur(main) {
-        
-      console.log(main)
-      // main.classList.contains('blur') ? main.classList.remove('blur')
-      //                                 : main.classList.add('blur');
-    
-  }
-  
   renderUI() {
-    let main = document.getElementById('main');
-    
+        
     if(!this.state.locked) {
-      this.blur(main);
+      this.blur();
       return(
        <Login userLogin={this.userLogin} /> 
      );
     } else
     if(this.state.newRecipe) {
-      this.blur(main);
+      this.blur();
       return(
         <EditorUI userLogin={this.createRecipe} />
       )
     } else {
-      this.blur(main);
+      this.blur();
       return( <div />);
     }
                         
