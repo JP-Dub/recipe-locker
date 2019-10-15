@@ -3,13 +3,13 @@ const Server = require(process.cwd() + '/app/controllers/server.js'),
 
 module.exports = (app, passport, cors) => {
 	
-	function isLoggedIn (req, res, next) {
-    
-		if (req.isAuthenticated()) {
-			return next()
-		} else {
-			res.redirect('/');
-		}
+	function isLoggedIn (req, res, next) {   
+    return req.isAuthenticate() ? next() : res.redirect('/');
+		// if(req.isAuthenticated()) {
+		// 	return next()
+		// } else {
+		// 	res.redirect('/');
+		// }
 	}
 	
 	const handleServer = new Server();

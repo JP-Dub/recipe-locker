@@ -221,6 +221,7 @@ class App extends Component {
 /*
 {!this.state.locked ? <Login userLogin={this.userLogin} /> : <div />}
 */
+
 // configure ajax call
 const ajax = {
   ready: function ready(fn) {
@@ -265,14 +266,18 @@ const ajax = {
   }
 };
 
-export default ajax;
-
 const blur = {
   set: function ready(main) {
-    main.contains('blur') ? main.remove('blur') : main.add('blur');
+    let open = document.getElementById('main-center');
+    let open2 = document.getElementById('subframe-mount');
+    
+    
+    main.contains('blur') && open || ? main.remove('blur') : main.add('blur');
   }
   
-}
+};
+
+export default ajax;
 
 // render to DOM
 ReactDOM.render(<Main />, document.getElementById("root"));
