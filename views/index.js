@@ -65,30 +65,34 @@ class App extends Component {
 
   userLogin(evt) {
     // evt.preventDefault();
-   
+    let set;
     if(!this.userPath) {
       if( evt.target.id === 'main-lock') {
+        set = 'remove'
         this.setState({
           locked: 0,
           user: 'fas fa-unlock'
         })
       } else {
+        set = 'on';
         this.setState({
           locked: 1,
           user: 'fas fa-lock'
         })
       }
     }
-    blur.set(this.main.classList)
+    blur.set(this.main.classList, set)
   }
 
   createRecipe(evt) {
     //blur.set(this.main.classList);
     if( evt.target.id === 'account-close') {
+      blur.set(this.main.classList, 'remove')
       this.setState({
         newRecipe: 0
       })
     } else {
+      blur.set(this.main.classList, 'on')
       this.setState({
         newRecipe: 1
       })
@@ -104,12 +108,16 @@ class App extends Component {
     blur.set(this.main.classList);
   }
   
+  blockEvent(evt) {
+    console.log(evt)
+  }
+  
   renderUI() {
     
     if(!this.state.locked) {
       return(
        <Login userLogin={this.userLogin}
-              onblur={this.block}/> 
+              onBlur={this.blockEvent}/> 
      );
     } else
     if(this.state.newRecipe) {
@@ -269,14 +277,15 @@ const ajax = {
 };
 
 const blur = {
-  set: function ready(main) {
-    let open = document.getElementById('main-center');
-    let open2 = document.getElementById('subframe-mount');
-    // devise function to prevent unblur if right icon isn't clicked
+  set: function ready(style, set) {
+      style[set]('blur');
+//     let open = document.getElementById('main-center');
+//     let open2 = document.getElementById('subframe-mount');
+//     // devise function to prevent unblur if right icon isn't clicked
    
-    let blurry = main.contains('blur');
-    //console.log(open, open2, )
-    blurry ? main.remove('blur') : main.add('blur');
+//     let blurry = main.contains('blur');
+//     //console.log(open, open2, )
+//     blurry ? main.remove('blur') : main.add('blur');
   }
   
 };
