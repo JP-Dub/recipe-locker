@@ -44,7 +44,8 @@ class App extends Component {
 
   componentDidMount() {
     this.main = document.getElementById('main');
-    
+    // let empty = document.getElementById('empty');
+    // console.log(empty)
     let path = window.location.pathname;
     this.userPath = RegExp("^/login/.*").test(path);
 
@@ -64,7 +65,7 @@ class App extends Component {
 
   userLogin(evt) {
     // evt.preventDefault();
-    blur.set(this.main.classList)
+   
     if(!this.userPath) {
       if( evt.target.id === 'main-lock') {
         this.setState({
@@ -78,7 +79,7 @@ class App extends Component {
         })
       }
     }
-
+    blur.set(this.main.classList)
   }
 
   createRecipe(evt) {
@@ -271,10 +272,10 @@ const blur = {
     let open = document.getElementById('main-center');
     let open2 = document.getElementById('subframe-mount');
     // devise function to prevent unblur if right icon isn't clicked
-    let empty = document.getElementById('empty');
+   
     let blurry = main.contains('blur');
-    console.log(open, open2, empty)
-    empty && blurry ? main.remove('blur') : main.add('blur');
+    //console.log(open, open2, )
+    blurry ? main.remove('blur') : main.add('blur');
   }
   
 };
