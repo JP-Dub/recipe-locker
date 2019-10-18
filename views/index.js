@@ -82,7 +82,7 @@ class App extends Component {
   }
 
   createRecipe(evt) {
-    blur.set(this.main.classList);
+    //blur.set(this.main.classList);
     if( evt.target.id === 'account-close') {
       this.setState({
         newRecipe: 0
@@ -115,7 +115,7 @@ class App extends Component {
         <EditorUI userLogin={this.createRecipe} />
       )
     } else {
-      return( <div />);
+      return( <div id='empty'/>);
     }
                         
   }
@@ -271,9 +271,10 @@ const blur = {
     let open = document.getElementById('main-center');
     let open2 = document.getElementById('subframe-mount');
     // devise function to prevent unblur if right icon isn't clicked
-    
-    console.log(open, open2)
-   main.contains('blur') ? main.remove('blur') : main.add('blur');
+    let empty = document.getElementById('empty');
+    let blurry = main.contains('blur');
+    console.log(open, open2, empty)
+   main.contains('blur') && !empty ? main.remove('blur') : main.add('blur');
   }
   
 };
