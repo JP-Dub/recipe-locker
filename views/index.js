@@ -33,7 +33,7 @@ class App extends Component {
     this.state = {
       newRecipe: 0,
       locked  : 1,
-      login   : 0,
+      login   : 1,
       create  : "",
       edit    : "",
       delete  : "",
@@ -79,19 +79,20 @@ class App extends Component {
           user: 'fas fa-lock'
         })
       }
+      blur.set(this.main.classList, set)
     }
-    blur.set(this.main.classList, set)
+   
   }
 
   createRecipe(evt) {
     let set;
     if( evt.target.id === 'account-close') {
-      set = 'add';
+      set = 'remove';
       this.setState({
         newRecipe: 0
       })
     } else {
-      set = 'remove';
+      set = 'add';
       this.setState({
         newRecipe: 1
       })
