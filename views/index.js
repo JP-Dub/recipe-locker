@@ -29,7 +29,6 @@ class App extends Component {
     super(props);
     this.userLogin = this.userLogin.bind(this);
     this.createRecipe = this.createRecipe.bind(this);
-    this.blockEvent = this.blockEvent.bind(this);
     
     this.state = {
       newRecipe: 0,
@@ -68,13 +67,13 @@ class App extends Component {
     let set;
     if(!this.userPath) {
       if( evt.target.id === 'main-lock') {
-        set = 'remove'
+        set = 'add';
         this.setState({
           locked: 0,
           user: 'fas fa-unlock'
         })
       } else {
-        set = 'on';
+        set = 'remove';
         this.setState({
           locked: 1,
           user: 'fas fa-lock'
@@ -85,18 +84,19 @@ class App extends Component {
   }
 
   createRecipe(evt) {
-    //blur.set(this.main.classList);
+    let set;
     if( evt.target.id === 'account-close') {
-      blur.set(this.main.classList, 'remove')
+      set = 'add';
       this.setState({
         newRecipe: 0
       })
     } else {
-      blur.set(this.main.classList, 'on')
+      set = 'remove';
       this.setState({
         newRecipe: 1
       })
     }
+    blur.set(this.main.classList, set)
     
   }
 
@@ -108,16 +108,11 @@ class App extends Component {
     blur.set(this.main.classList);
   }
   
-  blockEvent(evt) {
-    console.log(evt)
-  }
-  
   renderUI() {
     
     if(!this.state.locked) {
       return(
-       <Login userLogin={this.userLogin}
-              onBlur={this.blockEvent}/> 
+       <Login userLogin={this.userLogin} /> 
      );
     } else
     if(this.state.newRecipe) {
@@ -278,16 +273,7 @@ const ajax = {
 
 const blur = {
   set: function ready(style, set) {
-    console.log(style, set)
-     // style[set]('blur');
-       style.add('blur');
-//     let open = document.getElementById('main-center');
-//     let open2 = document.getElementById('subframe-mount');
-//     // devise function to prevent unblur if right icon isn't clicked
-   
-//     let blurry = main.contains('blur');
-//     //console.log(open, open2, )
-//     blurry ? main.remove('blur') : main.add('blur');
+       style[set]('blur');
   }
   
 };
