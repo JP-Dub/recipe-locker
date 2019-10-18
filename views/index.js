@@ -79,13 +79,14 @@ class App extends Component {
           user: 'fas fa-lock'
         })
       }
-      blur.set(this.main.classList, set)
+      blur.change(this.main.classList, set)
     }
    
   }
 
   createRecipe(evt) {
     let set;
+    
     if( evt.target.id === 'account-close') {
       set = 'remove';
       this.setState({
@@ -97,16 +98,16 @@ class App extends Component {
         newRecipe: 1
       })
     }
-    blur.set(this.main.classList, set)
+    blur.change(this.main.classList, set)
     
   }
 
   editRecipe() {
-    blur.set(this.main.classList);
+    blur.change(this.main.classList);
   }
 
   deleteRecipe() {
-    blur.set(this.main.classList);
+    blur.change(this.main.classList);
   }
   
   renderUI() {
@@ -273,10 +274,7 @@ const ajax = {
 };
 
 const blur = {
-  set: function ready(style, set) {
-       style[set]('blur');
-  }
-  
+  change: (style, set) => { style[set]('blur') }
 };
 
 export default ajax;
