@@ -115,7 +115,7 @@ class App extends Component {
         <EditorUI userLogin={this.createRecipe} />
       )
     } else {
-      return( <div id='empty'/>);
+      return( <div id='empty'/> );
     }
                         
   }
@@ -274,7 +274,7 @@ const blur = {
     let empty = document.getElementById('empty');
     let blurry = main.contains('blur');
     console.log(open, open2, empty)
-   main.contains('blur') && !empty ? main.remove('blur') : main.add('blur');
+    empty && blurry ? main.remove('blur') : main.add('blur');
   }
   
 };
