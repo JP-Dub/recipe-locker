@@ -278,7 +278,9 @@ const ajax = {
 
 const blur = {
   set: function ready(style, set) {
-      style[set]('blur');
+    console.log(style, set)
+     // style[set]('blur');
+       style.add('blur');
 //     let open = document.getElementById('main-center');
 //     let open2 = document.getElementById('subframe-mount');
 //     // devise function to prevent unblur if right icon isn't clicked
