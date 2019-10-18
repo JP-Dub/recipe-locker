@@ -272,6 +272,7 @@ const blur = {
     let open2 = document.getElementById('subframe-mount');
     // devise function to prevent unblur if right icon isn't clicked
     
+    console.log(open, open2)
    main.contains('blur') ? main.remove('blur') : main.add('blur');
   }
   
