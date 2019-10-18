@@ -29,7 +29,8 @@ class App extends Component {
     super(props);
     this.userLogin = this.userLogin.bind(this);
     this.createRecipe = this.createRecipe.bind(this);
-
+    this.blockEvent = this.blockEvent.bind(this);
+    
     this.state = {
       newRecipe: 0,
       locked  : 1,
@@ -44,8 +45,7 @@ class App extends Component {
 
   componentDidMount() {
     this.main = document.getElementById('main');
-    // let empty = document.getElementById('empty');
-    // console.log(empty)
+
     let path = window.location.pathname;
     this.userPath = RegExp("^/login/.*").test(path);
 
@@ -108,7 +108,8 @@ class App extends Component {
     
     if(!this.state.locked) {
       return(
-       <Login userLogin={this.userLogin} /> 
+       <Login userLogin={this.userLogin}
+              onblur={this.block}/> 
      );
     } else
     if(this.state.newRecipe) {
