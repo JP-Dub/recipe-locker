@@ -60,18 +60,17 @@ class App extends Component {
     this.table = document.getElementById('index-table');
     this.header = document.getElementById('index-header');
     this.index = document.getElementById('index');
-    // // this.table.style.height = this.state.idxTable;   
-    window.addEventListener('resize', (evt) => {
+    this.adjHeight = () => {
       let height = this.index.clientHeight - Math.round(this.header.clientHeight + 5);
-      console.log(height)
-      if(height => 72 )this.table.style.height = height + 'px';
-
-    });
+      if(height >= 72 ) this.table.style.height = height + 'px';
+    }
+    // // this.table.style.height = this.state.idxTable;   
+    window.addEventListener('resize', this.adjHeight, false);
   
   }
 
   componentWillUnMount() {
-    window.removeEventListener('resize');
+    window.removeEventListener('resize', this.adjHeight, false);
   }
 
   userLogin(evt) {
