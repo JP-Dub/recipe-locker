@@ -124,9 +124,11 @@ i:hover {
 
 #index {
   border-radius: .5em 0 0 .5em;
+  margin: 0;
   order: 1;
   width: 30%;
-  overflow-y : auto; 
+ 
+/*   overflow-y : auto;  */
 }
 #index-header > h3:first-child {
   float: right;
@@ -151,7 +153,6 @@ i:hover {
 
 
 #index-table {
-  border: 1px solid blue; 
   height: auto;
   overflow-y : auto; 
 /*   height: 15em;
@@ -159,6 +160,7 @@ i:hover {
 }
 #table { 
   border-collapse: collapse;
+/*   overflow-y : auto;  */
   width: 100%;  
 }
 th {
