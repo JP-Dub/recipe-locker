@@ -63,8 +63,9 @@ class App extends Component {
     this.index = document.getElementById('index');
     // // this.table.style.height = this.state.idxTable;   
     window.addEventListener('resize', (evt) => {
-      console.log('resize', this.table.style)
+     
       this.table.style.height = this.index.clientHeight;
+       console.log('resize', this.table.style)
     //   this.setState( state => {
     //     return {idxTable: state.idxTable = this.index.clientHeight}
     //   })
