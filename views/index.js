@@ -65,12 +65,12 @@ class App extends Component {
       if(height >= 72 ) this.table.style.height = height + 'px';
     }
     // // this.table.style.height = this.state.idxTable;   
-    window.addEventListener('resize', this.adjHeight, false);
+    window.addEventListener('resize', this.adjHeight);
   
   }
 
   componentWillUnMount() {
-    window.removeEventListener('resize', this.adjHeight, false);
+    window.removeEventListener('resize', this.adjHeight);
   }
 
   userLogin(evt) {
