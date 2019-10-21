@@ -91,8 +91,7 @@ i:hover {
 /***** recipe and ingredients divs (x2) *****/
 
 #food-columns {
-  height: 60vh;
-  
+  height: 60vh; 
 }
 .flex {
   align-items: stretch;
@@ -127,8 +126,7 @@ i:hover {
   border-radius: .5em 0 0 .5em;
   order: 1;
   width: 30%;
-  margin: 0;
-  border: 1px solid red;
+  overflow-y : auto; 
 }
 #index-header > h3:first-child {
   float: right;
@@ -147,22 +145,19 @@ i:hover {
   padding-right: .4em;  
 }
 .idx {
-  border: 1px solid lime;
   padding-top: .1em;
   width: 15%;   
 }
 
 
 #index-table {
-  border: 1px solid blue;
-  margin-top: 0;
-  padding-top:0;
-  overflow-y: scroll; 
+  border: 1px solid blue; 
   height: auto;
+  overflow-y : auto; 
 /*   height: 15em;
   overflow-y : auto; */
 }
-table { 
+#table { 
   border-collapse: collapse;
   width: 100%;  
 }
