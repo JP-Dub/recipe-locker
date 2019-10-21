@@ -29,7 +29,7 @@ body {
   bottom: 0;
   height: 100%; /*20em;*/
   left: 0;
-  margin: 10% auto 0;
+/*   margin: 10% auto 0; */
   position: absolute;
   right: 0;
   top: 0%; 
@@ -40,7 +40,7 @@ body {
 #subframe {
   height: auto;
 /*   margin: auto; */
-  margin: 10% auto 0;
+  margin: 10% auto;
   max-width: 600px;
   padding: 0 1em 1em; /* 0 1.5em 1.5em 1.5em */
   position: relative;
@@ -177,20 +177,20 @@ body {
   body {
     font-size: 1em;
   }
-  #subframe-mount {
+/*   #subframe-mount {
     min-width: 600px;
     width: 60%;
-  }
+  } */
 }
  
 @media all and (max-width: 850px) and (min-width: 250px) { 
   body {
     font-size: .8em; 
   }
-  #subframe-mount {
+/*   #subframe-mount {
     min-width: 325px;
     width: 100%;
-  }
+  } */
 /*   #subframe {
     padding-bottom: 1em;
   } */
