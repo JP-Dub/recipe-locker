@@ -152,7 +152,7 @@ i:hover {
 
 
 #index-table {
-  height: auto;
+/*   height: auto; */
   overflow-y: auto;
 }
 #table { 
@@ -168,7 +168,6 @@ td {
 }
 tbody {
   background-color: whitesmoke;
-  border: 1px solid lime;
 }
 tr:nth-child(even) {
   background-color: lightgray;
