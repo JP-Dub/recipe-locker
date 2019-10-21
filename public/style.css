@@ -153,14 +153,13 @@ i:hover {
 
 
 #index-table {
-/*   overflow-y: auto; */
-  height: 18em;
+  overflow-y: scroll; 
+  height: 14em;
 /*   height: 15em;
   overflow-y : auto; */
 }
-table {
+table { 
   border-collapse: collapse;
-  overflow-y: auto;
   width: 100%;  
 }
 th {

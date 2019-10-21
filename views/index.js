@@ -155,7 +155,7 @@ class App extends Component {
                 </h3>
               </header>
               <div id="index-table">
-                <table>
+                <table id='table'>
                   <tbody>
                     <tr>
                       <td>foo gartarum</td>
