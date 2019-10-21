@@ -55,6 +55,12 @@ class App extends Component {
         user  : "fas fa-lock-open"
       });
     }
+    
+    this.foodColumn = document.getElementById('index-table');
+    this.foodColumn.addEventListener('mouseover', (evt) => {
+      console.log(evt)
+      console.log(this.foodColumn.innerHeight)
+    })
   }
 
   componentWillUnMount() {

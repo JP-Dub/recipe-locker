@@ -154,7 +154,7 @@ i:hover {
 
 #index-table {
   overflow-y: scroll; 
-  height: 14em;
+  height: auto;
 /*   height: 15em;
   overflow-y : auto; */
 }
