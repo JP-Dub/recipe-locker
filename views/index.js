@@ -57,9 +57,10 @@ class App extends Component {
     }
     
     this.foodColumn = document.getElementById('index-table');
+    this.index = document.getElementById('index');
     this.foodColumn.addEventListener('mouseover', (evt) => {
       console.log(evt)
-      console.log(this.foodColumn.innerHeight)
+      console.log(this.foodColumn.clientHeight, this.index.clientHeight)
     })
   }
 

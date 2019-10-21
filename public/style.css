@@ -128,7 +128,7 @@ i:hover {
   order: 1;
   width: 30%;
   margin: 0;
-/*   overflow-y: auto; */
+  border: 1px solid red;
 }
 #index-header > h3:first-child {
   float: right;
@@ -147,12 +147,14 @@ i:hover {
   padding-right: .4em;  
 }
 .idx {
+  border: 1px solid lime;
   padding-top: .1em;
   width: 15%;   
 }
 
 
 #index-table {
+  border: 1px solid blue;
   overflow-y: scroll; 
   height: auto;
 /*   height: 15em;
