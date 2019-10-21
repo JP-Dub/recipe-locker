@@ -38,7 +38,6 @@ class App extends Component {
       delete  : "",
       unlocked: "fas fa-lock-open",
       user    : "fas fa-lock",
-      idxTable: ''
     };
   }
 
@@ -62,14 +61,15 @@ class App extends Component {
     // this.foodColumn.style.height = this.foodColumn.clientHeight
     this.table = document.getElementById('index-table');
     this.index = document.getElementById('index');
-    // this.table.style.height = this.state.idxTable;   
+    // // this.table.style.height = this.state.idxTable;   
     window.addEventListener('resize', (evt) => {
-      console.log('resize', this.index.clientHeight)
-      //this.table.style.height = this.index.clientHeight;
-      this.setState( state => {
-        return {idxTable: state.idxTable = this.index.clientHeight}
-      })
-      this.table.style.height = this.state.idxTable;  
+      console.log('resize', this.table.style)
+      this.table.style.height = this.index.clientHeight;
+    //   this.setState( state => {
+    //     return {idxTable: state.idxTable = this.index.clientHeight}
+    //   })
+    //   console.log(this.state.idxTable, 'idx table')
+    //   this.table.style.height = this.state.idxTable;  
       
     //   console.log(evt)
     //   console.log(this.foodColumn.clientHeight, this.index.clientHeight)

@@ -152,7 +152,7 @@ i:hover {
 
 
 #index-table {
-/*   height: auto; */
+  height: 100px;
   overflow-y: auto;
 }
 #table { 
