@@ -152,16 +152,15 @@ i:hover {
 
 
 #index-table {
-  border: 1px solid red;
-  height: auto;
-  margin-top: 0;
-  overflow-y : auto;
+  border: 1px solid blue;
+/*   height: 15em;
+  overflow-y : auto; */
 }
 table {
-
   border-collapse: collapse;
-  width: 100%;
-  
+  height: 12em;
+  overflow-y : auto;
+  width: 100%;  
 }
 th {
 /*   background-color: skyblue;
