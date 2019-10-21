@@ -127,7 +127,6 @@ i:hover {
   margin: 0;
   order: 1;
   width: 30%;
- 
 /*   overflow-y : auto;  */
 }
 #index-header > h3:first-child {
@@ -154,14 +153,16 @@ i:hover {
 
 #index-table {
   height: auto;
-  overflow-y : auto; 
+/*   overflow-y : auto; */
+  width: 90%;
+  border: 1px solid blue;
 /*   height: 15em;
   overflow-y : auto; */
 }
 #table { 
   border-collapse: collapse;
-/*   overflow-y : auto;  */
-  width: 100%;  
+  overflow-y : auto; 
+  width: 70%;  
 }
 th {
 /*   background-color: skyblue;
@@ -172,6 +173,7 @@ td {
 }
 tbody {
   background-color: whitesmoke;
+  border: 1px solid lime;
 }
 tr:nth-child(even) {
   background-color: lightgray;
