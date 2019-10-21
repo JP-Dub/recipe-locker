@@ -60,26 +60,20 @@ class App extends Component {
     // console.log(this.foodColumn.clientHeight)
     // this.foodColumn.style.height = this.foodColumn.clientHeight
     this.table = document.getElementById('index-table');
+    this.header = document.getElementById('index-header');
     this.index = document.getElementById('index');
     // // this.table.style.height = this.state.idxTable;   
     window.addEventListener('resize', (evt) => {
-     
-      this.table.style.height = this.index.clientHeight;
-       console.log('resize', this.table.style)
-    //   this.setState( state => {
-    //     return {idxTable: state.idxTable = this.index.clientHeight}
-    //   })
-    //   console.log(this.state.idxTable, 'idx table')
-    //   this.table.style.height = this.state.idxTable;  
-      
-    //   console.log(evt)
-    //   console.log(this.foodColumn.clientHeight, this.index.clientHeight)
+      let height = this.index.clientHeight - this.header.clientHeight;
+      console.log(height)
+      this.table.style.height = height + 'px';
+
     });
   
   }
 
   componentWillUnMount() {
-
+    window.removeEventListener('resize');
   }
 
   userLogin(evt) {
