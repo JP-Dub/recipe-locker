@@ -56,15 +56,17 @@ class App extends Component {
       });
     }
     
-    this.foodColumn = document.getElementById('index-table');
-    console.log(this.foodColumn.clientHeight)
+    this.table = document.getElementById('index-table');
+    // console.log(this.foodColumn.clientHeight)
     // this.foodColumn.style.height = this.foodColumn.clientHeight
     
-    // this.index = document.getElementById('index');
-    // this.foodColumn.addEventListener('mouseover', (evt) => {
+    this.index = document.getElementById('index');
+    window.addEventListener('resize', (evt) => {
+      console.log('resize', this.index.clientHeight)
+      this.table.style.height = this.index.clientHeight;
     //   console.log(evt)
     //   console.log(this.foodColumn.clientHeight, this.index.clientHeight)
-    // })
+    });
   }
 
   componentWillUnMount() {

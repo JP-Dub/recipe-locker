@@ -153,16 +153,11 @@ i:hover {
 
 #index-table {
   height: auto;
-/*   overflow-y : auto; */
-  width: 90%;
-  border: 1px solid blue;
-/*   height: 15em;
-  overflow-y : auto; */
+  overflow-y: auto;
 }
 #table { 
   border-collapse: collapse;
-  overflow-y : auto; 
-  width: 70%;  
+  width: 100%;  
 }
 th {
 /*   background-color: skyblue;
