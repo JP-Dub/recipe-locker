@@ -25,6 +25,7 @@ body {
   z-index: 1;
 } */
 
+/***** prevent screen clicks below dialog box *****/
 #subframe-mount {
   bottom: 0;
   height: 100%; /*20em;*/
@@ -155,6 +156,7 @@ body {
 #reset,
 #save {
   background-color:#d9b3ff;
+  cursor: pointer;
   font-weight: bold;
   height: 2.5em;
   margin-left: auto;
