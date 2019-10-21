@@ -16,6 +16,14 @@ body {
  */
 /***** popup UI div *****/
 
+#no-click-wrapper {
+  position: absolute;
+  width: 90%;
+  height: 90vh;
+  border: 1px solid blue;
+  z-index: 1;
+}
+
 #subframe-mount {
   bottom: 0;
   height: 20em;
@@ -25,6 +33,7 @@ body {
   right: 0;
   top: 0%; 
   width: 31.5em;
+  z-index: 2;
 }
 
 #subframe {
@@ -35,6 +44,8 @@ body {
   position: relative;
   width: 100%;
 }
+
+
 
 /* .frame {
   background: #d2ff52; /* Old browsers 
