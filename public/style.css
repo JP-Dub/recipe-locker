@@ -155,6 +155,8 @@ i:hover {
 
 #index-table {
   border: 1px solid blue;
+  margin-top: 0;
+  padding-top:0;
   overflow-y: scroll; 
   height: auto;
 /*   height: 15em;
