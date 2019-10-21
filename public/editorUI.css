@@ -16,29 +16,31 @@ body {
  */
 /***** popup UI div *****/
 
-#no-click-wrapper {
-  position: absolute;
+/* #no-click-wrapper {
+/*   margin: -40% auto; 
+  position: relative;
   width: 90%;
   height: 90vh;
   border: 1px solid blue;
   z-index: 1;
-}
+} */
 
 #subframe-mount {
   bottom: 0;
-  height: 20em;
+  height: 100%; /*20em;*/
   left: 0;
   margin: 10% auto 0;
   position: absolute;
   right: 0;
   top: 0%; 
-  width: 31.5em;
+  width: 100%; /*31.5em;*/
   z-index: 2;
 }
 
 #subframe {
   height: auto;
-  margin: auto;
+/*   margin: auto; */
+  margin: 10% auto 0;
   max-width: 600px;
   padding: 0 1em 1em; /* 0 1.5em 1.5em 1.5em */
   position: relative;
