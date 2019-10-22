@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ErrorBoundary from '../views/errorboundary';
+import ajax from '../views/index';
 import "../public/actionUI.css";
 
 class Login extends Component {
@@ -78,6 +79,41 @@ class User extends Component {
             </div>
       </ErrorBoundary>
     );
+  }
+}
+
+class DeleteRecipe extends Component {
+  constructor(props) {
+    super(props);
+    this.deleteRecipe = this.deleteRecipe.bind(this);
+    this.state = {};
+  }
+  
+  deleteRecipe() {
+    console.log('delete the recipe')
+  }
+  
+  render() {
+    return (
+         <ErrorBoundary>
+            <div id="twitter" className="flex-container radius">
+              <header id="twitter-header" className="ua-header headr">
+                <h3>Delete Recipe</h3>
+                <i            
+                  className="fas fa-trash"
+                  title="Delete Recipe"
+                  onClick={this.deleteRecipe}
+                />
+              </header>
+              <div id="signin-info">
+                <p>Attention: You are about to permenantly delete your recipe!</p>
+                <p>              
+                  If would like to continue with this action, confirm by clicking on the trash can icon 
+                </p>
+              </div>
+            </div>
+      </ErrorBoundary>
+    )
   }
 }
 
