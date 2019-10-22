@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ErrorBoundary from '../views/errorboundary';
+import "../public/actionUI.css";
 
 class Login extends Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class Login extends Component {
   render() {
     return (
       <ErrorBoundary>
-        <div id="main-center">
+        <div id="subframe-mount">
           <div id="subframe" className="frame radius">
             <header id="subframe-header" className="ua-header">
               <h3>User Account</h3>
@@ -30,10 +31,10 @@ class Login extends Component {
                 onClick={this.props.userLogin}
               />
             </header>
-            <div id="twitter" className="flex-container">
-              <header id="twitter-header" className="ua-header">
+            <div id="twitter" className="flex-container radius">
+              <header id="twitter-header" className="ua-header headr">
                 <h3>Twitter Login</h3>
-                <i
+                <i            
                   className="fab fa-twitter"
                   title="sign in"
                   onClick={this.twitterHandler}
@@ -56,4 +57,4 @@ class Login extends Component {
   }
 }
 
-// export default Login;
+export default Login;
