@@ -124,7 +124,8 @@ class App extends Component {
     
     if(!this.state.locked) {
       return(
-       <Login userLogin={this.userLogin} /> 
+       <Login userLogin={this.userLogin}
+              actionName='User Account'/> 
      );
     } else
     if(this.state.newRecipe) {

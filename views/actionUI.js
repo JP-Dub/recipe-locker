@@ -5,6 +5,43 @@ import "../public/actionUI.css";
 class Login extends Component {
   constructor(props) {
     super(props);
+    // this.twitterHandler = this.twitterHandler.bind(this);
+    this.state = {};
+  }
+  componentDidMount() {}
+
+  componentWillUnMount() {}
+
+  // twitterHandler(evt) {
+  //   evt.preventDefault();
+  //   window.location.href = "/api/auth/twitter";
+  // }
+
+  render() {
+    return (
+      <ErrorBoundary>
+        <div id="subframe-mount">
+          <div id="subframe" className="frame radius">
+            <header id="actionUI-header" className="ua-header">
+              <h3>{this.props.actionName}</h3>
+              <i
+                id="icon-close"
+                className="fas fa-window-close"
+                title="close"
+                onClick={this.props.userLogin}
+              />
+            </header>
+            <User />
+          </div>
+        </div>
+      </ErrorBoundary>
+    );
+  }
+}
+
+class User extends Component {
+  constructor(props) {
+    super(props);
     this.twitterHandler = this.twitterHandler.bind(this);
     this.state = {};
   }
@@ -20,17 +57,6 @@ class Login extends Component {
   render() {
     return (
       <ErrorBoundary>
-        <div id="subframe-mount">
-          <div id="subframe" className="frame radius">
-            <header id="actionUI-header" className="ua-header">
-              <h3>User Account</h3>
-              <i
-                id="icon-close"
-                className="fas fa-window-close"
-                title="close"
-                onClick={this.props.userLogin}
-              />
-            </header>
             <div id="twitter" className="flex-container radius">
               <header id="twitter-header" className="ua-header headr">
                 <h3>Twitter Login</h3>
@@ -50,11 +76,11 @@ class Login extends Component {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
       </ErrorBoundary>
     );
   }
 }
+
+
 
 export default Login;
