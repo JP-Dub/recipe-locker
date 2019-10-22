@@ -118,8 +118,22 @@ class App extends Component {
   }
 
   deleteRecipe(evt) {
-    console.log(evt.target)
-    blur.change(this.main.classList);
+    console.log(evt.target.title)
+    let set;
+    
+        if( evt.target.title === 'Delete Recipe') {
+      set = 'remove';
+      this.setState({
+        newRecipe: 0
+      })
+    } else {
+      set = 'add';
+      this.setState({
+        newRecipe: 1
+      })
+    }
+    blur.change(this.main.classList, set)
+    //blur.change(this.main.classList);
   }
   
   renderUI() {
