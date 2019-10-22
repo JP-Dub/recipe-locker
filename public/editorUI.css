@@ -45,8 +45,7 @@
 }
 
 /** styling for icon **/
-#icon-close,
-#main-lock {
+#icon-close {
   color: black;
   float: right;
   font-size: 1em;
