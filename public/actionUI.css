@@ -7,9 +7,7 @@
   margin-bottom: 1em;
 }
 
-#twitter {
-  margin-bottom: 0;
-}
+
 
 .ua-header {
   line-height: 1.5em;
@@ -32,6 +30,10 @@
 .ua-header > i {
   position: absolute;
   width: 10%;
+}
+
+#twitter {
+  margin-bottom: 0;
 }
 
 #twitter-header > i {
