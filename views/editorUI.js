@@ -6,7 +6,7 @@ import "../public/editorUI.css";
 class EditorUI extends Component {
   constructor(props) {
     super(props);
-    this.resetForm = this.resetForm.bind(this);
+    this.resetForm  = this.resetForm.bind(this);
     this.submitForm = this.submitForm.bind(this);
     this.nameHandler= this.nameHandler.bind(this);
     this.ingredientsHandler= this.ingredientsHandler.bind(this);
