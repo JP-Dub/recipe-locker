@@ -75,12 +75,12 @@ body {
 .main-header > h2:nth-child(3) {
  float: right;  
 }
-#icon-close,
+
 #main-lock {
   color: black;
   float: right;
   font-size: .85em;
-  padding-top: .1em;
+  padding-top: .2em;
   padding-right: .55em;
 }
 
