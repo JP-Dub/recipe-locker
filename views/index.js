@@ -38,6 +38,7 @@ class App extends Component {
       delete  : "",
       unlocked: "fas fa-lock-open",
       user    : "fas fa-lock",
+      actionName : ""
     };
   }
 
@@ -81,7 +82,8 @@ class App extends Component {
         set = 'add';
         this.setState({
           locked: 0,
-          user: 'fas fa-unlock'
+          user: 'fas fa-unlock',
+          actionName: 'User Account'
         })
       } else {
         set = 'remove';
@@ -121,27 +123,30 @@ class App extends Component {
     console.log(evt.target.title)
     let set;
     
-        if( evt.target.title === 'Delete Recipe') {
-      set = 'remove';
-      this.setState({
-        newRecipe: 0
-      })
-    } else {
-      set = 'add';
-      this.setState({
-        newRecipe: 1
-      })
-    }
+    if( evt.target.title === 'Delete Recipe') {
+        set = 'add';
+        this.setState({
+          locked: 0,
+          user: 'fas fa-unlock',
+          actionName: 'Delete Recipe'
+        })
+      } else {
+        set = 'remove';
+        this.setState({
+          locked: 1,
+          user: 'fas fa-lock'
+        })
+      }
     blur.change(this.main.classList, set)
     //blur.change(this.main.classList);
   }
   
   renderUI() {
-    
+   
     if(!this.state.locked) {
       return(
        <Login userLogin={this.userLogin}
-              actionName='User Account'
+              actionName={this.state.actionName}
               action='login'
          /> 
      );
