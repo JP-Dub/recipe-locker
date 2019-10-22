@@ -98,7 +98,7 @@ class App extends Component {
   createRecipe(evt) {
     let set;
     
-    if( evt.target.id === 'account-close') {
+    if( evt.target.id === 'icon-close') {
       set = 'remove';
       this.setState({
         newRecipe: 0
