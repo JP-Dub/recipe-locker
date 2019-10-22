@@ -42,26 +42,26 @@
   font-size: 1em;
   margin-top: -.1em;
   padding: 0;
- 
-/*   text-align: left; */
 }
 
 #twitter {
   margin-bottom: 0;
 }
 
-#twitter-header {
+#twitter-header > h3 {
+  color: #1DA1F2;
   margin-top: 0;
   padding-top: 0;
 }
 
 #twitter-header > i {
+  color: #1DA1F2;
   font-size: 1.2em;
   line-height: 1.75em;
   margin-left: -10%;
+  margin-top: -.2em;
   padding-right: .4em;
-  text-align: right;
-  color: #1DA1F2;
+  text-align: right;  
 }
 
 #signin-info {
