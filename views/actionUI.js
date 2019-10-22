@@ -7,6 +7,7 @@ class Login extends Component {
   constructor(props) {
     super(props);
     // this.twitterHandler = this.twitterHandler.bind(this);
+    //this.renderUI = this.renderUI.bind(this);
     this.state = {};
   }
   componentDidMount() {}
@@ -17,6 +18,14 @@ class Login extends Component {
   //   evt.preventDefault();
   //   window.location.href = "/api/auth/twitter";
   // }
+  
+  renderUI () {
+    if(this.props.action === 'login') {
+      return (<User />)
+    } else {
+      return (<DeleteRecipe />)
+    }
+  }
 
   render() {
     return (
@@ -32,7 +41,7 @@ class Login extends Component {
                 onClick={this.props.userLogin}
               />
             </header>
-            <User />
+            { this.renderUI() }
           </div>
         </div>
       </ErrorBoundary>
@@ -108,7 +117,9 @@ class DeleteRecipe extends Component {
               <div id="signin-info">
                 <p>Attention: You are about to permenantly delete your recipe!</p>
                 <p>              
-                  If would like to continue with this action, confirm by clicking on the trash can icon 
+                  If would like to continue with this action, confirm by clicking 
+                  on the trash can icon in the upper right hand corner. Otherwise, 
+                  please cancel by closing window.
                 </p>
               </div>
             </div>

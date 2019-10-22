@@ -27,6 +27,7 @@ class App extends Component {
     super(props);
     this.userLogin    = this.userLogin.bind(this);
     this.createRecipe = this.createRecipe.bind(this);
+    this.deleteRecipe = this.deleteRecipe.bind(this);
     
     this.state = {
       newRecipe: 0,
@@ -116,7 +117,8 @@ class App extends Component {
     blur.change(this.main.classList);
   }
 
-  deleteRecipe() {
+  deleteRecipe(evt) {
+    console.log(evt.target)
     blur.change(this.main.classList);
   }
   
@@ -125,7 +127,9 @@ class App extends Component {
     if(!this.state.locked) {
       return(
        <Login userLogin={this.userLogin}
-              actionName='User Account'/> 
+              actionName='User Account'
+              action='login'
+         /> 
      );
     } else
     if(this.state.newRecipe) {
@@ -163,7 +167,7 @@ class App extends Component {
                 <h3 className="idx hdr-div">
                   <i className={this.state.create} 
                      onClick={this.createRecipe}
-                     title="add recipe" />
+                     title="Add Recipe" />
                 </h3>
               </header>
               <div id="index-table">
@@ -214,8 +218,8 @@ class App extends Component {
                 <h3 className="rcp hdr-div" />
                 <h3 className="rcp hdr-div">Yum Yum Chicken</h3>
                 <h3 className="rcp hdr-div">
-                  <i className={this.state.edit} title="edit recipe" />
-                  <i className={this.state.delete} title="delete recipe" />
+                  <i className={this.state.edit} title="Edit Recipe" />
+                  <i className={this.state.delete} title="Delete Recipe" onClick={this.deleteRecipe} />
                 </h3>
               </header>
               <article id="recipe-ingredients">
