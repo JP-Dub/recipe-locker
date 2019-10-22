@@ -236,13 +236,15 @@ ul {
      -moz-box-shadow: initial;
           box-shadow: initial;
 }
+
+.ua-header {
+  line-height: 1.5em;
+}
+/* 
 #twitter {
   -webkit-border-radius: .5em;
      -moz-border-radius: .5em;
           border-radius: .5em;
-}
-.ua-header {
-  line-height: 1.5em;
 }
 #account-header > h3  {
   padding-top: .3em;
@@ -274,10 +276,10 @@ ul {
 .ua-header > i {
   position: absolute;
   width: 10%;
-}
-#signin-info {
+} */
+/* #signin-info {
   padding: 0 .75em;
-}
+} */
 
 /****** Media Queries ******/
 

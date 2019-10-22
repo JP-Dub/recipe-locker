@@ -1,14 +1,15 @@
+/*****  User login  *****/
+
 .flex-container {
-  background-color: whitesmoke;
+/*   background-color: whitesmoke;
   border: 5px ridge lightgray;
-  overflow: hidden;
+  overflow: hidden; */
   margin-bottom: 1em;
 }
 
 #twitter {
   margin-bottom: 0;
 }
-/*****  User login  *****/
 
 .ua-header {
   line-height: 1.5em;
@@ -22,12 +23,15 @@
   padding-top: 0;
   padding-bottom: .1em;
 }
+
 .ua-header > h3 {
-  border: 1px solid blue;
   display: inline-block;
   margin: 0 auto;
   width: 100%;
-
+}
+.ua-header > i {
+  position: absolute;
+  width: 10%;
 }
 
 #twitter-header > i {
@@ -35,22 +39,18 @@
   line-height: 1.75em;
   margin-left: -10%;
   margin-top: -.1em;
-/*   padding-bottom: .2em; */
   padding-right: .4em;
   text-align: right;
   color: #1DA1F2;
 }
-.ua-header > i {
-  position: absolute;
-  width: 10%;
-}
+
 #signin-info {
   padding: 0 .75em;
 }
 
 /****** Media Queries ******/
 
-@media all and (min-width: 1281px) {
+/* @media all and (min-width: 1281px) {
   body {
     font-size: 1.2em;
   }
@@ -62,7 +62,7 @@
     font-size: 1em;
   }
 }
- 
+  */
 @media all and (max-width: 850px) and (min-width: 250px) { /* max-width: 640px */
   body {
     font-size: .8em; 
@@ -70,16 +70,6 @@
   #subframe {
     min-width: 325px;   
   }
-  
-/*   .frame {
-   /* Add the blur effect 
-   /* position: fixed; 
-    border: 5px 0px ridge lightgray;
-    -webkit-box-shadow: initial;
-       -moz-box-shadow: initial;
-            box-shadow: initial; 
-    padding-bottom: 0;
-  } */
 
 
 }

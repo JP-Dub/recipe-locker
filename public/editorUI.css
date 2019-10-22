@@ -61,9 +61,9 @@
 /***** Form Div *****/
 
 .flex-container {
-  background-color: whitesmoke;
+/*   background-color: whitesmoke;
   border: 5px ridge lightgray;
-  overflow: hidden;
+  overflow: hidden; */
   margin-bottom: 1em;
 }
 
