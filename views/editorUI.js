@@ -73,7 +73,7 @@ class EditorUI extends Component {
               className="ua-header">
               <h3>New Recipe</h3>
               <i
-                id="account-close"
+                id="icon-close"
                 className="fas fa-window-close"
                 title="close"
                 onClick={this.props.userLogin}
