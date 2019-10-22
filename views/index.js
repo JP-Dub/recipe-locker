@@ -25,7 +25,7 @@ class Main extends Component {
 class App extends Component {
   constructor(props) {
     super(props);
-    this.userLogin = this.userLogin.bind(this);
+    this.userLogin    = this.userLogin.bind(this);
     this.createRecipe = this.createRecipe.bind(this);
     
     this.state = {
