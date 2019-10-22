@@ -22,7 +22,7 @@ class Login extends Component {
       <ErrorBoundary>
         <div id="subframe-mount">
           <div id="subframe" className="frame radius">
-            <header id="subframe-header" className="ua-header">
+            <header id="actionUI-header" className="ua-header">
               <h3>User Account</h3>
               <i
                 id="icon-close"
