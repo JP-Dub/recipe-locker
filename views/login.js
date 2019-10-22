@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ErrorBoundary from '../views/errorboundary';
+import "../public/editorUI.css";
 
 class Login extends Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class Login extends Component {
   render() {
     return (
       <ErrorBoundary>
-        <div id="main-center">
+        <div id="subframe-mount">
           <div id="subframe" className="frame radius">
             <header id="subframe-header" className="ua-header">
               <h3>User Account</h3>

@@ -2,7 +2,7 @@ import ReactDOM from "react-dom";
 import React, { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import Login from '../views/login';
-// import NewRecipe from '../views/newRecipe';
+
 import EditorUI from '../views/editorUI';
 import ErrorBoundary from '../views/errorboundary';
 
