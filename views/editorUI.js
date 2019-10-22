@@ -64,7 +64,6 @@ class EditorUI extends Component {
   render() {   
     return (
       <ErrorBoundary>
-        <div id='no-click-wrapper' >
         <div id="subframe-mount">
           <div 
             id="subframe" 
@@ -128,7 +127,6 @@ class EditorUI extends Component {
               </div>
             </form>           
           </div>         
-        </div>
         </div>
       </ErrorBoundary>
     );
