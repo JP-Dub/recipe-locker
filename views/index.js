@@ -122,34 +122,31 @@ class App extends Component {
 
   deleteRecipe(evt) {
     let set;
-    
+    console.log('deleteRecipe')
     if( evt.target.title === 'Delete Recipe') {
         set = 'add';
         this.setState({
           locked: 0,
-          user: 'fas fa-unlock',
           actionName: 'Delete Recipe'
         })
       } else {
         set = 'remove';
         this.setState({
           locked: 1,
-          user: 'fas fa-lock',
           actionName: ''
         })
       }
     blur.change(this.main.classList, set)
-    //blur.change(this.main.classList);
   }
   
   renderUI() {
    
     if(!this.state.locked) {
       return(
-       <ActionUI userLogin={this.userLogin}
-              actionName={this.state.actionName}
-              action='login'
-         /> 
+       <ActionUI 
+         userLogin={this.userLogin}
+         actionName={this.state.actionName}
+       /> 
      );
     } else
     if(this.state.newRecipe) {

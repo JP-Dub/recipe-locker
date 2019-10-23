@@ -108,7 +108,7 @@ class DeleteRecipe extends Component {
          <ErrorBoundary>
             <div id="twitter" className="flex-container radius">
               <header id="twitter-header" className="ua-header headr">
-                <h3>Delete Recipe</h3>
+                <h3>[Your Recipe Name]</h3>
                 <i            
                   className="fas fa-trash"
                   title="Confirm Delete"
