@@ -20,7 +20,8 @@ class Login extends Component {
   // }
   
   renderUI () {
-    if(this.props.action === 'login') {
+   
+    if(this.props.actionName === 'User Account') {
       return (<User />)
     } else {
       return (<DeleteRecipe />)
@@ -37,7 +38,7 @@ class Login extends Component {
               <i
                 id="icon-close"
                 className="fas fa-window-close"
-                title="close"
+                title="Close Window"
                 onClick={this.props.userLogin}
               />
             </header>

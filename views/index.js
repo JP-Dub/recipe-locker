@@ -89,7 +89,8 @@ class App extends Component {
         set = 'remove';
         this.setState({
           locked: 1,
-          user: 'fas fa-lock'
+          user: 'fas fa-lock',
+          actionName: ''
         })
       }
       blur.change(this.main.classList, set)
@@ -120,7 +121,6 @@ class App extends Component {
   }
 
   deleteRecipe(evt) {
-    console.log(evt.target.title)
     let set;
     
     if( evt.target.title === 'Delete Recipe') {
@@ -134,7 +134,8 @@ class App extends Component {
         set = 'remove';
         this.setState({
           locked: 1,
-          user: 'fas fa-lock'
+          user: 'fas fa-lock',
+          actionName: ''
         })
       }
     blur.change(this.main.classList, set)
@@ -174,7 +175,7 @@ class App extends Component {
                 id="main-lock"
                 className={this.state.user}
                 onClick={this.userLogin}
-                title="user login"
+                title="User Login"
               />
             </h2>
           </header>
