@@ -7,7 +7,7 @@ import ErrorBoundary from '../views/errorboundary';
 
 import "../public/style.css";
 
-
+///login/jdub_piazza
 
 // Used with BrowserRouter for React Paths
 class Main extends Component {
@@ -32,7 +32,6 @@ class App extends Component {
     this.state = {
       newRecipe: 0,
       locked  : 1,
-      login   : 1,
       create  : "",
       edit    : "",
       delete  : "",
@@ -50,6 +49,7 @@ class App extends Component {
 
     if (this.userPath) {
       this.setState({
+        locked: 1,
         create: "fas fa-plus-square",
         edit  : "far fa-edit",
         delete: "fas fa-trash",
