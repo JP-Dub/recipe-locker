@@ -98,7 +98,7 @@ class App extends Component {
    
   }
   
-    deleteRecipe(evt) {
+  deleteRecipe(evt) {
     let set;
     let value = document.getElementById('recipe-name')
     console.log(value.innerHTML)
