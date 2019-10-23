@@ -3,7 +3,8 @@ const Server = require(process.cwd() + '/app/controllers/server.js'),
 
 module.exports = (app, passport, cors) => {
 	
-	function isLoggedIn (req, res, next) {   
+	function isLoggedIn (req, res, next) {  
+    console.log('dude logged in')
     return req.isAuthenticate() ? next() : res.redirect('/');
 		// if(req.isAuthenticated()) {
 		// 	return next()
@@ -37,7 +38,7 @@ module.exports = (app, passport, cors) => {
   app.route('/createRecipe')
     .post(handleServer.createRecipe);
 		
-	app.get('/auth/twitter', passport.authenticate( 'twitter' ) );
+	app.get( '/auth/twitter', passport.authenticate( 'twitter' ) );
 
 	app.route('/auth/twitter/callback' )
 		.get( passport.authenticate( 'twitter', {failureRedirect: '/'} ), 

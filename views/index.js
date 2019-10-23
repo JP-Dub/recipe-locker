@@ -110,7 +110,9 @@ class App extends Component {
       
   }
   
-  user
+  userLogout() {
+    window.location.href = "/api/logout";
+  }
   
   deleteRecipe(evt) {
     let set;
@@ -189,7 +191,7 @@ class App extends Component {
                 id="main-lock"
                 className={this.state.lockIcon}
                 onClick={this[this.state.account]}
-                title="User Login"
+                title={this.state.account === 'userLogin'? 'User Login' : 'User Logout'}
               />
             </h2>
           </header>
@@ -288,15 +290,18 @@ const ajax = {
   },
   request: function ajaxRequest(method, path, data, callback) {
     let xmlhttp = new XMLHttpRequest(),
-      url = "../api" + path,
-      params =
+        url = "../api" + path;
+    
+      let params = data ?
         typeof data === "string"
           ? data
           : Object.keys(data)
               .map(
                 k => encodeURIComponent(k) + "=" + encodeURIComponent(data[k])
               )
-              .join("&");
+              .join("&")
+      : null;
+      
 
     xmlhttp.open(method, url, true);
     
