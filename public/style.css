@@ -74,15 +74,22 @@ body {
   width: 70%;  
 }
 .main-header > h2:nth-child(3) {
- float: right;  
+ float: right; 
+ padding-right: .3em;
 }
 
 #main-lock {
   color: black;
+  direction:rtl;
   float: right;
   font-size: .85em;
   padding-top: .2em;
-  padding-right: .55em;
+  -webkit-transform:rotateY(180deg);
+     -moz-transform:rotateY(180deg);
+       -o-transform:rotateY(180deg);
+      -ms-transform:rotateY(180deg);
+  unicode-bidi:bidi-override;
+  
 }
 
 i:hover {
