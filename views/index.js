@@ -43,12 +43,14 @@ class App extends Component {
 
   componentDidMount() {
     this.main = document.getElementById('main');
-    let lock = document.getElementById('main-lock');
+    this.lock = document.getElementById('main-lock');
     let path = window.location.pathname;
     this.userPath = RegExp("^/login/.*").test(path);
-    console.log(lock.classList)
-    if (this.userPath) {
-      changeStyle.flip(lock.classList, 'add');
+    
+    console.log(this.lock.classList)
+    
+    if (this.userPath) {   
+      
       this.setState({
         locked   : 1,
         addIcon  : "fas fa-plus-square",
@@ -56,6 +58,7 @@ class App extends Component {
         trashIcon: "fas fa-trash",
         lockIcon : "fas fa-lock-open"
       });
+      
     }
     
  
@@ -96,7 +99,7 @@ class App extends Component {
       }
       changeStyle.blur(this.main.classList, set)
     }
-   
+      
   }
   
   deleteRecipe(evt) {
@@ -134,8 +137,7 @@ class App extends Component {
         newRecipe: 1
       })
     }
-    changeStyle.blur(this.main.classList, set)
-    
+    changeStyle.blur(this.main.classList, set)    
   }
 
   editRecipe() {
