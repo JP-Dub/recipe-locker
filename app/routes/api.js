@@ -43,7 +43,16 @@ module.exports = (app, passport, cors) => {
 		.get( passport.authenticate( 'twitter', {failureRedirect: '/'} ), 
         (req, res) => {   
     	    res.redirect('/login/' + req.user.twitter['username']);
-		});	
+		});
+  
+  app.get('/logout', (req, res) => {
+    req.logout();
+    req.session.destroy( err => {
+      if(err) throw err;
+      res.redirect('/');
+    });
+    
+  });
 		
 
 };

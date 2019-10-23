@@ -36,7 +36,8 @@ class App extends Component {
       editIcon : "",
       trashIcon: "",
       lockIcon : "fas fa-lock",
-      actionName: ""
+      actionName: "",
+      account : 'userLogin'
     };
   }
 
@@ -54,7 +55,8 @@ class App extends Component {
         addIcon  : "fas fa-plus-square",
         editIcon : "far fa-edit",
         trashIcon: "fas fa-trash",
-        lockIcon : "fas fa-lock-open"
+        lockIcon : "fas fa-lock-open",
+        account  : 'userLogout'
       });
       
     }
@@ -108,6 +110,8 @@ class App extends Component {
       
   }
   
+  user
+  
   deleteRecipe(evt) {
     let set;
     let value = document.getElementById('recipe-name')
@@ -147,8 +151,8 @@ class App extends Component {
   }
 
   editRecipe() {
-    let set;
-    changeStyle.blur(this.main.classList, set);
+    // let set;
+    // changeStyle.blur(this.main.classList, set);
   }
   
   renderUI() {
@@ -184,7 +188,7 @@ class App extends Component {
               <i
                 id="main-lock"
                 className={this.state.lockIcon}
-                onClick={this.userLogin}
+                onClick={this[this.state.account]}
                 title="User Login"
               />
             </h2>
