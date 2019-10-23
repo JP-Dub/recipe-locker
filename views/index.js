@@ -25,8 +25,8 @@ class Main extends Component {
 class App extends Component {
   constructor(props) {
     super(props);
-    this.userLogin    = this.userLogin.bind(this);
-    this.createRecipe = this.createRecipe.bind(this);
+    this.userLogin = this.userLogin.bind(this);
+    this.addRecipe = this.addRecipe.bind(this);
     this.deleteRecipe = this.deleteRecipe.bind(this);
     
     this.state = {
@@ -43,11 +43,12 @@ class App extends Component {
 
   componentDidMount() {
     this.main = document.getElementById('main');
-
+    let lock = document.getElementById('main-lock');
     let path = window.location.pathname;
     this.userPath = RegExp("^/login/.*").test(path);
-
+    console.log(lock.classList)
     if (this.userPath) {
+      changeStyle.flip(lock.classList, 'add');
       this.setState({
         locked   : 1,
         addIcon  : "fas fa-plus-square",
@@ -93,7 +94,7 @@ class App extends Component {
           actionName: ''
         })
       }
-      blur.change(this.main.classList, set)
+      changeStyle.blur(this.main.classList, set)
     }
    
   }
@@ -116,10 +117,10 @@ class App extends Component {
           actionName: ''
         })
       }
-    blur.change(this.main.classList, set)
+    changeStyle.blur(this.main.classList, set)
   }
 
-  createRecipe(evt) {
+  addRecipe(evt) {
     let set;
     
     if( evt.target.id === 'icon-close') {
@@ -133,12 +134,13 @@ class App extends Component {
         newRecipe: 1
       })
     }
-    blur.change(this.main.classList, set)
+    changeStyle.blur(this.main.classList, set)
     
   }
 
   editRecipe() {
-    blur.change(this.main.classList);
+    let set;
+    changeStyle.blur(this.main.classList, set);
   }
   
   renderUI() {
@@ -154,7 +156,7 @@ class App extends Component {
     } else
     if(this.state.newRecipe) {
       return(
-        <EditorUI userLogin={this.createRecipe} />
+        <EditorUI userLogin={this.addRecipe} />
       )
     } else {
       return( <div id='empty'/> );
@@ -186,7 +188,7 @@ class App extends Component {
                 <h3 className="idx hdr-div">Recipe Name</h3>
                 <h3 className="idx hdr-div">
                   <i className={this.state.addIcon} 
-                     onClick={this.createRecipe}
+                     onClick={this.addRecipe}
                      title="Add Recipe" />
                 </h3>
               </header>
@@ -308,8 +310,9 @@ const ajax = {
   }
 };
 
-const blur = {
-  change: (style, set) => { style[set]('blur') }
+const changeStyle = {
+  blur: (style, set) => { style[set]('blur') },
+  flip: (style, set) => { style[set]('flip-lock') }
 };
 
 export default ajax;
