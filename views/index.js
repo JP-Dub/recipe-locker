@@ -140,7 +140,7 @@ class App extends Component {
   }
   
   renderUI() {
-   
+   console.log('locked', this.state.locked, !this.state.locked ? true: false)
     if(!this.state.locked) {
       return(
        <ActionUI 
