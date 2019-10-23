@@ -17,8 +17,9 @@ module.exports = (app, passport, cors) => {
   
   app.route('/login/:user')
      .get(isLoggedIn, (req, res) => {
-    console.log('login/:user')
-          res.sendFile(__dirname + '/views/index.html');
+    console.log('login/:user', __dirname, process.cwd() + '/views/index.html')
+          //res.sendFile(process.cwd() +  '/views/index.html');
+    res.redirect('/login/' + req.user.twitter['username']);
   });
 //   app.get('/demo', (req, res) => {
 //     res.redirect('/rsvp/demo');
@@ -37,7 +38,7 @@ module.exports = (app, passport, cors) => {
 //   app.route('/resetRSVP')
 //     .put( handleServer.resetRSVP );  
   app.route('/createRecipe')
-    .post(handleServer.createRecipe);
+    .post( isLoggedIn, handleServer.createRecipe);
 		
 	app.get( '/auth/twitter', passport.authenticate( 'twitter' ) );
 
