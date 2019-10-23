@@ -24,7 +24,9 @@ class ActionUI extends Component {
     if(this.props.actionName === 'User Account') {
       return (<Login />)
     } else {
-      return (<DeleteRecipe />)
+      return (<DeleteRecipe
+                recipeName={this.props.recipeName}
+              />)
     }
   }
 
@@ -104,11 +106,12 @@ class DeleteRecipe extends Component {
   }
   
   render() {
+    console.log(this.props)
     return (
          <ErrorBoundary>
             <div id="twitter" className="flex-container radius">
               <header id="twitter-header" className="ua-header headr">
-                <h3>[Your Recipe Name]</h3>
+                <h3>{this.props.recipeName}</h3>
                 <i            
                   className="fas fa-trash"
                   title="Confirm Delete"

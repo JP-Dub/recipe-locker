@@ -124,7 +124,7 @@ class App extends Component {
     let set;
     let value = document.getElementById('recipe-name')
     console.log(value.innerHTML)
-    
+    this.name = value.innerHTML;
     if( evt.target.title === 'Delete Recipe') {
         set = 'add';
         this.setState({
@@ -148,6 +148,7 @@ class App extends Component {
        <ActionUI 
          userLogin={this.state.actionName === 'User Account'? this.userLogin : this.deleteRecipe}
          actionName={this.state.actionName}
+         recipeName={this.name}
        /> 
      );
     } else
