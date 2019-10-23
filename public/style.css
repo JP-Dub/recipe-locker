@@ -78,18 +78,20 @@ body {
  padding-right: .3em;
 }
 
-#main-lock {
-  color: black;
+.flip-lock {
   direction:rtl;
-  float: right;
-  font-size: .85em;
-  padding-top: .2em;
   -webkit-transform:rotateY(180deg);
      -moz-transform:rotateY(180deg);
        -o-transform:rotateY(180deg);
       -ms-transform:rotateY(180deg);
-  unicode-bidi:bidi-override;
-  
+  unicode-bidi:bidi-override;  
+}
+
+#main-lock {
+  color: black;
+  float: right;
+  font-size: .85em;
+  padding-top: .2em;
 }
 
 i:hover {
@@ -308,7 +310,7 @@ ul {
     width: 60%;
   }
   .main-header > h2:nth-child(3) {
-    padding: 4px;
+/*     padding: ; */
   }
 }
  
