@@ -78,7 +78,7 @@ class App extends Component {
     // evt.preventDefault();
     let set;
     if(!this.userPath) {
-      if( evt.target.id === 'main-lock') {
+      if( evt.target.id === 'main-lock' ) {
         set = 'add';
         this.setState({
           locked: 0,
