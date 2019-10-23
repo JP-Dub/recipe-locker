@@ -1,0 +1,29 @@
+.frame{
+  background: #d2ff52; /* Old browsers */
+  background: -webkit-linear-gradient(top,  #d2ff52 0%,#91e842 100%);
+  background:    -moz-linear-gradient(top,  #d2ff52 0%, #91e842 100%);
+  background:         linear-gradient(to bottom,  #d2ff52 0%,#91e842 100%); 
+  border: 5px ridge lightgray;  
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52', endColorstr='#91e842',GradientType=0 ); 
+}
+
+.shadow {
+  -webkit-box-shadow: 8px 4px 20px 10px dimgray;
+     -moz-box-shadow: 8px 4px 20px 10px dimgray;
+          box-shadow: 8px 4px 20px 10px dimgray;
+}
+
+.radius {
+  -webkit-border-radius: .5em;
+     -moz-border-radius: .5em;
+          border-radius: .5em;
+}
+
+.blur {
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+
+i:hover {
+  cursor: pointer;
+}

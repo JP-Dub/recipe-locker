@@ -48,6 +48,7 @@ body {
   -webkit-filter: blur(2px);
   filter: blur(2px);
 }
+
 /***** main header div *****/
 
 .main-header {
@@ -93,6 +94,7 @@ i:hover {
 #food-columns {
   height: 60vh; 
 }
+
 .flex {
   align-items: stretch;
   display: inline-flex; 
@@ -103,6 +105,7 @@ i:hover {
   background-color: whitesmoke;
   border: 5px ridge lightgray;
   overflow: hidden;
+  margin-bottom: 1em;
 }
 .flex-header {
   background-color:#d9b3ff; 

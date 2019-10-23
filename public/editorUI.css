@@ -24,13 +24,6 @@
 }
 
 
-/* .radius {
-  -webkit-border-radius: .5em;
-     -moz-border-radius: .5em;
-          border-radius: .5em;
-} */
-
-
 /**** subframe-header ****/
 #subframe-header {
   line-height: 2em;
@@ -61,8 +54,8 @@
 .flex-container {
 /*   background-color: whitesmoke;
   border: 5px ridge lightgray;
-  overflow: hidden; */
-  margin-bottom: 1em;
+  overflow: hidden; *
+  margin-bottom: 1em;*/
 }
 
 /* .flex-container:last-child {
