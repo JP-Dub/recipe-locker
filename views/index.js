@@ -35,7 +35,6 @@ class App extends Component {
       addIcon  : "",
       editIcon : "",
       trashIcon: "",
-      unlocked : "fas fa-lock-open",
       lockIcon : "fas fa-lock",
       actionName: ""
     };
@@ -50,8 +49,6 @@ class App extends Component {
     console.log(this.lock.classList)
     
     if (this.userPath) {   
-      changeStyle.flip(this.lock.classList, 'add', (what) => {
-        console.log(what)
       this.setState({
         locked   : 1,
         addIcon  : "fas fa-plus-square",
@@ -59,7 +56,6 @@ class App extends Component {
         trashIcon: "fas fa-trash",
         lockIcon : "fas fa-lock-open"
       });
-     }); 
       
     }
     
@@ -76,11 +72,11 @@ class App extends Component {
   
   }
   
-  componentDidUpdate(props, prevState) {
-    if(this.state.lockIcon !== 'fas fa-unlock' 
-       ||
-       this.state.lockIcon !== 'fas fa-open'     ) {
+  componentDidUpdate() {
+    if(this.state.lockIcon === 'fas fa-lock-open') {
       changeStyle.flip(this.lock.classList, 'add');
+    } else {
+      changeStyle.flip(this.lock.classList, 'remove');
     }
   }
 
@@ -324,7 +320,7 @@ const ajax = {
 
 const changeStyle = {
   blur: (style, set) => { style[set]('blur') },
-  flip: (style, set, cb) => { style[set]('flip-lock'), cb('complete')}
+  flip: (style, set) => { style[set]('flip-lock') }
 };
 
 export default ajax;
