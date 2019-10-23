@@ -167,7 +167,7 @@ class App extends Component {
     return (
       <ErrorBoundary>
         <div id="main" className="frame shadow radius">
-          <header id="locker-header" className="main-header">
+          <header className="main-header">
             <h2 className="hdr-div" />
             <h2 className="hdr-div">The Recipe Locker</h2>
             <h2 className="hdr-div">
