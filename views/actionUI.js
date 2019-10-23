@@ -3,7 +3,7 @@ import ErrorBoundary from '../views/errorboundary';
 import ajax from '../views/index';
 import "../public/actionUI.css";
 
-class Login extends Component {
+class ActionUI extends Component {
   constructor(props) {
     super(props);
     // this.twitterHandler = this.twitterHandler.bind(this);
@@ -131,4 +131,4 @@ class DeleteRecipe extends Component {
 
 
 
-export default Login;
+export default ActionUI;

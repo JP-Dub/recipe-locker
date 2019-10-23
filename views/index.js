@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom";
 import React, { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-import Login from '../views/actionUI';
+import ActionUI from '../views/actionUI';
 import EditorUI from '../views/editorUI';
 import ErrorBoundary from '../views/errorboundary';
 
@@ -146,7 +146,7 @@ class App extends Component {
    
     if(!this.state.locked) {
       return(
-       <Login userLogin={this.userLogin}
+       <ActionUI userLogin={this.userLogin}
               actionName={this.state.actionName}
               action='login'
          /> 
