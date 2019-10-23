@@ -22,7 +22,7 @@ class ActionUI extends Component {
   renderUI () {
    
     if(this.props.actionName === 'User Account') {
-      return (<User />)
+      return (<Login />)
     } else {
       return (<DeleteRecipe />)
     }
@@ -50,7 +50,7 @@ class ActionUI extends Component {
   }
 }
 
-class User extends Component {
+class Login extends Component {
   constructor(props) {
     super(props);
     this.twitterHandler = this.twitterHandler.bind(this);
@@ -73,7 +73,7 @@ class User extends Component {
                 <h3>Twitter Login</h3>
                 <i            
                   className="fab fa-twitter"
-                  title="sign in"
+                  title="User Login"
                   onClick={this.twitterHandler}
                 />
               </header>
@@ -111,7 +111,7 @@ class DeleteRecipe extends Component {
                 <h3>Delete Recipe</h3>
                 <i            
                   className="fas fa-trash"
-                  title="Delete Recipe"
+                  title="Confirm Delete"
                   onClick={this.deleteRecipe}
                 />
               </header>
