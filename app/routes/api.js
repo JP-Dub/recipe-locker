@@ -5,7 +5,7 @@ module.exports = (app, passport, cors) => {
 	
 	function isLoggedIn (req, res, next) {  
     console.log('dude logged in')
-    return req.isAuthenticate() ? next() : res.redirect('/');
+    return req.isAuthenticated() ? next() : res.redirect('/');
 		// if(req.isAuthenticated()) {
 		// 	return next()
 		// } else {
@@ -17,6 +17,7 @@ module.exports = (app, passport, cors) => {
   
   app.route('/login/:user')
      .get(isLoggedIn, (req, res) => {
+    console.log('login/:user')
           res.sendFile(__dirname + '/views/index.html');
   });
 //   app.get('/demo', (req, res) => {
@@ -43,7 +44,7 @@ module.exports = (app, passport, cors) => {
 	app.route('/auth/twitter/callback' )
 		.get( passport.authenticate( 'twitter', {failureRedirect: '/'} ), 
         (req, res) => {   
-    	    res.redirect('/login/' + req.user.twitter['username']);
+    	    res.redirect('/api/login/' + req.user.twitter['username']);
 		});
   
   app.get('/logout', (req, res) => {
