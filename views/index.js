@@ -97,6 +97,27 @@ class App extends Component {
     }
    
   }
+  
+    deleteRecipe(evt) {
+    let set;
+    let value = document.getElementById('recipe-name')
+    console.log(value.innerHTML)
+    this.name = value.innerHTML;
+    if( evt.target.title === 'Delete Recipe') {
+        set = 'add';
+        this.setState({
+          locked: 0,
+          actionName: 'Delete Recipe'
+        })
+      } else {
+        set = 'remove';
+        this.setState({
+          locked: 1,
+          actionName: ''
+        })
+      }
+    blur.change(this.main.classList, set)
+  }
 
   createRecipe(evt) {
     let set;
@@ -118,27 +139,6 @@ class App extends Component {
 
   editRecipe() {
     blur.change(this.main.classList);
-  }
-
-  deleteRecipe(evt) {
-    let set;
-    let value = document.getElementById('recipe-name')
-    console.log(value.innerHTML)
-    this.name = value.innerHTML;
-    if( evt.target.title === 'Delete Recipe') {
-        set = 'add';
-        this.setState({
-          locked: 0,
-          actionName: 'Delete Recipe'
-        })
-      } else {
-        set = 'remove';
-        this.setState({
-          locked: 1,
-          actionName: ''
-        })
-      }
-    blur.change(this.main.classList, set)
   }
   
   renderUI() {
