@@ -50,7 +50,8 @@ class App extends Component {
     console.log(this.lock.classList)
     
     if (this.userPath) {   
-      
+      changeStyle.flip(this.lock.classList, 'add', (what) => {
+        console.log(what)
       this.setState({
         locked   : 1,
         addIcon  : "fas fa-plus-square",
@@ -58,6 +59,7 @@ class App extends Component {
         trashIcon: "fas fa-trash",
         lockIcon : "fas fa-lock-open"
       });
+     }); 
       
     }
     
@@ -72,6 +74,14 @@ class App extends Component {
       
     window.addEventListener('resize', this.adjHeight);
   
+  }
+  
+  componentDidUpdate(props, prevState) {
+    if(this.state.lockIcon !== 'fas fa-unlock' 
+       ||
+       this.state.lockIcon !== 'fas fa-open'     ) {
+      changeStyle.flip(this.lock.classList, 'add');
+    }
   }
 
   componentWillUnMount() {
@@ -105,7 +115,7 @@ class App extends Component {
   deleteRecipe(evt) {
     let set;
     let value = document.getElementById('recipe-name')
-    console.log(value.innerHTML)
+    //console.log(value.innerHTML)
     this.name = value.innerHTML;
     if( evt.target.title === 'Delete Recipe') {
         set = 'add';
@@ -146,7 +156,7 @@ class App extends Component {
   }
   
   renderUI() {
-   console.log('locked', this.state.locked, !this.state.locked ? true: false)
+   //console.log('locked', this.state.locked, !this.state.locked ? true: false)
     if(!this.state.locked) {
       return(
        <ActionUI 
@@ -314,7 +324,7 @@ const ajax = {
 
 const changeStyle = {
   blur: (style, set) => { style[set]('blur') },
-  flip: (style, set) => { style[set]('flip-lock') }
+  flip: (style, set, cb) => { style[set]('flip-lock'), cb('complete')}
 };
 
 export default ajax;
