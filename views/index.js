@@ -122,7 +122,9 @@ class App extends Component {
 
   deleteRecipe(evt) {
     let set;
-    console.log('deleteRecipe')
+    let value = document.getElementById('recipe-name')
+    console.log(value.innerHTML)
+    
     if( evt.target.title === 'Delete Recipe') {
         set = 'add';
         this.setState({
@@ -144,7 +146,7 @@ class App extends Component {
     if(!this.state.locked) {
       return(
        <ActionUI 
-         userLogin={this.userLogin}
+         userLogin={this.state.actionName === 'User Account'? this.userLogin : this.deleteRecipe}
          actionName={this.state.actionName}
        /> 
      );
@@ -233,7 +235,7 @@ class App extends Component {
             <div id="recipe" className="flex-container">
               <header id="recipe-header" className="flex-header">
                 <h3 className="rcp hdr-div" />
-                <h3 className="rcp hdr-div">Yum Yum Chicken</h3>
+                <h3 id='recipe-name' className="rcp hdr-div">Yum Yum Chicken</h3>
                 <h3 className="rcp hdr-div">
                   <i className={this.state.edit} title="Edit Recipe" />
                   <i className={this.state.delete} title="Delete Recipe" onClick={this.deleteRecipe} />
