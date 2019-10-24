@@ -14,7 +14,8 @@ var Recipes = new Schema({
      recipes : [{
        name: String,
        ingredients: Array,
-       directions : Array
+       directions : Array,
+       ratings : Number
      }]
 });
 
