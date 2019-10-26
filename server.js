@@ -34,9 +34,7 @@ mongoose.connect(process.env.MONGO_URI, {
 
 mongoose.Promise = global.Promise;
 
-app.use(
-  "/api",
-  proxy({
+app.use("/api", proxy({
     target: "localhost",
     port: 3000
   })
