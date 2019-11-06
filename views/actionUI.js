@@ -109,9 +109,9 @@ class Login extends Component {
       let data = {
         name : this.props.recipeName,
       }
-      // ajax.ready(ajax.request('DELETE', '/delete-recipe', data, () => {
-      //   console.log("success")
-      // }))
+      ajax.ready(ajax.request('DELETE', '/delete-recipe', data, () => {
+        console.log("success")
+      }))
     }
     
     render() {

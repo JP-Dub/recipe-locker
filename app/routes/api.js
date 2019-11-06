@@ -16,11 +16,19 @@ module.exports = (app, passport, cors) => {
           //res.sendFile(process.cwd() +  '/views/index.html');
       res.redirect('/login/' + req.user.twitter['username']);
     });
+  
+  //app.route('/load-recipes')
+  app.route('/recipe-locker')
+    .get(handleServer.loadRecipes)
+    .post(isLoggedIn, handleServer.createRecipe)
+    .put(isLoggedIn, handleServer.editRecipe)
+    .delete(isLoggedIn, handleServer.deleteRecipe);
 
-  app.route( '/createRecipe' )
+  app.route( '/create-recipe' )
     .post( isLoggedIn, handleServer.createRecipe);
   
   app.route('/delete-recipe')
+    .delete(isLoggedIn, handleServer.deleteRecipe);
 		
 	app.get( '/auth/twitter', passport.authenticate( 'twitter' ) );
 

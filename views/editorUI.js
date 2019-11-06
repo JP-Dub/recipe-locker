@@ -33,7 +33,7 @@ class EditorUI extends Component {
 
   submitForm() {
     
-    ajax.ready(ajax.request('POST', '/createRecipe', this.state, (data) => {
+    ajax.ready(ajax.request('POST', '/create-recipe', this.state, (data) => {
       this.setState({
         name: '',
         directions:'',
