@@ -113,7 +113,8 @@ class DeleteRecipe extends Component {
             <div id="twitter" className="flex-container radius">
               <header id="twitter-header" className="ua-header headr">
                 <h3>{this.props.recipeName}</h3>
-                <i            
+                <i
+                  id="delete"
                   className="fas fa-trash"
                   title="Confirm Delete"
                   onClick={this.deleteRecipe}
