@@ -19,6 +19,8 @@ module.exports = (app, passport, cors) => {
 
   app.route( '/createRecipe' )
     .post( isLoggedIn, handleServer.createRecipe);
+  
+  app.route('/delete-recipe')
 		
 	app.get( '/auth/twitter', passport.authenticate( 'twitter' ) );
 

@@ -105,6 +105,13 @@ class Login extends Component {
     
     deleteRecipe() {
       console.log('delete the recipe')
+      console.log('hash=',window.location.hash, ' search=', window.location.search, ' pathname=',window.location.pathname)
+      let data = {
+        name : this.props.recipeName,
+      }
+      // ajax.ready(ajax.request('DELETE', '/delete-recipe', data, () => {
+      //   console.log("success")
+      // }))
     }
     
     render() {
