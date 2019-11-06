@@ -12,10 +12,10 @@ module.exports = (app, passport, cors) => {
   
   app.route('/login/:user')
      .get(isLoggedIn, (req, res) => {
-    console.log('login/:user', __dirname, process.cwd() + '/views/index.html')
+      console.log('login/:user', __dirname, process.cwd() + '/views/index.html')
           //res.sendFile(process.cwd() +  '/views/index.html');
-    res.redirect('/login/' + req.user.twitter['username']);
-  });
+      res.redirect('/login/' + req.user.twitter['username']);
+    });
 
   app.route( '/createRecipe' )
     .post( isLoggedIn, handleServer.createRecipe);
