@@ -58,10 +58,10 @@
 /*** twitter logo styling ***/
 #actionUI-subheader > i {
   color: #1DA1F2;
-  font-size: 1.2em;
+/*   font-size: 1.2em; */
   line-height: 1.75em;
   margin-left: -10%;
-  margin-top: -.2em;
+/*   margin-top: -.2em; */
   padding-right: .4em;
   text-align: right;  
 }
@@ -70,11 +70,15 @@
   padding: 0 .75em;
 }
 
+/* twitter icon */
 #twitter {
   font-size: 1.2em;  
+  margin-top: -.2em;
 }
+/* trash can icon*/
 #delete {
-  font-size: .8em;
+  font-size: 1em;
+  margin-top: -.15em;
 }
 
 /****** Media Queries ******/
