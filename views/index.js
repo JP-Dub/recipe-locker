@@ -61,7 +61,6 @@ class App extends Component {
       
     }
     
- 
     this.table = document.getElementById('index-table');
     this.header= document.getElementById('index-header');
     this.index = document.getElementById('index');
@@ -71,6 +70,10 @@ class App extends Component {
     }
       
     window.addEventListener('resize', this.adjHeight);
+    
+    ajax.ready(ajax.request('GET', '/recipe-locker', {}, (book) => {
+      
+    }))
   
   }
   

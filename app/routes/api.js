@@ -24,11 +24,11 @@ module.exports = (app, passport, cors) => {
     .put(isLoggedIn, handleServer.editRecipe)
     .delete(isLoggedIn, handleServer.deleteRecipe);
 
-  app.route( '/create-recipe' )
-    .post( isLoggedIn, handleServer.createRecipe);
+//   app.route( '/create-recipe' )
+//     .post( isLoggedIn, handleServer.createRecipe);
   
-  app.route('/delete-recipe')
-    .delete(isLoggedIn, handleServer.deleteRecipe);
+//   app.route('/delete-recipe')
+//     .delete(isLoggedIn, handleServer.deleteRecipe);
 		
 	app.get( '/auth/twitter', passport.authenticate( 'twitter' ) );
 

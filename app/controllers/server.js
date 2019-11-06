@@ -3,7 +3,8 @@ const Recipes = require('../model/users.js');
 function ClickHandler() {
   
   this.loadRecipes = (req, res) => {
-    console.log('load recipes')
+    console.log('load recipes into UI')
+    res.json({message: 'nothing here yet'})
   }
   
   this.createRecipe = (req, res) => {
@@ -13,7 +14,8 @@ function ClickHandler() {
   }
   
   this.editRecipe = (req, res) => {
-    console.log()
+    console.log('edit recipe')
+    res.json({message: 'nothing to edit'})
   }
   
   this.deleteRecipe = (req, res) => {
