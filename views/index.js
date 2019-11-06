@@ -44,10 +44,7 @@ class App extends Component {
   componentDidMount() {
     this.main = document.getElementById('main');
     this.lock = document.getElementById('main-lock');
-    let path = window.location.pathname;
-    this.userPath = RegExp("^/login/.*").test(path);
-    
-    console.log(this.lock.classList)
+    this.userPath = RegExp("^/login/.*").test(window.location.pathname);
     
     if (this.userPath) {   
       this.setState({
@@ -70,6 +67,7 @@ class App extends Component {
     }
       
     window.addEventListener('resize', this.adjHeight);
+    
     
     ajax.ready(ajax.request('GET', '/recipe-locker', {}, (book) => {
       

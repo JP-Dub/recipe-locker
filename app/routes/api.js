@@ -20,7 +20,7 @@ module.exports = (app, passport, cors) => {
   //app.route('/load-recipes')
   app.route('/recipe-locker')
     .get(handleServer.loadRecipes)
-    .post(isLoggedIn, handleServer.createRecipe)
+    .post(handleServer.createRecipe)
     .put(isLoggedIn, handleServer.editRecipe)
     .delete(isLoggedIn, handleServer.deleteRecipe);
 
