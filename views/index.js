@@ -262,11 +262,25 @@ class App extends Component {
               <section id="recipe-ingredients">
                 <ul>
                   Ingredients:
-                  <li>2lbs Chicken Breast</li>
-                  <li>1 can of diced tomatoes</li>
-                  <li>1 pinch of salt</li>
-                  <li>1/2 teaspoon white pepper</li>
+                  <li>1/2 c. all-purpose flour</li>
+                  <li>1 tbsp. lemon pepper seasoning</li>
+                  <li>2 lemons, divided</li>
+                  <li>1 tsp. kosher salt</li>
+                  <li>1 lb. boneless skinless chicken breasts, halved</li>
+                  <li>2 tbsp. extra virgin olive oil</li>
+                  <li>2 tbsp.butter</li>
+                  <li>2 cloves garlic, minced</li>
+                  <li>freshly chopped parsley</li>
                 </ul>
+                <aside>
+                  <ol>
+                    Directions:
+                    <li>Preheat oven to 400°. In a medium bowl, whisk together flour, lemon pepper, salt, and zest of 1 lemon. Toss chicken breasts in the flour mixture until fully coated. Slice remaining lemon into thin rounds.</li>
+                    <li>In a large ovenproof skillet over medium-high heat, heat oil. Add chicken in a single layer and cook until golden on bottom, about 5 minutes, then flip chicken breasts.</li>
+                    <li>To skillet, add broth, butter, garlic, and lemon slices and bake until chicken is cooked through and sauce has reduced slightly, 15 minutes.</li>
+                    <li>Spoon sauce on top of chicken and garnish with parsley.</li>
+                  </ol>
+                </aside>
               </section>
             </div>
           </div>

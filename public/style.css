@@ -217,6 +217,9 @@ tr:nth-child(even) {
 .fa-edit {
   padding-right: .4em;
 }
+#recipe-ingredients {
+  overflow: auto;
+}
 
 
 ul {
