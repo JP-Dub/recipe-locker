@@ -127,7 +127,6 @@ body {
   unicode-bidi:bidi-override;  
 }
 
-
 i:hover {
   cursor: pointer;
 }
@@ -172,7 +171,6 @@ i:hover {
 .hdr-div {
   display: inherit;
   margin-top: 0;   
-  border: 1px dashed black;
 }
 
 
@@ -274,11 +272,11 @@ tr:nth-child(even) {
   width: 70%;
 }
 #recipe-header {
-  padding: 0;
   text-align: center;
 }
 #recipe-header > h3 {
   margin: initial;
+  width: 20%;
 }
 #recipe-header > h3:first-child {
   float: left;
