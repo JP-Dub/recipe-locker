@@ -259,7 +259,7 @@ class App extends Component {
                   <i className={this.state.trashIcon} title="Delete Recipe" onClick={this.deleteRecipe} />
                 </h3>
               </header>
-              <article id="recipe-ingredients">
+              <section id="recipe-ingredients">
                 <ul>
                   Ingredients:
                   <li>2lbs Chicken Breast</li>
@@ -267,7 +267,7 @@ class App extends Component {
                   <li>1 pinch of salt</li>
                   <li>1/2 teaspoon white pepper</li>
                 </ul>
-              </article>
+              </section>
             </div>
           </div>
         </div>
