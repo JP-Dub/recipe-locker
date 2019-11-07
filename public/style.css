@@ -54,6 +54,44 @@ body {
 .main-header {
   color: #d9b3ff;
   display: inline-block;
+/*   padding: .3em;  turn off*/
+  height: 2em;
+  text-align: center;
+  width: 100%;
+}
+.main-header > h2 {
+  height: 1.3em;
+}
+.main-header > h2 {
+/*   height: 2em; */
+  width: 10%;
+}
+.main-header > h2:first-child { 
+  float: left;
+  margin: 0;  
+}
+.main-header > h2:nth-child(2) {
+  font-weight: bold;
+  margin: 0 auto;
+/*   padding-top: .1em; turn off*/
+  width: 70%;  
+}
+.main-header > h2:nth-child(3) {
+ float: right; 
+/* margin-top: .22em; add margin*/
+ padding-right: .3em;
+}
+
+#main-lock {
+  color: black;
+  float: right;
+  font-size: .85em;
+  padding-top: .2em;
+}
+
+/* .main-header {
+  color: #d9b3ff;
+  display: inline-block;
   padding: .3em;
   height: 2.5em;
   text-align: center;
@@ -78,6 +116,13 @@ body {
  padding-right: .3em;
 }
 
+#main-lock {
+  color: black;
+  float: right;
+  font-size: .85em;
+  padding-top: .2em;
+} */
+
 .flip-lock {
   direction:rtl;
   -webkit-transform:rotateY(180deg);
@@ -87,12 +132,6 @@ body {
   unicode-bidi:bidi-override;  
 }
 
-#main-lock {
-  color: black;
-  float: right;
-  font-size: .85em;
-  padding-top: .2em;
-}
 
 i:hover {
   cursor: pointer;
