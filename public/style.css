@@ -164,7 +164,7 @@ i:hover {
   border-bottom: 1px solid dimgray;
   display: inline-block;
   height: 2em;
-  padding-top: 0;
+  padding-top: .25em;
   width: 100%;
 }
 
@@ -178,7 +178,38 @@ i:hover {
 
 
 /***** recipe index div *****/
+#index {
+  border-radius: .5em 0 0 .5em;
+  margin: 0;
+  width: 30%;
+}
+#index-header > h3 {
+  margin: 0;
+}
+#index-header > h3:first-child {
+  float: left;
+  margin: 0;
+  width: .4em;
+}
+#index-header > h3:nth-child(2) {
+  float: left;
+  margin-left: 0;
+  text-align: left;
+  width: 70%; 
+}
+#index-header > h3:nth-child(3) {
+  float: right;
+  text-align: right;
+  padding-right: .4em; 
+  width: 15%;
+}
+#index-header > h3 > i {
+  padding-top: .1em;
+}
 
+
+
+/*
 #index {
   border-radius: .5em 0 0 .5em;
   margin: 0;
@@ -208,6 +239,7 @@ i:hover {
   
   border: 1px dashed red;
 }
+  */
 
 /*#index-table*/
 .table {
