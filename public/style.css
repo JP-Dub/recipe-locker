@@ -61,11 +61,12 @@ body {
 }
 .main-header > h2 {
   height: 1.3em;
-}
-.main-header > h2 {
-/*   height: 2em; */
   width: 10%;
 }
+/* .main-header > h2 {
+  height: 2em;
+
+} */
 .main-header > h2:first-child { 
   float: left;
   margin: 0;  
