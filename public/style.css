@@ -59,7 +59,7 @@ body {
   width: 100%;
 }
 .main-header > h2 {
-  height: 1.3em;
+/*   height: 1.3em; */
   width: 10%;
 }
 
@@ -170,6 +170,7 @@ i:hover {
 
 .hdr-div {
   display: inherit;
+  height: 1.3em;
   margin-top: 0;   
 }
 
@@ -182,16 +183,16 @@ i:hover {
   width: 30%;
 }
 #index-header > h3 {
-  margin: 0;
+  margin: initial;
 }
 #index-header > h3:first-child {
   float: left;
-  margin: 0;
+/*   margin: 0; */
   width: .4em;
 }
 #index-header > h3:nth-child(2) {
   float: left;
-  margin-left: 0;
+/*   margin-left: 0; */
   text-align: left;
   width: 70%; 
 }
