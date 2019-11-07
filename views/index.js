@@ -65,7 +65,7 @@ class App extends Component {
       let height = this.index.clientHeight - Math.round(this.header.clientHeight + 5);
       if(height >= 72 ) this.table.style.height = height + 'px';
     }
-      
+    this.adjHeight();
     window.addEventListener('resize', this.adjHeight);
     
     
@@ -207,7 +207,7 @@ class App extends Component {
                      title="Add Recipe" />
                 </h3>
               </header>
-              <div id="index-table">
+              <div id="index-table" class='table'>
                 <table id='table'>
                   <tbody>
                     <tr>
@@ -259,6 +259,7 @@ class App extends Component {
                   <i className={this.state.trashIcon} title="Delete Recipe" onClick={this.deleteRecipe} />
                 </h3>
               </header>
+              <div id='recipe-table' class='table'>
               <section id="recipe-ingredients">
                 <ul>
                   Ingredients:
@@ -272,7 +273,8 @@ class App extends Component {
                   <li>2 cloves garlic, minced</li>
                   <li>freshly chopped parsley</li>
                 </ul>
-                <aside>
+                </section>
+                <section id='recipe-directions'>
                   <ol>
                     Directions:
                     <li>Preheat oven to 400°. In a medium bowl, whisk together flour, lemon pepper, salt, and zest of 1 lemon. Toss chicken breasts in the flour mixture until fully coated. Slice remaining lemon into thin rounds.</li>
@@ -280,8 +282,8 @@ class App extends Component {
                     <li>To skillet, add broth, butter, garlic, and lemon slices and bake until chicken is cooked through and sauce has reduced slightly, 15 minutes.</li>
                     <li>Spoon sauce on top of chicken and garnish with parsley.</li>
                   </ol>
-                </aside>
-              </section>
+                </section>
+              </div>
             </div>
           </div>
         </div>
