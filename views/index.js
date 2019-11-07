@@ -61,23 +61,26 @@ class App extends Component {
     this.table = document.getElementsByClassName('table');
     this.idx_header= document.getElementById('index-header');
     this.index = document.getElementById('index');
+    this.recipe = document.getElementById('recipe');
    
     this.adjHeight = () => {
-      let height = this.index.clientHeight - Math.round(this.idx_header.clientHeight + 5);
+      let height = this.index.clientHeight - Math.round(this.idx_header.clientHeight);
       console.log(height)
       if(height >= 72 ) {
         this.table[0].style.height = height + 'px';
-        this.table[1].style.height = height + 'px';
+        this.table[1].style.height = height + 5 + 'px';
+      } else {
+        console.log(this.recipe.clientHeight)
+      this.table[1].style.height = this.recipe.clientHeight - Math.round(this.idx_header.clientHeight) + 'px';
       }
-      this.table[1].style.height = height + 'px';
     }
     this.adjHeight();
     window.addEventListener('resize', this.adjHeight);
     
     
-    ajax.ready(ajax.request('GET', '/recipe-locker', {}, (book) => {
+//     ajax.ready(ajax.request('GET', '/recipe-locker', {}, (book) => {
       
-    }))
+//     }));
   
   }
   
