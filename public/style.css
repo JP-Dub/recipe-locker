@@ -121,13 +121,14 @@ i:hover {
   border-bottom: 1px solid dimgray;
   display: inline-block;
   height: 2em;
-  padding-top: .25em;
+  padding-top: 0;/*.25em;*/
   text-align: center;
   width: 100%;
 }
 .hdr-div {
   display: inherit;
   margin-top: 0;   
+  border: 1px dashed black;
 }
 
 
@@ -160,6 +161,8 @@ i:hover {
 .idx {
   padding-top: .1em;
   width: 15%;   
+  
+  border: 1px dashed red;
 }
 
 /*#index-table*/

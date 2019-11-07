@@ -64,7 +64,7 @@ class App extends Component {
     this.recipe = document.getElementById('recipe');
    
     this.adjHeight = () => {
-      let height = this.index.clientHeight - Math.round(this.idx_header.clientHeight);
+      let height = this.index.clientHeight - Math.round(this.idx_header.clientHeight + 5);
       console.log(height)
       if(height >= 72 ) {
         this.table[0].style.height = height + 'px';
