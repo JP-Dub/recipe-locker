@@ -54,7 +54,6 @@ body {
 .main-header {
   color: #d9b3ff;
   display: inline-block;
-/*   padding: .3em;  turn off*/
   height: 2em;
   text-align: center;
   width: 100%;
@@ -63,10 +62,7 @@ body {
   height: 1.3em;
   width: 10%;
 }
-/* .main-header > h2 {
-  height: 2em;
 
-} */
 .main-header > h2:first-child { 
   float: left;
   margin: 0;  
@@ -74,12 +70,10 @@ body {
 .main-header > h2:nth-child(2) {
   font-weight: bold;
   margin: 0 auto;
-/*   padding-top: .1em; turn off*/
   width: 70%;  
 }
 .main-header > h2:nth-child(3) {
  float: right; 
-/* margin-top: .22em; add margin*/
  padding-right: .3em;
 }
 
@@ -156,15 +150,25 @@ i:hover {
   overflow: hidden;
   margin-bottom: 1em;
 }
+/* .flex-header {
+  background-color:#d9b3ff; 
+  border-bottom: 1px solid dimgray;
+  display: inline-block;
+  height: 2em;
+  padding-top: 0;/*.25em;*
+  text-align: center;
+  width: 100%;
+} */
 .flex-header {
   background-color:#d9b3ff; 
   border-bottom: 1px solid dimgray;
   display: inline-block;
   height: 2em;
-  padding-top: 0;/*.25em;*/
-  text-align: center;
+  padding-top: 0;
   width: 100%;
 }
+
+
 .hdr-div {
   display: inherit;
   margin-top: 0;   
@@ -180,7 +184,7 @@ i:hover {
   margin: 0;
   order: 1;
   width: 30%;
-/*   overflow-y : auto;  */
+/*   overflow-y : auto;  *
 }
 #index-header > h3:first-child {
   float: right;
