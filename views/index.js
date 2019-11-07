@@ -61,12 +61,13 @@ class App extends Component {
     this.table = document.getElementsByClassName('table');
     this.header= document.getElementById('index-header');
     this.index = document.getElementById('index');
-    console.log(this.table.entries)
+    console.log(this.table)
     this.adjHeight = () => {
       let height = this.index.clientHeight - Math.round(this.header.clientHeight + 5);
       if(height >= 72 ) {
         this.table[0].style.height = height + 'px';
         this.table[1].style.height = height + 'px';
+      }
     }
     this.adjHeight();
     window.addEventListener('resize', this.adjHeight);
