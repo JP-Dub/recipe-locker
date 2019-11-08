@@ -347,13 +347,14 @@ section > ul {
 
 #recipe-ingredients > ul > li {
 /*   list-style-position: inside; */
-  margin-left: 1em;
-  padding: .2em .8em;
+  margin-left: 2em;
+/*   padding: .2em .8em; */
+  
 }
 
-#recipe-directions > ul > li {
-  margin-left: 1em;
-  padding: .2em .8em;
+#recipe-directions > ol > li {
+  margin-left: 2em;
+  padding: .8em 0;
 }
 
 
