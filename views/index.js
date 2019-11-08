@@ -271,7 +271,7 @@ class App extends Component {
               <div id='recipe-table' class='table'>
               <section id="recipe-ingredients">
                 <ul>
-                  Ingredients:
+                  <span class='recipe-font'>Ingredients:</span>
                   <li>1/2 c. all-purpose flour</li>
                   <li>1 tbsp. lemon pepper seasoning</li>
                   <li>2 lemons, divided</li>
@@ -285,7 +285,7 @@ class App extends Component {
                 </section>
                 <section id='recipe-directions'>
                   <ol>
-                    Directions:
+                    <span class='recipe-font'>Directions:</span>
                     <li>Preheat oven to 400°. In a medium bowl, whisk together flour, lemon pepper, salt, and zest of 1 lemon. Toss chicken breasts in the flour mixture until fully coated. Slice remaining lemon into thin rounds.</li>
                     <li>In a large ovenproof skillet over medium-high heat, heat oil. Add chicken in a single layer and cook until golden on bottom, about 5 minutes, then flip chicken breasts.</li>
                     <li>To skillet, add broth, butter, garlic, and lemon slices and bake until chicken is cooked through and sauce has reduced slightly, 15 minutes.</li>

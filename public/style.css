@@ -346,15 +346,17 @@ section > ul {
 
 
 #recipe-ingredients > ul > li {
-/*   list-style-position: inside; */
-  margin-left: 2em;
-/*   padding: .2em .8em; */
-  
+  margin-left: 2em; 
 }
 
 #recipe-directions > ol > li {
   margin-left: 2em;
-  padding: .8em 0;
+  padding-bottom: .8em;
+}
+
+.recipe-font {
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 
