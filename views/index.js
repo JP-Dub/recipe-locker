@@ -62,17 +62,17 @@ class App extends Component {
     this.idx_header= document.getElementById('index-header');
     this.index = document.getElementById('index');
     this.recipe = document.getElementById('recipe');
-   
+    
     this.adjHeight = () => {
-      let height = this.index.clientHeight - Math.round(this.idx_header.clientHeight + 5);
-      console.log(height)
+      let height = this.index.clientHeight - Math.round(this.idx_header.clientHeight);
+      console.log(height, document.body.clientWidth)
       if(height >= 72 ) {
         this.table[0].style.height = height + 'px';
-        //this.table[1].style.height = height + 5 + 'px';
-      } //else {
-        //console.log(this.recipe.clientHeight)
+
+      }
+      // maintain height of  #recipe-table
       this.table[1].style.height = this.recipe.clientHeight - Math.round(this.idx_header.clientHeight) + 'px';
-      //}
+      
     }
     this.adjHeight();
     window.addEventListener('resize', this.adjHeight);

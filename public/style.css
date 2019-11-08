@@ -240,7 +240,7 @@ i:hover {
   */
 
 #index-table {
-  
+  margin-top: -.25em;
 }
 .table {
   height: 60vh;
@@ -534,12 +534,14 @@ section > ul {
 
   #index-table {
     height: 7em;
+    margin-top: 0em;
     max-height: 20em;
   }
+
   td {
     width: 100%;
     text-align: center;
-    border-top: 1px solid black;
+/*     border-top: 1px solid black; */
   }  
 
   #recipe {
