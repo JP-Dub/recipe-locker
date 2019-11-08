@@ -339,9 +339,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f1f2', end
 overflow: none;
 }
 
+section > ol,
+section > ul {
+  padding: 0 .8em;
+}
 
-ul {
-  list-style-position: inside;
+
+#recipe-ingredients > ul > li {
+/*   list-style-position: inside; */
+  margin-left: 1em;
+  padding: .2em .8em;
+}
+
+#recipe-directions > ul > li {
+  margin-left: 1em;
+  padding: .2em .8em;
 }
 
 
