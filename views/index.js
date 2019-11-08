@@ -62,10 +62,14 @@ class App extends Component {
     this.idx_header= document.getElementById('index-header');
     this.index = document.getElementById('index');
     this.recipe = document.getElementById('recipe');
+    this.tbody = document.getElementById('table');
     
     this.adjHeight = () => {
       let height = this.index.clientHeight - Math.round(this.idx_header.clientHeight);
       console.log(height, {width: document.body.clientWidth, height: window.innerHeight})
+      if(document.body.clientWidth <= 850) {
+        this.index[0].style.height = this.tbody.clientHeight + this.idx_header.clientHeight;
+      }
       if(height >= 72 ) {
         this.table[0].style.height = height + 'px';
       }

@@ -497,7 +497,7 @@ section > ul {
     margin: 0 auto;
     min-height: 5.5em;
 /*  max-height: 15vh;  allows height to grow and shrink when set*/
-/*  height: 30%; */
+    height: 30%;
     padding: initial;
     width: 100%;
   }
@@ -524,6 +524,7 @@ section > ul {
     margin-top: 0em;
     min-height: 7em;
     max-height: 20em;
+    z-index: -2;
   }
 
   td {
