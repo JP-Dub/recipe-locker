@@ -67,8 +67,8 @@ class App extends Component {
     this.adjHeight = () => {
       let height = this.index.clientHeight - Math.round(this.idx_header.clientHeight);
       console.log(height, {width: document.body.clientWidth, height: window.innerHeight})
-      if(document.body.clientWidth <= 850) {
-        this.index[0].style.height = this.tbody.clientHeight + this.idx_header.clientHeight;
+      if(document.body.clientWidth < 850) {
+        this.index.style.height = this.tbody.clientHeight + Math.round(this.idx_header.clientHeight) + 'px';
       }
       if(height >= 72 ) {
         this.table[0].style.height = height + 'px';
@@ -211,9 +211,9 @@ class App extends Component {
           <div id="food-columns" className="flex">
             <div id="index" className="flex-container">
               <header id="index-header" className="flex-header">
-                <h3 className="idx hdr-div" />
-                <h3 className="idx hdr-div">Recipe Name</h3>
-                <h3 className="idx hdr-div">
+                <h3 className="hdr-div" />
+                <h3 className="hdr-div">Recipe Name</h3>
+                <h3 className="hdr-div">
                   <i className={this.state.addIcon} 
                      onClick={this.addRecipe}
                      title="Add Recipe" />
@@ -264,9 +264,9 @@ class App extends Component {
             </div>
             <div id="recipe" className="flex-container">
               <header id="recipe-header" className="flex-header">
-                <h3 className="rcp hdr-div" />
-                <h3 id='recipe-name' className="rcp hdr-div">Yum Yum Chicken</h3>
-                <h3 className="rcp hdr-div">
+                <h3 className="hdr-div" />
+                <h3 id='recipe-name' className="hdr-div">Yum Yum Chicken</h3>
+                <h3 className="hdr-div">
                   <i className={this.state.editIcon} title="Edit Recipe" />
                   <i className={this.state.trashIcon} title="Delete Recipe" onClick={this.deleteRecipe} />
                 </h3>

@@ -497,7 +497,7 @@ section > ul {
     margin: 0 auto;
     min-height: 5.5em;
 /*  max-height: 15vh;  allows height to grow and shrink when set*/
-    height: 30%;
+/*     height: 30%; */
     padding: initial;
     width: 100%;
   }
