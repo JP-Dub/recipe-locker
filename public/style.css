@@ -239,7 +239,9 @@ i:hover {
 }
   */
 
-/*#index-table*/
+#index-table {
+  
+}
 .table {
   height: 60vh;
   overflow-y: auto;
