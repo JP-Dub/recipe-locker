@@ -68,11 +68,11 @@ class App extends Component {
       console.log(height)
       if(height >= 72 ) {
         this.table[0].style.height = height + 'px';
-        this.table[1].style.height = height + 5 + 'px';
-      } else {
-        console.log(this.recipe.clientHeight)
+        //this.table[1].style.height = height + 5 + 'px';
+      } //else {
+        //console.log(this.recipe.clientHeight)
       this.table[1].style.height = this.recipe.clientHeight - Math.round(this.idx_header.clientHeight) + 'px';
-      }
+      //}
     }
     this.adjHeight();
     window.addEventListener('resize', this.adjHeight);
