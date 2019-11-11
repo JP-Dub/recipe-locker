@@ -66,16 +66,19 @@ class App extends Component {
     
     this.adjHeight = () => {
       let height = this.index.clientHeight - Math.round(this.idx_header.clientHeight);
-      console.log(height, {width: document.body.clientWidth, height: window.innerHeight})
-
+      //console.log(height, {width: document.body.clientWidth, height: window.innerHeight})
       
       if(height >= 72 ) {
         this.table[0].style.height = height + 'px';
       }
       // maintain height of #recipe-table
       this.table[1].style.height = this.recipe.clientHeight - Math.round(this.idx_header.clientHeight) + 'px';
-      if(document.body.clientWidth <= 851) this.main.style.height = this.recipe.clientHeight + (window.innerHeight - this.main.clientHeight);
-      console.log('height= ', this.recipe.clientHeight, window.innerHeight - this.main.clientHeight)
+      if(document.body.clientWidth <= 851) {
+        this.main.style.height = '100vh' // this.main.clientHeight + (window.innerHeight - this.main.clientHeight);
+      } else {
+        this.main.style.height = 'auto';
+      }
+      //console.log('height= ', this.recipe.clientHeight, window.innerHeight - this.main.clientHeight)
     }
     this.adjHeight();
     window.addEventListener('resize', this.adjHeight);
@@ -219,7 +222,7 @@ class App extends Component {
                      title="Add Recipe" />
                 </h3>
               </header>
-              <div id="index-table" class='table'>
+              <div id="index-table" className='table'>
                 <table id='table'>
                   <tbody>
                     <tr>
@@ -271,10 +274,10 @@ class App extends Component {
                   <i className={this.state.trashIcon} title="Delete Recipe" onClick={this.deleteRecipe} />
                 </h3>
               </header>
-              <div id='recipe-table' class='table'>
+              <div id='recipe-table' className='table'>
               <section id="recipe-ingredients">
                 <ul>
-                  <span class='recipe-font'>Ingredients:</span>
+                  <span className='recipe-font'>Ingredients:</span>
                   <li>1/2 c. all-purpose flour</li>
                   <li>1 tbsp. lemon pepper seasoning</li>
                   <li>2 lemons, divided</li>
@@ -288,7 +291,7 @@ class App extends Component {
                 </section>
                 <section id='recipe-directions'>
                   <ol>
-                    <span class='recipe-font'>Directions:</span>
+                    <span className='recipe-font'>Directions:</span>
                     <li>Preheat oven to 400°. In a medium bowl, whisk together flour, lemon pepper, salt, and zest of 1 lemon. Toss chicken breasts in the flour mixture until fully coated. Slice remaining lemon into thin rounds.</li>
                     <li>In a large ovenproof skillet over medium-high heat, heat oil. Add chicken in a single layer and cook until golden on bottom, about 5 minutes, then flip chicken breasts.</li>
                     <li>To skillet, add broth, butter, garlic, and lemon slices and bake until chicken is cooked through and sauce has reduced slightly, 15 minutes.</li>
