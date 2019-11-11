@@ -45,7 +45,7 @@ class EditorUI extends Component {
                directions : state.directions = recipe.directions
                }
       })
-      console.log('data', recipe)
+      console.log('data', recipes)
     }));
   }
 
@@ -98,7 +98,7 @@ class EditorUI extends Component {
                 onClick={this.props.userLogin}
               />
             </header>
-            <form name="newRecipeForm">
+            <form name="recipeForm">
               <div className="flex-container radius">
                 <header className="ua-header headr">
                   <h3>Name</h3>

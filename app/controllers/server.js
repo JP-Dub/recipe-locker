@@ -4,7 +4,12 @@ function ClickHandler() {
   
   this.loadRecipes = (req, res) => {
     console.log('load recipes into UI')
-    res.json({message: 'nothing here yet'})
+    res.json({message: 'nothing here yet',
+             recipes: [{
+               name: 'nothing to report', 
+               directions: "nothing to report",
+               ingredients: "nothing to rport"
+             }]})
   }
   
   this.createRecipe = (req, res) => {

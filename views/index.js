@@ -31,6 +31,8 @@ class App extends Component {
     this.editorUI = this.editorUI.bind(this);
     
     this.state = {
+      editorUI : 0,
+      editorName: '',
       newRecipe: 0,
       locked   : 1,
       addIcon  : "",
@@ -180,7 +182,7 @@ class App extends Component {
   editorUI(evt) {
     let set;
     let value = document.getElementById('recipe-name');
-    
+    this.name = value.innerHTML;
     if( evt.target.id === 'icon-close') {
       set = 'remove';
       this.setState({
@@ -191,7 +193,7 @@ class App extends Component {
       set = 'add';
       this.setState({
         editorUI: 1,
-        editorName: value.innerHTML
+        editorName: evt.target.title
       })
     }
     changeStyle.blur(this.main.classList, set)        
@@ -208,15 +210,16 @@ class App extends Component {
        /> 
      );
     } else
-    if(this.state.newRecipe) {
+    if(this.state.editorUI) {
       return(
         <EditorUI 
-          userLogin={this.addRecipe} 
+          userLogin={this.editorUI} 
           editorName={this.state.editorName}
+          recipeName={this.name}
           />
       )
     } else {
-      return( <div id='empty'/> );
+      return( <div id='reserveUI'/> );
     }
                         
   }
@@ -245,7 +248,7 @@ class App extends Component {
                 <h3 className="hdr-div">Recipe Name</h3>
                 <h3 className="hdr-div">
                   <i className={this.state.addIcon} 
-                     onClick={this.addRecipe}
+                     onClick={this.editorUI}
                      title="Add Recipe" />
                 </h3>
               </header>
@@ -297,7 +300,7 @@ class App extends Component {
                 <h3 className="hdr-div" />
                 <h3 id='recipe-name' className="hdr-div">Yum Yum Chicken</h3>
                 <h3 className="hdr-div">
-                  <i className={this.state.editIcon} title="Edit Recipe" />
+                  <i className={this.state.editIcon} title="Edit Recipe" onClick={this.editorUI}/>
                   <i className={this.state.trashIcon} title="Delete Recipe" onClick={this.deleteRecipe} />
                 </h3>
               </header>
