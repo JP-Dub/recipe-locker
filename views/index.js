@@ -72,12 +72,14 @@ class App extends Component {
         this.table[0].style.height = height + 'px';
       }
       // maintain height of #recipe-table
-      this.table[1].style.height = this.recipe.clientHeight - Math.round(this.idx_header.clientHeight) + 'px';
+     
       if(document.body.clientWidth <= 851) {
-        this.main.style.height = '100vh' // this.main.clientHeight + (window.innerHeight - this.main.clientHeight);
+        this.recipe.style.height = this.recipe.clientHeight + (window.innerHeight - this.main.clientHeight) + 'px';
       } else {
-        this.main.style.height = 'auto';
+        this.recipe.style.height = '60vh';
       }
+      
+       this.table[1].style.height = this.recipe.clientHeight - Math.round(this.idx_header.clientHeight) + 'px';
       //console.log('height= ', this.recipe.clientHeight, window.innerHeight - this.main.clientHeight)
     }
     this.adjHeight();
