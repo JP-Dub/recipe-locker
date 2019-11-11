@@ -54,7 +54,9 @@ app.use(
     }
   })
 );
-
+app.get('*', (req, res) => {
+  console.log(req.path, req.originalUrl, req.baseUrl)
+})
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static("public"));
 
