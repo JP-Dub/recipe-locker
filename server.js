@@ -54,15 +54,12 @@ app.use(
     }
   })
 );
-app.get('*', (req, res) => {
-  console.log(req.path, req.originalUrl, req.baseUrl)
-})
-// http://expressjs.com/en/starter/static-files.html
+
 app.use(express.static("public"));
 
 // http://expressjs.com/en/starter/basic-routing.html
-app.get("/", function(request, response) {
-  response.sendFile(__dirname + "/views/index.html");
+app.get("/", function(req, res) {
+  res.sendFile(__dirname + "/views/index.html");
 });
 
 app.use(passport.initialize());
