@@ -28,6 +28,7 @@ class App extends Component {
     this.userLogin = this.userLogin.bind(this);
     this.addRecipe = this.addRecipe.bind(this);
     this.deleteRecipe = this.deleteRecipe.bind(this);
+    this.editorUI = this.editorUI.bind(this);
     
     this.state = {
       newRecipe: 0,
@@ -156,7 +157,7 @@ class App extends Component {
 
   addRecipe(evt) {
     let set;
-    
+    console.log(evt.target.title)
     if( evt.target.id === 'icon-close') {
       set = 'remove';
       this.setState({
@@ -176,6 +177,26 @@ class App extends Component {
     // changeStyle.blur(this.main.classList, set);
   }
   
+  editorUI(evt) {
+    let set;
+    let value = document.getElementById('recipe-name');
+    
+    if( evt.target.id === 'icon-close') {
+      set = 'remove';
+      this.setState({
+        editorUI: 0,
+        editorName: ''
+      })
+    } else {
+      set = 'add';
+      this.setState({
+        editorUI: 1,
+        editorName: value.innerHTML
+      })
+    }
+    changeStyle.blur(this.main.classList, set)        
+  }  
+  
   renderUI() {
    //console.log('locked', this.state.locked, !this.state.locked ? true: false)
     if(!this.state.locked) {
@@ -189,7 +210,10 @@ class App extends Component {
     } else
     if(this.state.newRecipe) {
       return(
-        <EditorUI userLogin={this.addRecipe} />
+        <EditorUI 
+          userLogin={this.addRecipe} 
+          editorName={this.state.editorName}
+          />
       )
     } else {
       return( <div id='empty'/> );
