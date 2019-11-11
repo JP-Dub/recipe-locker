@@ -249,7 +249,7 @@ class App extends Component {
                 <h3 className="hdr-div">
                   <i className={this.state.addIcon} 
                      onClick={this.editorUI}
-                     title="Add Recipe" />
+                     title="New Recipe" />
                 </h3>
               </header>
               <div id="index-table" className='table'>

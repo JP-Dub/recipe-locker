@@ -14,14 +14,18 @@ class EditorUI extends Component {
     this.loadForm = this.loadForm.bind(this);
     
     this.state = {
-      name: "",
+      name       : "",
       ingredients: "",
-      directions: ""
+      directions : ""
     };
   }
   
   componentDidMount() {
-    if(this.props.editorName === 'edit') {
+    this.formName = document.getElementById('name');
+    this.formIngredients = document.getElementById('ingredients');
+    this.formDirections = document.getElementById('directions');
+    
+    if(this.props.editorName === 'Edit Recipe') {
       this.loadForm();
     }
   }
@@ -38,7 +42,11 @@ class EditorUI extends Component {
   
   loadForm() {
     ajax.ready(ajax.request('GET', '/recipe-locker', this.props.data, (recipes) => {
+    
       let recipe = recipes[0];
+      this.formName.innerText =recipe.name;
+      this.formIngredients.value = recipe.ingredients;
+      this.formDirections.value = recipe.
       this.setState( state => {
         return {name      : state.name = recipe.name,
                ingredients: state.ingredients = recipe.ingredients,
@@ -90,7 +98,7 @@ class EditorUI extends Component {
             <header 
               id="subframe-header" 
               className="ua-header">
-              <h3>New Recipe</h3>
+              <h3>{this.props.editorName}</h3>
               <i
                 id="icon-close"
                 className="fas fa-window-close"
