@@ -122,39 +122,3 @@
   float: right;
 }
 /****** Media Queries ******/
-
-@media all and (min-width: 1281px) {
-  body {
-    font-size: 1.2em;
-  }
-}
- 
-@media all and (max-width: 1280px) and (min-width: 851px) {
-  body {
-    font-size: 1em;
-  }
-/*   #subframe-mount {
-    min-width: 600px;
-    width: 60%;
-  } */
-}
- 
-@media all and (max-width: 850px) and (min-width: 250px) { 
-  body {
-    font-size: .8em; 
-  }
-/*   #subframe-mount {
-    min-width: 325px;
-    width: 100%;
-  } */
-/*   #subframe {
-    padding-bottom: 1em;
-  } */
-/*   .container {
-    border: 5px 0px ridge lightgray;
-    -webkit-box-shadow: initial;
-       -moz-box-shadow: initial;
-            box-shadow: initial; 
-    padding-bottom: 0;
-  } */
-}

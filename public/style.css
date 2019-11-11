@@ -458,9 +458,6 @@ section > ul {
   #main-center {
     width: 60%;
   }
-  .main-header > h2:nth-child(3) {
-/*     padding: ; */
-  }
 }
  
 @media all and (max-width: 850px) and (min-width: 250px) { /* max-width: 640px */
