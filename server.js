@@ -23,12 +23,20 @@ const devServerOptions = Object.assign({}, webpackConfig.devServer, {
 
 const wpServer = new webpackDevServer(compiler, devServerOptions);
 
+let options = ({
+	origin : 'https://recipe-locker.glitch.me',
+	preflightContinue: true,
+  optionsSuccessStatus: 200
+});
+
+app.use(cors(options));
+
 require("dotenv").config();
 require("./app/config/passport")(passport);
 
 mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useFindAndModify: false,
+  useNewUrlParser   : true,
+  useFindAndModify  : false,
   useUnifiedTopology: true
 });
 
@@ -50,14 +58,14 @@ app.use(
     resave: false,
     saveUninitialized: true,
     cookie: {
-      secure: true
+      secure: true,
+      sameSite: 'none'
     }
   })
 );
 
 app.use(express.static("public"));
 
-// http://expressjs.com/en/starter/basic-routing.html
 app.get("/", function(req, res) {
   res.sendFile(__dirname + "/views/index.html");
 });
