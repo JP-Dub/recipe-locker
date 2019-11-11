@@ -11,6 +11,7 @@ class EditorUI extends Component {
     this.nameHandler= this.nameHandler.bind(this);
     this.ingredientsHandler= this.ingredientsHandler.bind(this);
     this.directionsHandler = this.directionsHandler.bind(this);
+    this.loadForm = this.loadForm.bind(this);
     
     this.state = {
       name: "",
@@ -19,7 +20,11 @@ class EditorUI extends Component {
     };
   }
   
-  componentDidMount() {}
+  componentDidMount() {
+    if(this.props.editorName === 'edit') {
+      this.loadForm();
+    }
+  }
 
   componentWillUnMount() {}
   
@@ -30,14 +35,28 @@ class EditorUI extends Component {
       directions: ""
     });
   }
+  
+  loadForm() {
+    ajax.ready(ajax.request('GET', '/recipe-locker', this.props.data, (recipes) => {
+      let recipe = recipes[0];
+      this.setState( state => {
+        return {name      : state.name = recipe.name,
+               ingredients: state.ingredients = recipe.ingredients,
+               directions : state.directions = recipe.directions
+               }
+      })
+      console.log('data', recipe)
+    }));
+  }
 
   submitForm() {
     
     ajax.ready(ajax.request('POST', '/recipe-locker', this.state, (data) => {
       this.setState({
-        name: '',
-        directions:'',
-        ingredients: ''
+        name       : '',
+        ingredients: '',
+        directions : ''
+        
       }); 
       console.log('data', data)
     }));
