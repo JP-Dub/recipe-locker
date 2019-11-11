@@ -45,8 +45,8 @@ class EditorUI extends Component {
     
       let recipe = recipes[0];
       this.formName.innerText =recipe.name;
-      this.formIngredients.value = recipe.ingredients;
-      this.formDirections.value = recipe.
+      this.formIngredients.innerText = recipe.ingredients;
+      this.formDirections.innerText = recipe.directions;
       this.setState( state => {
         return {name      : state.name = recipe.name,
                ingredients: state.ingredients = recipe.ingredients,
