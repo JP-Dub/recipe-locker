@@ -62,6 +62,7 @@ class App extends Component {
     this.idx_header= document.getElementById('index-header');
     this.index = document.getElementById('index');
     this.recipe = document.getElementById('recipe');
+    this.main = document.getElementById('food-columns');
     
     this.adjHeight = () => {
       let height = this.index.clientHeight - Math.round(this.idx_header.clientHeight);
@@ -73,8 +74,8 @@ class App extends Component {
       }
       // maintain height of #recipe-table
       this.table[1].style.height = this.recipe.clientHeight - Math.round(this.idx_header.clientHeight) + 'px';
-      
-      
+      if(document.body.clientWidth <= 851) this.recipe.style.height += window.innerHeight - this.main.clientHeight;
+      console.log('height= ', window.innerHeight - this.main.clientHeight)
     }
     this.adjHeight();
     window.addEventListener('resize', this.adjHeight);
