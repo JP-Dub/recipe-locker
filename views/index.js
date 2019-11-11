@@ -59,10 +59,10 @@ class App extends Component {
     }
     
     this.table = document.getElementsByClassName('table');
-    this.idx_header= document.getElementById('index-header');
-    this.index = document.getElementById('index');
+    this.idx_header = document.getElementById('index-header');
+    this.index  = document.getElementById('index');
     this.recipe = document.getElementById('recipe');
-    this.main = document.getElementById('main');
+    this.main   = document.getElementById('main');
     
     this.adjHeight = () => {
       let height = this.index.clientHeight - Math.round(this.idx_header.clientHeight);
@@ -71,16 +71,17 @@ class App extends Component {
       if(height >= 72 ) {
         this.table[0].style.height = height + 'px';
       }
-      // maintain height of #recipe-table
-     
-      if(document.body.clientWidth <= 851) {
+      
+      // expands #recipe to full screen height
+      if(document.body.clientWidth <= 850) {
         this.recipe.style.height = this.recipe.clientHeight + (window.innerHeight - this.main.clientHeight) + 'px';
       } else {
         this.recipe.style.height = '60vh';
       }
       
-       this.table[1].style.height = this.recipe.clientHeight - Math.round(this.idx_header.clientHeight) + 'px';
-      //console.log('height= ', this.recipe.clientHeight, window.innerHeight - this.main.clientHeight)
+      // maintain height of #recipe-table
+      this.table[1].style.height = this.recipe.clientHeight - Math.round(this.idx_header.clientHeight) + 'px';
+
     }
     this.adjHeight();
     window.addEventListener('resize', this.adjHeight);
