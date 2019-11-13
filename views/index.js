@@ -25,10 +25,11 @@ class Main extends Component {
 class App extends Component {
   constructor(props) {
     super(props);
-    this.userLogin = this.userLogin.bind(this);
-    this.addRecipe = this.addRecipe.bind(this);
-    this.deleteRecipe = this.deleteRecipe.bind(this);
+    // this.userLogin = this.userLogin.bind(this);
+    // this.addRecipe = this.addRecipe.bind(this);
+    // this.deleteRecipe = this.deleteRecipe.bind(this);
     this.editorUI = this.editorUI.bind(this);
+    this.actionUI = this.actionUI.bind(this);
     
     this.state = {
       editorUI : 0,
@@ -226,7 +227,8 @@ class App extends Component {
   // }
   
   actionUI(evt) {
-    console.log(evt, this.userPath)
+    if(evt.target.title === 'Logout') return window.location.href = "/api/logout";
+    
     let set = 'remove',
         actionUI = 0,
         actionName = '',
@@ -234,7 +236,7 @@ class App extends Component {
         lockIcon = 'fas fa-lock';
     
     if(this.userPath) lockIcon = 'fas fa-lock-open'; 
-
+   
     if(evt.target.title === 'Login' ) {
       set = 'add';
       actionUI = 1;
@@ -382,8 +384,8 @@ class App extends Component {
                 <h3 className="hdr-div" />
                 <h3 id='recipe-name' className="hdr-div">Yum Yum Chicken</h3>
                 <h3 className="hdr-div">
-                  <i className={this.state.editIcon} title="Edit Recipe" onClick={this.editorUI}/>
-                  <i className={this.state.trashIcon} title="Delete Recipe" onClick={this.actionUI} />
+                  <i className={this.state.isLoggedIn? this.state.editIcon} title="Edit Recipe" onClick={this.editorUI}/>
+                  <i className={this.state.isLoggedIn? this.state.trashIcon : ''} title="Delete Recipe" onClick={this.actionUI} />
                 </h3>
               </header>
               <div id='recipe-table' className='table'>
