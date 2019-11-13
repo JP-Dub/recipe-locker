@@ -110,54 +110,100 @@ class App extends Component {
     window.removeEventListener('resize', this.adjHeight);
   }
 
+//   userLogin(evt) {
+//     // evt.preventDefault();
+//     let set;
+//     if(!this.userPath) {
+//       if( evt.target.id === 'main-lock' ) {
+//         set = 'add';
+//         this.setState({
+//           locked: 0,
+//           lockIcon: 'fas fa-unlock',
+//           actionName: 'User Account'
+//         })
+//       } else {
+//         set = 'remove';
+//         this.setState({
+//           locked: 1,
+//           lockIcon: 'fas fa-lock',
+//           actionName: ''
+//         })
+//       }
+//       changeStyle.blur(this.main.classList, set)
+//     }
+      
+//   }
+  
   userLogin(evt) {
     // evt.preventDefault();
-    let set;
+    let set = 'remove',
+        actionUI = 0,
+        actionName = '',
+        lockIcon = 'fas fa-lock';
+
     if(!this.userPath) {
-      if( evt.target.id === 'main-lock' ) {
+      if(evt.target.title === 'Login' ) {
         set = 'add';
-        this.setState({
-          locked: 0,
-          lockIcon: 'fas fa-unlock',
-          actionName: 'User Account'
-        })
-      } else {
-        set = 'remove';
-        this.setState({
-          locked: 1,
-          lockIcon: 'fas fa-lock',
-          actionName: ''
-        })
-      }
+        actionUI = 1;
+        actionName = 'User Account';
+        lockIcon = 'fas fa-unlock'
+      } 
+      
+      this.setState({
+        actionUI : actionUI,
+        actionName : actionName,
+        lockIcon : lockIcon
+      });
+
       changeStyle.blur(this.main.classList, set)
     }
       
-  }
+  }  
   
   userLogout() {
     window.location.href = "/api/logout";
   }
   
+  // deleteRecipe(evt) {
+  //   let set;
+  //   let value = document.getElementById('recipe-name')
+  //   //console.log(value.innerHTML)
+  //   this.name = value.innerHTML;
+  //   if( evt.target.title === 'Delete Recipe') {
+  //       set = 'add';
+  //       this.setState({
+  //         locked: 0,
+  //         actionName: 'Delete Recipe'
+  //       })
+  //   } else {
+  //     set = 'remove';
+  //     this.setState({
+  //       locked: 1,
+  //       actionName: ''
+  //     })
+  //   }
+  //   changeStyle.blur(this.main.classList, set)
+  // }
   deleteRecipe(evt) {
-    let set;
-    let value = document.getElementById('recipe-name')
-    //console.log(value.innerHTML)
-    this.name = value.innerHTML;
+    let set = 'remove',
+        actionUI = 0,
+        actionName = '',
+        recipeName = '';
+
     if( evt.target.title === 'Delete Recipe') {
-        set = 'add';
-        this.setState({
-          locked: 0,
-          actionName: 'Delete Recipe'
-        })
-    } else {
-      set = 'remove';
-      this.setState({
-        locked: 1,
-        actionName: ''
-      })
+      set = 'add';
+      actionUI = 1;
+      actionName = 'Delete Recipe';
+      recipeName = this.recipeName.innerHTML;
     }
+    this.setState({
+      actionUI: actionUI,
+      actionName: actionName,
+      recipeName: recipeName
+    });
+
     changeStyle.blur(this.main.classList, set)
-  }
+  }  
 
   addRecipe(evt) {
     let set;
@@ -200,12 +246,12 @@ class App extends Component {
   
   renderUI() {
    //console.log('locked', this.state.locked, !this.state.locked ? true: false)
-    if(!this.state.locked) {
+    if(this.state.actionUI) {
       return(
        <ActionUI 
          userLogin={this.state.actionName === 'User Account'? this.userLogin : this.deleteRecipe}
          actionName={this.state.actionName}
-         recipeName={this.name}
+         recipeName={this.state.recipeName}
        /> 
      );
     } else
