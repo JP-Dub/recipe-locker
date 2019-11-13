@@ -236,7 +236,7 @@ class App extends Component {
                 id="main-lock"
                 className={this.state.lockIcon}
                 onClick={this[this.state.account]}
-                title={this.state.account === 'userLogin'? 'User Login' : 'User Logout'}
+                title={this.state.account === 'userLogin'? 'Login' : 'Logout'}
               />
             </h2>
           </header>
