@@ -181,22 +181,23 @@ class App extends Component {
   }
   
   editorUI(evt) {
-    let set;
-    let value = document.getElementById('recipe-name');
-    this.name = value.innerHTML;
+    let set,
+        editorUI = 0,
+        editorName = '';
+    this.name = document.getElementById('recipe-name').innerHTML;
+    //this.name = value.innerHTML;
     if( evt.target.id === 'icon-close') {
       set = 'remove';
-      this.setState({
-        editorUI: 0,
-        editorName: ''
-      })
     } else {
       set = 'add';
-      this.setState({
-        editorUI: 1,
-        editorName: evt.target.title
-      })
+      editorUI = 1;
+      editorName = evt.target.title;
     }
+
+    this.setState({
+      editorUI: editorUI,
+      editorName: editorName
+    })
     changeStyle.blur(this.main.classList, set)        
   }  
   
