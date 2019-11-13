@@ -149,13 +149,13 @@ class App extends Component {
           locked: 0,
           actionName: 'Delete Recipe'
         })
-      } else {
-        set = 'remove';
-        this.setState({
-          locked: 1,
-          actionName: ''
-        })
-      }
+    } else {
+      set = 'remove';
+      this.setState({
+        locked: 1,
+        actionName: ''
+      })
+    }
     changeStyle.blur(this.main.classList, set)
   }
 
