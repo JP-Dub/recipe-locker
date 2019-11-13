@@ -156,11 +156,14 @@ i:hover {
 #index-header > h3:nth-child(3) {
   float: right;
   text-align: right;
-  padding-right: .4em; 
+/*   padding-right: .4em;  */
   width: 15%;
+
 }
 #index-header > h3 > i {
+  float: right;
   padding-top: .1em;
+  margin-right: .1em;
 }
 
 
@@ -221,7 +224,7 @@ tr:nth-child(even) {
 #recipe-header > h3 > i {
 /*   display: inline-block; */
   position: relative;
-  margin-right: .2em;
+  margin-right: .1em;
   padding-top: .1em;
 }
 
@@ -376,6 +379,22 @@ section > ul {
     text-align: center;
     width: 50%;    
   }
+  
+  #index-header > h3:nth-child(3) > i {
+    margin-right: .1em;
+  }
+  
+/*   #index-header > h3:nth-child(3) {
+  float: right;
+  text-align: right;
+  padding-right: .4em;  
+  width: 15%;
+  border: 1px solid blue;
+} */
+  
+/*   #index-header > h3 > i {
+    margin-right: .3em;
+  } */
 
   #index-table {
     margin-top: 0em;
@@ -383,9 +402,7 @@ section > ul {
     max-height: 20em;
   }
   
-/*   .fa-trash {
-    border: 1px solid blue;
-  } */
+
   
   table {
       
@@ -408,7 +425,7 @@ section > ul {
   }
   
   #recipe-header > h3 > i {
-  margin-right: .3em;
+  margin-right: .1em;
 }
 
   
