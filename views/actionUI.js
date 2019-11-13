@@ -20,7 +20,6 @@ class ActionUI extends Component {
   // }
   
   renderUI () {
-   
     if(this.props.actionName === 'User Account') {
       return (<Login />)
     } else {
@@ -96,52 +95,51 @@ class Login extends Component {
   }
   
   
-  class DeleteRecipe extends Component {
-    constructor(props) {
-      super(props);
-      this.deleteRecipe = this.deleteRecipe.bind(this);
-      this.state = {};
-    }
-    
-    deleteRecipe() {
-      console.log('delete the recipe')
-      console.log('hash=',window.location.hash, ' search=', window.location.search, ' pathname=',window.location.pathname)
-      let data = {
-        name : this.props.recipeName,
-      }
-      ajax.ready(ajax.request('DELETE', '/recipe-locker', data, () => {
-        console.log("success")
-      }))
-    }
-    
-    render() {
-      console.log(this.props)
-      return (
-           <ErrorBoundary>
-              <div id="inner-subframe" className="flex-container radius">
-                <header id="actionUI-subheader" className="ua-header headr">
-                  <h3>{this.props.recipeName}</h3>
-                  <i
-                    id="delete"
-                    className="fas fa-trash"
-                    title="Confirm Delete"
-                    onClick={this.deleteRecipe}
-                  />
-                </header>
-                <div id="signin-info">
-                  <p>Attention: You are about to permenantly delete your recipe!</p>
-                  <p>              
-                    If would like to continue with this action, confirm by clicking 
-                    on the trash can icon in the upper right hand corner. Otherwise, 
-                    please cancel by closing window.
-                  </p>
-                </div>
-              </div>
-        </ErrorBoundary>
-      )
-    }
+class DeleteRecipe extends Component {
+  constructor(props) {
+    super(props);
+    this.deleteRecipe = this.deleteRecipe.bind(this);
+    this.state = {};
   }
-
+    
+  deleteRecipe() {
+    console.log('delete the recipe')
+    console.log('hash=',window.location.hash, ' search=', window.location.search, ' pathname=',window.location.pathname)
+    let data = {
+      name : this.props.recipeName,
+    }
+    ajax.ready(ajax.request('DELETE', '/recipe-locker', data, () => {
+      console.log("success")
+    }))
+  }
+    
+  render() {
+    console.log(this.props)
+    return (
+         <ErrorBoundary>
+            <div id="inner-subframe" className="flex-container radius">
+              <header id="actionUI-subheader" className="ua-header headr">
+                <h3>{this.props.recipeName}</h3>
+                <i
+                  id="delete"
+                  className="fas fa-trash"
+                  title="Confirm Delete"
+                  onClick={this.deleteRecipe}
+                />
+              </header>
+              <div id="signin-info">
+                <p>Attention: You are about to permenantly delete your recipe!</p>
+                <p>              
+                  If would like to continue with this action, confirm by clicking 
+                  on the trash can icon in the upper right hand corner. Otherwise, 
+                  please cancel by closing window.
+                </p>
+              </div>
+            </div>
+      </ErrorBoundary>
+    )
+  }
+}
 
 
 export default ActionUI;
