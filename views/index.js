@@ -47,7 +47,6 @@ class App extends Component {
 
   componentDidMount() {
     this.main = document.getElementById('main');
-    this.lock = document.getElementById('main-lock');
     this.userPath = RegExp("^/login/.*").test(window.location.pathname);
     
     if (this.userPath) {   
@@ -87,21 +86,21 @@ class App extends Component {
       this.table[1].style.height = this.recipe.clientHeight - Math.round(this.idx_header.clientHeight) + 'px';
 
     }
+    
     this.adjHeight();
+    
     window.addEventListener('resize', this.adjHeight);
     
-    
-//     ajax.ready(ajax.request('GET', '/recipe-locker', {}, (book) => {
-      
-//     }));
+//     ajax.ready(ajax.request('GET', '/recipe-locker', {}, (book) => {}));
   
   }
   
   componentDidUpdate() {
+    let mainLock = document.getElementById('main-lock');
     if(this.state.lockIcon === 'fas fa-lock-open') {
-      changeStyle.flip(this.lock.classList, 'add');
+      changeStyle.flip(mainLock.classList, 'add');
     } else {
-      changeStyle.flip(this.lock.classList, 'remove');
+      changeStyle.flip(mainLock.classList, 'remove');
     }
   }
 
