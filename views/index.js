@@ -47,6 +47,7 @@ class App extends Component {
 
   componentDidMount() {
     this.main = document.getElementById('main');
+    this.recipeName = document.getElementById('recipe-name');
     this.userPath = RegExp("^/login/.*").test(window.location.pathname);
     
     if (this.userPath) {   
@@ -182,8 +183,10 @@ class App extends Component {
   editorUI(evt) {
     let set,
         editorUI = 0,
-        editorName = '';
-    this.name = document.getElementById('recipe-name').innerHTML;
+        editorName = '',
+        recipeName = '';
+    //this.name = document.getElementById('recipe-name').innerHTML;
+    
     //this.name = value.innerHTML;
     if( evt.target.id === 'icon-close') {
       set = 'remove';
@@ -191,11 +194,13 @@ class App extends Component {
       set = 'add';
       editorUI = 1;
       editorName = evt.target.title;
+      recipeName = this.recipeName.innerHTML;
     }
 
     this.setState({
       editorUI: editorUI,
-      editorName: editorName
+      editorName: editorName,
+      recipeName: recipeName
     })
     changeStyle.blur(this.main.classList, set)        
   }  
@@ -216,7 +221,7 @@ class App extends Component {
         <EditorUI 
           userLogin={this.editorUI} 
           editorName={this.state.editorName}
-          recipeName={this.name}
+          recipeName={this.state.recipeName}
           />
       )
     } else {
