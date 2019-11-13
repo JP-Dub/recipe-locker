@@ -56,12 +56,7 @@ class App extends Component {
     
     if (this.userPath) {   
       this.setState({
-        locked   : 1,
-        addIcon  : "fas fa-plus-square",
-        editIcon : "far fa-edit",
-        trashIcon: "fas fa-trash",
         lockIcon : "fas fa-lock-open",
-        account  : 'userLogout',
         isLoggedIn: 1
       });
       
@@ -114,118 +109,6 @@ class App extends Component {
     window.removeEventListener('resize', this.adjHeight);
   }
 
-//   userLogin(evt) {
-//     // evt.preventDefault();
-//     let set;
-//     if(!this.userPath) {
-//       if( evt.target.id === 'main-lock' ) {
-//         set = 'add';
-//         this.setState({
-//           locked: 0,
-//           lockIcon: 'fas fa-unlock',
-//           actionName: 'User Account'
-//         })
-//       } else {
-//         set = 'remove';
-//         this.setState({
-//           locked: 1,
-//           lockIcon: 'fas fa-lock',
-//           actionName: ''
-//         })
-//       }
-//       changeStyle.blur(this.main.classList, set)
-//     }
-      
-//   }
-  
-//   userLogin(evt) {
-//     // evt.preventDefault();
-//     let set = 'remove',
-//         actionUI = 0,
-//         actionName = '',
-//         lockIcon = 'fas fa-lock';
-
-//     if(!this.userPath) {
-//       if(evt.target.title === 'Login' ) {
-//         set = 'add';
-//         actionUI = 1;
-//         actionName = 'User Account';
-//         lockIcon = 'fas fa-unlock'
-//       } 
-      
-//       this.setState({
-//         actionUI : actionUI,
-//         actionName : actionName,
-//         lockIcon : lockIcon
-//       });
-
-//       changeStyle.blur(this.main.classList, set)
-//     }
-      
-//   }  
-  
-  userLogout() {
-    window.location.href = "/api/logout";
-  }
-  
-  // deleteRecipe(evt) {
-  //   let set;
-  //   let value = document.getElementById('recipe-name')
-  //   //console.log(value.innerHTML)
-  //   this.name = value.innerHTML;
-  //   if( evt.target.title === 'Delete Recipe') {
-  //       set = 'add';
-  //       this.setState({
-  //         locked: 0,
-  //         actionName: 'Delete Recipe'
-  //       })
-  //   } else {
-  //     set = 'remove';
-  //     this.setState({
-  //       locked: 1,
-  //       actionName: ''
-  //     })
-  //   }
-  //   changeStyle.blur(this.main.classList, set)
-  // }
-//   deleteRecipe(evt) {
-//     let set = 'remove',
-//         actionUI = 0,
-//         actionName = '',
-//         recipeName = '';
-
-//     if( evt.target.title === 'Delete Recipe') {
-//       set = 'add';
-//       actionUI = 1;
-//       actionName = 'Delete Recipe';
-//       recipeName = this.recipeName.innerHTML;
-//     }
-//     this.setState({
-//       actionUI: actionUI,
-//       actionName: actionName,
-//       recipeName: recipeName
-//     });
-
-//     changeStyle.blur(this.main.classList, set)
-//   }  
-
-  // addRecipe(evt) {
-  //   let set;
-  //   console.log(evt.target.title)
-  //   if( evt.target.id === 'icon-close') {
-  //     set = 'remove';
-  //     this.setState({
-  //       newRecipe: 0
-  //     })
-  //   } else {
-  //     set = 'add';
-  //     this.setState({
-  //       newRecipe: 1
-  //     })
-  //   }
-  //   changeStyle.blur(this.main.classList, set)    
-  // }
-  
   actionUI(evt) {
     if(evt.target.title === 'Logout') return window.location.href = "/api/logout";
     
@@ -233,9 +116,8 @@ class App extends Component {
         actionUI = 0,
         actionName = '',
         recipeName = '',
-        lockIcon = 'fas fa-lock';
-    
-    if(this.userPath) lockIcon = 'fas fa-lock-open'; 
+        lockIcon = this.userPath ? 'fas fa-lock' : 'fas fa-lock-open';
+
    
     if(evt.target.title === 'Login' ) {
       set = 'add';
@@ -331,7 +213,7 @@ class App extends Component {
                 <h3 className="hdr-div" />
                 <h3 className="hdr-div">Recipe Name</h3>
                 <h3 className="hdr-div">
-                  <i className={this.state.addIcon} 
+                  <i className={this.state.isLoggedIn? this.state.addIcon: ''} 
                      onClick={this.editorUI}
                      title="New Recipe" />
                 </h3>
@@ -384,8 +266,8 @@ class App extends Component {
                 <h3 className="hdr-div" />
                 <h3 id='recipe-name' className="hdr-div">Yum Yum Chicken</h3>
                 <h3 className="hdr-div">
-                  <i className={this.state.isLoggedIn? this.state.editIcon} title="Edit Recipe" onClick={this.editorUI}/>
-                  <i className={this.state.isLoggedIn? this.state.trashIcon : ''} title="Delete Recipe" onClick={this.actionUI} />
+                  <i className={this.state.isLoggedIn? this.state.editIcon : ''} title="Edit Recipe" onClick={this.editorUI}/>
+                  <i className={this.state.isLoggedIn? this.state.trashIcon: ''} title="Delete Recipe" onClick={this.actionUI} />
                 </h3>
               </header>
               <div id='recipe-table' className='table'>
