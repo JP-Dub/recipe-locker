@@ -137,31 +137,31 @@ class App extends Component {
       
 //   }
   
-  userLogin(evt) {
-    // evt.preventDefault();
-    let set = 'remove',
-        actionUI = 0,
-        actionName = '',
-        lockIcon = 'fas fa-lock';
+//   userLogin(evt) {
+//     // evt.preventDefault();
+//     let set = 'remove',
+//         actionUI = 0,
+//         actionName = '',
+//         lockIcon = 'fas fa-lock';
 
-    if(!this.userPath) {
-      if(evt.target.title === 'Login' ) {
-        set = 'add';
-        actionUI = 1;
-        actionName = 'User Account';
-        lockIcon = 'fas fa-unlock'
-      } 
+//     if(!this.userPath) {
+//       if(evt.target.title === 'Login' ) {
+//         set = 'add';
+//         actionUI = 1;
+//         actionName = 'User Account';
+//         lockIcon = 'fas fa-unlock'
+//       } 
       
-      this.setState({
-        actionUI : actionUI,
-        actionName : actionName,
-        lockIcon : lockIcon
-      });
+//       this.setState({
+//         actionUI : actionUI,
+//         actionName : actionName,
+//         lockIcon : lockIcon
+//       });
 
-      changeStyle.blur(this.main.classList, set)
-    }
+//       changeStyle.blur(this.main.classList, set)
+//     }
       
-  }  
+//   }  
   
   userLogout() {
     window.location.href = "/api/logout";
@@ -187,43 +187,43 @@ class App extends Component {
   //   }
   //   changeStyle.blur(this.main.classList, set)
   // }
-  deleteRecipe(evt) {
-    let set = 'remove',
-        actionUI = 0,
-        actionName = '',
-        recipeName = '';
+//   deleteRecipe(evt) {
+//     let set = 'remove',
+//         actionUI = 0,
+//         actionName = '',
+//         recipeName = '';
 
-    if( evt.target.title === 'Delete Recipe') {
-      set = 'add';
-      actionUI = 1;
-      actionName = 'Delete Recipe';
-      recipeName = this.recipeName.innerHTML;
-    }
-    this.setState({
-      actionUI: actionUI,
-      actionName: actionName,
-      recipeName: recipeName
-    });
+//     if( evt.target.title === 'Delete Recipe') {
+//       set = 'add';
+//       actionUI = 1;
+//       actionName = 'Delete Recipe';
+//       recipeName = this.recipeName.innerHTML;
+//     }
+//     this.setState({
+//       actionUI: actionUI,
+//       actionName: actionName,
+//       recipeName: recipeName
+//     });
 
-    changeStyle.blur(this.main.classList, set)
-  }  
+//     changeStyle.blur(this.main.classList, set)
+//   }  
 
-  addRecipe(evt) {
-    let set;
-    console.log(evt.target.title)
-    if( evt.target.id === 'icon-close') {
-      set = 'remove';
-      this.setState({
-        newRecipe: 0
-      })
-    } else {
-      set = 'add';
-      this.setState({
-        newRecipe: 1
-      })
-    }
-    changeStyle.blur(this.main.classList, set)    
-  }
+  // addRecipe(evt) {
+  //   let set;
+  //   console.log(evt.target.title)
+  //   if( evt.target.id === 'icon-close') {
+  //     set = 'remove';
+  //     this.setState({
+  //       newRecipe: 0
+  //     })
+  //   } else {
+  //     set = 'add';
+  //     this.setState({
+  //       newRecipe: 1
+  //     })
+  //   }
+  //   changeStyle.blur(this.main.classList, set)    
+  // }
   
   actionUI(evt) {
     console.log(evt, this.userPath)
@@ -231,7 +231,7 @@ class App extends Component {
         actionUI = 0,
         actionName = '',
         recipeName = '',
-        lockIcon = 'fas fa-lock'
+        lockIcon = 'fas fa-lock';
     
     if(this.userPath) lockIcon = 'fas fa-lock-open'; 
 
