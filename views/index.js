@@ -177,16 +177,16 @@ class App extends Component {
   }
   
   editorUI(evt) {
-    let set,
+    let set = 'remove',
         editorUI = 0,
         editorName = '',
         recipeName = '';
     //this.name = document.getElementById('recipe-name').innerHTML;
-    console.log(this.recipeName.innerHTML)
+    console.log(evt.target)
     //this.name = value.innerHTML;
-    if( evt.target.id === 'icon-close') {
-      set = 'remove';
-    } else {
+    if( evt.target.title !== 'close') {
+      //set = 'remove';
+    //} else {
       set = 'add';
       editorUI = 1;
       editorName = evt.target.title;

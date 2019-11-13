@@ -113,8 +113,8 @@ class EditorUI extends Component {
                 </header>
                 <input 
                   id="name" 
-                  name='name' 
-                  value={this.props.recipeName} 
+                  name="name"
+                  value={this.state.name} 
                   onChange={this.nameHandler} required />
               </div>
               <div className="flex-container radius">
@@ -123,7 +123,7 @@ class EditorUI extends Component {
                 </header>
                 <textarea 
                   id="ingredients" 
-                  name='ingredients' 
+                  name="ingredients" 
                   value={this.state.ingredients} 
                   onChange={this.ingredientsHandler}
                   rows="2"
