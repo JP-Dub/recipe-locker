@@ -32,20 +32,13 @@ class App extends Component {
     this.actionUI = this.actionUI.bind(this);
     
     this.state = {
-      editorUI : 0,
-      actionUI : 0,
+      editorUI  : 0,
+      actionUI  : 0,
       editorName: '',
       actionName: '',
       recipeName: '',
       isLoggedIn: 0,
-      showIcons : 0,
-      account : 'userLogin',
-      newRecipe: 0,
-      locked   : 1,
-      addIcon  : "",
-      editIcon : "",
-      trashIcon: "",
-      lockIcon : "fas fa-lock"
+      lockIcon  : "fas fa-lock"
     };
   }
 
@@ -62,35 +55,33 @@ class App extends Component {
       
     }
     
-    this.table = document.getElementsByClassName('table');
-    this.idx_header = document.getElementById('index-header');
-    this.index  = document.getElementById('index');
-    this.recipe = document.getElementById('recipe');
-    this.main   = document.getElementById('main');
+    const idx_header = document.getElementById('index-header'),
+          table  = document.getElementsByClassName('table'),
+          index  = document.getElementById('index'),
+          recipe = document.getElementById('recipe');
     
-    this.adjHeight = () => {
-      let height = this.index.clientHeight - Math.round(this.idx_header.clientHeight);
+    const adjHeight = () => {
+      let height = index.clientHeight - Math.round(idx_header.clientHeight);
       //console.log(height, {width: document.body.clientWidth, height: window.innerHeight})
       
       if(height >= 72 ) {
-        this.table[0].style.height = height + 'px';
+        table[0].style.height = height + 'px';
       }
       
       // expands #recipe to full screen height
       if(document.body.clientWidth <= 850) {
-        this.recipe.style.height = this.recipe.clientHeight + (window.innerHeight - this.main.clientHeight) + 'px';
+        recipe.style.height = recipe.clientHeight + (window.innerHeight - this.main.clientHeight) + 'px';
       } else {
-        this.recipe.style.height = '60vh';
+        recipe.style.height = '60vh';
       }
       
       // maintain height of #recipe-table
-      this.table[1].style.height = this.recipe.clientHeight - Math.round(this.idx_header.clientHeight) + 'px';
+      table[1].style.height = recipe.clientHeight - Math.round(idx_header.clientHeight) + 'px';
 
     }
-    
-    this.adjHeight();
-    
-    window.addEventListener('resize', this.adjHeight);
+
+    adjHeight();
+    window.addEventListener('resize', adjHeight);
     
 //     ajax.ready(ajax.request('GET', '/recipe-locker', {}, (book) => {}));
   
@@ -116,7 +107,7 @@ class App extends Component {
         actionUI = 0,
         actionName = '',
         recipeName = '',
-        lockIcon = this.userPath ? 'fas fa-lock' : 'fas fa-lock-open';
+        lockIcon = this.userPath ? 'fas fa-lock-open' : 'fas fa-lock' ;
 
    
     if(evt.target.title === 'Login' ) {
@@ -213,7 +204,7 @@ class App extends Component {
                 <h3 className="hdr-div" />
                 <h3 className="hdr-div">Recipe Name</h3>
                 <h3 className="hdr-div">
-                  <i className={this.state.isLoggedIn? this.state.addIcon: ''} 
+                  <i className={this.state.isLoggedIn? 'fas fa-plus-square' : ''} 
                      onClick={this.editorUI}
                      title="New Recipe" />
                 </h3>
@@ -266,8 +257,8 @@ class App extends Component {
                 <h3 className="hdr-div" />
                 <h3 id='recipe-name' className="hdr-div">Yum Yum Chicken</h3>
                 <h3 className="hdr-div">
-                  <i className={this.state.isLoggedIn? this.state.editIcon : ''} title="Edit Recipe" onClick={this.editorUI}/>
-                  <i className={this.state.isLoggedIn? this.state.trashIcon: ''} title="Delete Recipe" onClick={this.actionUI} />
+                  <i className={this.state.isLoggedIn? 'far fa-edit' : ''} title="Edit Recipe" onClick={this.editorUI}/>
+                  <i className={this.state.isLoggedIn? 'fas fa-trash': ''} title="Delete Recipe" onClick={this.actionUI} />
                 </h3>
               </header>
               <div id='recipe-table' className='table'>
