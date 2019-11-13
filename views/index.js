@@ -40,7 +40,8 @@ class App extends Component {
       trashIcon: "",
       lockIcon : "fas fa-lock",
       actionName: "",
-      account : 'userLogin'
+      account : 'userLogin',
+      showIcons : 0
     };
   }
 
