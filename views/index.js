@@ -181,12 +181,8 @@ class App extends Component {
         editorUI = 0,
         editorName = '',
         recipeName = '';
-    //this.name = document.getElementById('recipe-name').innerHTML;
-    console.log(evt.target)
-    //this.name = value.innerHTML;
+
     if( evt.target.title !== 'close') {
-      //set = 'remove';
-    //} else {
       set = 'add';
       editorUI = 1;
       editorName = evt.target.title;
@@ -197,7 +193,8 @@ class App extends Component {
       editorUI: editorUI,
       editorName: editorName,
       recipeName: recipeName
-    })
+    });
+    
     changeStyle.blur(this.main.classList, set)        
   }  
   

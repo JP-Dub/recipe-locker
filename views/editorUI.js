@@ -25,6 +25,7 @@ class EditorUI extends Component {
     this.formIngredients = document.getElementById('ingredients');
     this.formDirections = document.getElementById('directions');
     
+    
     if(this.props.editorName === 'Edit Recipe') {
       this.loadForm();
     }
@@ -48,7 +49,7 @@ class EditorUI extends Component {
       this.formIngredients.innerText = recipe.ingredients;
       this.formDirections.innerText = recipe.directions;
       this.setState( state => {
-        return {name      : state.name = recipe.name,
+        return {name      : state.name = this.props.recipeName,
                ingredients: state.ingredients = recipe.ingredients,
                directions : state.directions = recipe.directions
                }
