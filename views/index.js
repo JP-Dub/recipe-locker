@@ -226,11 +226,14 @@ class App extends Component {
   }
   
   actionUI(evt) {
+    console.log(evt, this.userPath)
     let set = 'remove',
         actionUI = 0,
         actionName = '',
         recipeName = '',
-        lockIcon = !this.userPath ? 'fas fa-lock' : 'fas fa-lock-open'; 
+        lockIcon = 'fas fa-lock'
+    
+    if(this.userPath) lockIcon = 'fas fa-lock-open'; 
 
     if(evt.target.title === 'Login' ) {
       set = 'add';
