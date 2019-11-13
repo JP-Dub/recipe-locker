@@ -222,6 +222,37 @@ class App extends Component {
     changeStyle.blur(this.main.classList, set)    
   }
   
+  actionUI(evt) {
+    let set = 'remove',
+        actionUI = 0,
+        actionName = '',
+        recipeName = '',
+        lockIcon = !this.userPath ? 'fas fa-lock' : 'fas fa-lock-open'; 
+
+    if(evt.target.title === 'Login' ) {
+      set = 'add';
+      actionUI = 1;
+      actionName = 'User Account';
+      lockIcon = 'fas fa-unlock'
+    }  
+    
+    if(evt.target.title === 'Delete Recipe') {
+      set = 'add';
+      actionUI = 1;
+      actionName = 'Delete Recipe';
+      recipeName = this.recipeName.innerHTML;
+    }       
+
+    this.setState({
+      actionUI: actionUI,
+      actionName: actionName,
+      recipeName: recipeName,
+      lockIcon : lockIcon
+    });      
+
+    changeStyle.blur(this.main.classList, set)
+  }  
+  
   editorUI(evt) {
     let set = 'remove',
         editorUI = 0,
