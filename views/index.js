@@ -33,6 +33,7 @@ class App extends Component {
     this.state = {
       editorUI : 0,
       editorName: '',
+      recipeName: '',
       newRecipe: 0,
       locked   : 1,
       addIcon  : "",
@@ -174,11 +175,6 @@ class App extends Component {
     }
     changeStyle.blur(this.main.classList, set)    
   }
-
-  editRecipe() {
-    // let set;
-    // changeStyle.blur(this.main.classList, set);
-  }
   
   editorUI(evt) {
     let set,
@@ -186,7 +182,7 @@ class App extends Component {
         editorName = '',
         recipeName = '';
     //this.name = document.getElementById('recipe-name').innerHTML;
-    
+    console.log(this.recipeName.innerHTML)
     //this.name = value.innerHTML;
     if( evt.target.id === 'icon-close') {
       set = 'remove';

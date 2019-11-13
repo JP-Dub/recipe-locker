@@ -114,9 +114,8 @@ class EditorUI extends Component {
                 <input 
                   id="name" 
                   name='name' 
-                  value={this.state.name} 
-                  onChange={this.nameHandler} required
-                  dangerouslySetInnerHTML={{__html: this.props.recipeName}} />
+                  value={this.props.recipeName} 
+                  onChange={this.nameHandler} required />
               </div>
               <div className="flex-container radius">
                 <header className="ua-header headr">
