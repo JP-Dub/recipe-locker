@@ -32,17 +32,19 @@ class App extends Component {
     
     this.state = {
       editorUI : 0,
+      actionUI : 0,
       editorName: '',
+      actionName: '',
       recipeName: '',
+      isLoggedIn: 0,
+      showIcons : 0,
+      account : 'userLogin',
       newRecipe: 0,
       locked   : 1,
       addIcon  : "",
       editIcon : "",
       trashIcon: "",
-      lockIcon : "fas fa-lock",
-      actionName: "",
-      account : 'userLogin',
-      showIcons : 0
+      lockIcon : "fas fa-lock"
     };
   }
 
@@ -58,7 +60,8 @@ class App extends Component {
         editIcon : "far fa-edit",
         trashIcon: "fas fa-trash",
         lockIcon : "fas fa-lock-open",
-        account  : 'userLogout'
+        account  : 'userLogout',
+        isLoggedIn: 1
       });
       
     }
@@ -280,7 +283,7 @@ class App extends Component {
     if(this.state.actionUI) {
       return(
        <ActionUI 
-         userLogin={this.state.actionName === 'User Account'? this.userLogin : this.deleteRecipe}
+         userLogin={this.actionUI}
          actionName={this.state.actionName}
          recipeName={this.state.recipeName}
        /> 
@@ -312,8 +315,8 @@ class App extends Component {
               <i
                 id="main-lock"
                 className={this.state.lockIcon}
-                onClick={this[this.state.account]}
-                title={this.state.account === 'userLogin'? 'Login' : 'Logout'}
+                onClick={this.actionUI}
+                title={this.state.isLoggedIn? 'Logout' : 'Login'}
               />
             </h2>
           </header>
@@ -377,7 +380,7 @@ class App extends Component {
                 <h3 id='recipe-name' className="hdr-div">Yum Yum Chicken</h3>
                 <h3 className="hdr-div">
                   <i className={this.state.editIcon} title="Edit Recipe" onClick={this.editorUI}/>
-                  <i className={this.state.trashIcon} title="Delete Recipe" onClick={this.deleteRecipe} />
+                  <i className={this.state.trashIcon} title="Delete Recipe" onClick={this.actionUI} />
                 </h3>
               </header>
               <div id='recipe-table' className='table'>
